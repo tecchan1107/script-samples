@@ -33,12 +33,41 @@
     
     
     <meta property="docfx:newtab" content="true">
+    <script type="text/javascript">
+      (function(c,l,a,r,i,t,y){
+          c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+          t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+          y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+      })(window, document, "clarity", "script", "8j6pedl344");
+  </script>
   </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
     <div id="wrapper">
       <header>
         
         <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
           <div class="container">
+             <div class="github-mark">
+              <a href="https://github.com/pnp/script-samples" title="Go to repository">
+               <div class="github-wrapper">
+                  <div class="github-icon">
+                    <img src="https://pnp.github.io/script-samples/assets/icons/github-light-64px.png" alt="GitHub Icon Image">
+                  </div>
+                  <div class="github-repository">
+                    <span>GitHub</span>
+                    <ul class="github-facts">
+                      <li>
+                        <i class="fa fa-code-fork" aria-hidden="true"></i>
+                        <span class="github-forks"></span>
+                      </li>
+                      <li>
+                        <i class="fa fa-star-o" aria-hidden="true"></i>
+                        <span class="github-stars"></span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </a>
+            </div>
             <div class="navbar-header">
               <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
                 <span class="sr-only">Toggle navigation</span>
@@ -64,7 +93,7 @@
           <div class="col-md-12">
             <article class="content wrap" id="_content" data-uid="">
                   <div class="contribution-panel mobile-hide pull-right">
-                      <a href="https://github.com/pnp/script-samples/blob/main/scripts/teams-bulk-create-teams/README.md/#L1" title="Improve this Doc" class="improve-doc-lg"><i class="glyphicon glyphicon-pencil"></i></a>
+                      <a href="https://github.com/tecchan1107/script-samples/blob/main/scripts/teams-bulk-create-teams/README.md/#L1" title="Improve this Doc" class="improve-doc-lg"><i class="glyphicon glyphicon-pencil"></i></a>
                   </div>
                     <h1 id="bulk-create-teams-with-json-file">Bulk Create Teams with JSON File</h1>
 
@@ -82,6 +111,9 @@
 <ul role="tablist">
 <li role="presentation">
 <a href="#tabpanel_CeZOj-G++Q_pnpps" role="tab" aria-controls="tabpanel_CeZOj-G++Q_pnpps" data-tab="pnpps" tabindex="0" aria-selected="true">PnP PowerShell</a>
+</li>
+<li role="presentation">
+<a href="#tabpanel_CeZOj-G++Q_cli-m365-ps" role="tab" aria-controls="tabpanel_CeZOj-G++Q_cli-m365-ps" data-tab="cli-m365-ps" tabindex="-1">CLI for Microsoft 365</a>
 </li>
 <li role="presentation">
 <a href="#tabpanel_CeZOj-G++Q_json" role="tab" aria-controls="tabpanel_CeZOj-G++Q_json" data-tab="json" tabindex="-1">JSON</a>
@@ -153,6 +185,92 @@ end{
 <p>Check out the <strong>PnP PowerShell</strong> to learn more at: <a href="https://aka.ms/pnp/powershell">https://aka.ms/pnp/powershell</a></p>
 </div>
 </section>
+<section id="tabpanel_CeZOj-G++Q_cli-m365-ps" role="tabpanel" data-tab="cli-m365-ps" aria-hidden="true" hidden="hidden"><button class="article-clipboard" title="Copy to clipboard" data-toggle="tooltip" data-placement="top" data-clipboard-target="section[id^='tabpanel'][data-tab='cli-m365-ps'] pre">
+    <span class="glyphicon glyphicon-copy" aria-hidden="true"></span>
+    <span class="article-clipboard__message done">Copied</span>
+</button>
+
+<pre><code class="lang-powershell"># Usage example:
+# .\Create-BulkTeams.ps1 -OwnerEmail &quot;user@contoso.com&quot;
+
+[CmdletBinding()]
+param (
+    [Parameter(Mandatory = $true)]
+    [string]$OwnerEmail,
+    [Parameter(Mandatory = $false)]
+    [string] $SiteListJsonFile = &quot;.\teams.json&quot;
+)
+begin {
+    #Log in to Microsoft 365
+    Write-Host &quot;Connecting to Tenant&quot; -f Yellow
+
+    $m365Status = m365 status
+    if ($m365Status -match &quot;Logged Out&quot;) {
+        m365 login
+    }
+
+    Write-Host &quot;Connection Successful!&quot; -f Green
+
+    $sites = Get-Content $SiteListJsonFile -Raw | ConvertFrom-Json
+    $prefixes = &quot;HR&quot;, &quot;Finance&quot;, &quot;ICT&quot;, &quot;Service Desk&quot;, &quot;Client Services&quot;, &quot;Project Alpha&quot;, &quot;Project Beta&quot;, &quot;Project Charlie&quot;, &quot;Leadership&quot;, &quot;Community&quot;
+}
+process {
+    $prefixes | Foreach-Object {
+        $prefix = $_
+
+        $sites | Foreach-Object {
+            $siteTitle = &quot;$($_.SiteTitle.Replace(&quot;XXXXX&quot;, $prefix))&quot;
+            $mailNickname = &quot;$($_.SiteUrl.Replace(&quot;XXXXX&quot;, $prefix).Replace(&quot; &quot;,''))&quot;
+
+            # Check if team exists
+            $team = m365 teams team get --name $siteTitle | ConvertFrom-Json
+
+            if (-not $team) {
+                # Create a Microsoft 365 Group                
+                Write-Host &quot;Creating group $($siteTitle)&quot;
+
+                # If the $OwnerEmail is the tenant admin then this will break.
+                # This is a very special case where when we create a new o365group, 
+                # the tenant admin will be by default the member of this group internally. 
+                # Then when we want to add the same user as the owner of this group we will get the following error:
+                # Error: One or more added object references already exist for the following modified properties: 'owners'.
+                m365 aad o365group add --displayName &quot;$($siteTitle)&quot; --description &quot;Testing Site for $($siteTitle)&quot; --mailNickname $mailNickname --owners &quot;$($OwnerEmail)&quot; --isPrivate (!$_.IsPublic).ToString().ToLowerInvariant()
+
+                $group = $null
+                $waitTime = 5
+                $trial = 0
+                $maxRetry = 3
+
+                do {
+                    $trial++
+                    Write-Host &quot;Waiting $waitTime seconds before group provisioning is complete...&quot;
+                    Start-Sleep -Seconds $waitTime
+
+                    $group = m365 aad o365group list --displayName &quot;$($siteTitle)&quot; | ConvertFrom-Json
+                } while ($group -eq $null -and $trial -lt $maxRetry)
+
+                if ($group -eq $null) { 
+                    return
+                }
+
+                # Create a new Microsoft Teams team under existing Microsoft 365 group
+                Write-Host &quot;Creating Microsoft Teams team under group $($siteTitle)&quot;
+                m365 aad o365group teamify --mailNickname $mailNickname
+            }
+            else {
+                Write-Host &quot;Microsoft Teams team $($siteTitle) already exists&quot;
+            }
+        }
+    }
+}
+end {
+    Write-Host &quot;Finished&quot; -ForegroundColor Green
+}
+</code></pre>
+<div class="highlight-tool">
+<p>Check out the <strong>CLI for Microsoft 365</strong> to learn more at: <a href="https://aka.ms/cli-m365">https://aka.ms/cli-m365</a></p>
+</div>
+</section>
 <section id="tabpanel_CeZOj-G++Q_json" role="tabpanel" data-tab="json" aria-hidden="true" hidden="hidden"><button class="article-clipboard" title="Copy to clipboard" data-toggle="tooltip" data-placement="top" data-clipboard-target="section[id^='tabpanel'][data-tab='json'] pre">
     <span class="glyphicon glyphicon-copy" aria-hidden="true"></span>
     <span class="article-clipboard__message done">Copied</span>
@@ -187,11 +305,14 @@ end{
 <tr>
 <td>Paul Bullock</td>
 </tr>
+<tr>
+<td>Nanddeep Nachan</td>
+</tr>
 </tbody>
 </table>
 <h2 id="disclaimer">Disclaimer</h2>
 <p><strong>THESE SAMPLES ARE PROVIDED <em>AS IS</em> WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING ANY IMPLIED WARRANTIES OF FITNESS FOR A PARTICULAR PURPOSE, MERCHANTABILITY, OR NON-INFRINGEMENT.</strong></p>
-<img src="https://telemetry.sharepointpnp.com/script-samples/scripts/template-script-submission" aria-hidden="true">
+<img src="https://pnptelemetry.azurewebsites.net/script-samples/scripts/template-script-submission" aria-hidden="true">
 </article>
           </div>
         </div>

@@ -33,12 +33,41 @@
     
     
     <meta property="docfx:newtab" content="true">
+    <script type="text/javascript">
+      (function(c,l,a,r,i,t,y){
+          c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+          t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+          y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+      })(window, document, "clarity", "script", "8j6pedl344");
+  </script>
   </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
     <div id="wrapper">
       <header>
         
         <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
           <div class="container">
+             <div class="github-mark">
+              <a href="https://github.com/pnp/script-samples" title="Go to repository">
+               <div class="github-wrapper">
+                  <div class="github-icon">
+                    <img src="https://pnp.github.io/script-samples/assets/icons/github-light-64px.png" alt="GitHub Icon Image">
+                  </div>
+                  <div class="github-repository">
+                    <span>GitHub</span>
+                    <ul class="github-facts">
+                      <li>
+                        <i class="fa fa-code-fork" aria-hidden="true"></i>
+                        <span class="github-forks"></span>
+                      </li>
+                      <li>
+                        <i class="fa fa-star-o" aria-hidden="true"></i>
+                        <span class="github-stars"></span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </a>
+            </div>
             <div class="navbar-header">
               <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
                 <span class="sr-only">Toggle navigation</span>
@@ -64,7 +93,7 @@
           <div class="col-md-12">
             <article class="content wrap" id="_content" data-uid="">
                   <div class="contribution-panel mobile-hide pull-right">
-                      <a href="https://github.com/pnp/script-samples/blob/main/scripts/spo-add-document-library-webpart-to-page/README.md/#L1" title="Improve this Doc" class="improve-doc-lg"><i class="glyphicon glyphicon-pencil"></i></a>
+                      <a href="https://github.com/tecchan1107/script-samples/blob/main/scripts/spo-add-document-library-webpart-to-page/README.md/#L1" title="Improve this Doc" class="improve-doc-lg"><i class="glyphicon glyphicon-pencil"></i></a>
                   </div>
                     <h1 id="add-a-document-library-web-part-to-a-page-and-only-show-a-specific-folder">Add a document library web part to a page (and only show a specific folder)</h1>
 
@@ -77,13 +106,16 @@
 <li role="presentation">
 <a href="#tabpanel_CeZOj-G++Q_pnpps" role="tab" aria-controls="tabpanel_CeZOj-G++Q_pnpps" data-tab="pnpps" tabindex="0" aria-selected="true">PnP PowerShell</a>
 </li>
+<li role="presentation">
+<a href="#tabpanel_CeZOj-G++Q_cli-m365-ps" role="tab" aria-controls="tabpanel_CeZOj-G++Q_cli-m365-ps" data-tab="cli-m365-ps" tabindex="-1">CLI for Microsoft 365 with PowerShell</a>
+</li>
 </ul>
 <section id="tabpanel_CeZOj-G++Q_pnpps" role="tabpanel" data-tab="pnpps"><button class="article-clipboard" title="Copy to clipboard" data-toggle="tooltip" data-placement="top" data-clipboard-target="section[id^='tabpanel'][data-tab='pnpps'] pre">
     <span class="glyphicon glyphicon-copy" aria-hidden="true"></span>
     <span class="article-clipboard__message done">Copied</span>
 </button>
 
-<pre><code class="lang-powershell">Connect-PnPOnline -Url https://yourtenant.sharepoint.com/sites/Yoursite/ -UseWebLogin
+<pre><code class="lang-powershell">Connect-PnPOnline -Url https://yourtenant.sharepoint.com/sites/Yoursite/ -Interactive
 $ray = &quot;folder1&quot;,
        &quot;folder2&quot;,
        &quot;folder3&quot;
@@ -91,23 +123,65 @@ $ray = &quot;folder1&quot;,
 foreach ($name in $ray) {
 
     #create page
-    Add-PnPClientSidePage -Name $name -LayoutType Article -HeaderLayoutType NoImage -CommentsEnabled:$false
+    Add-PnPPage -Name $name -LayoutType Article -HeaderLayoutType NoImage -CommentsEnabled:$false
     
     #add sections
-    Add-PnPClientSidePageSection -Page $name -SectionTemplate TwoColumn -Order 1
+    Add-PnPPageSection -Page $name -SectionTemplate TwoColumn -Order 1
     
     #add text webpart
-    Add-PnPClientSideText -Page $name -Section 1 -Column 1 -Text &quot; &quot;
+    Add-PnPPageTextPart -Page $name -Section 1 -Column 1 -Text &quot;This is $name&quot;
     
     #add doclib
-    Add-PnPClientSideWebPart -Page $name -DefaultWebPartType List -Section 1 -Column 2 -WebPartProperties @{isDocumentLibrary=&quot;true&quot;;selectedListId=&quot;1fa1fb45-e53b-4ea1-9325-ddca7afe986e&quot;;selectedFolderPath=&quot;/$name&quot;;hideCommandBar=&quot;false&quot;}
-    $page = Get-PnPClientSidePage -Identity $name
+    $DocLib = Get-PnPList -Identity Documents
+    $DocLibID = $DocLib.id.tostring()
+    Add-PnPPageWebPart -Page $name -DefaultWebPartType List -Section 1 -Column 1 -WebPartProperties @{isDocumentLibrary=&quot;true&quot;;selectedListId=&quot;$($DocLibID)&quot;;selectedFolderPath=&quot;/$name&quot;;hideCommandBar=&quot;false&quot;}
+    $page = Get-PnPPage -Identity $name
     $page.Publish()
 }
 
 </code></pre>
 <div class="highlight-tool">
 <p>Check out the <strong>PnP PowerShell</strong> to learn more at: <a href="https://aka.ms/pnp/powershell">https://aka.ms/pnp/powershell</a></p>
+</div>
+</section>
+<section id="tabpanel_CeZOj-G++Q_cli-m365-ps" role="tabpanel" data-tab="cli-m365-ps" aria-hidden="true" hidden="hidden"><button class="article-clipboard" title="Copy to clipboard" data-toggle="tooltip" data-placement="top" data-clipboard-target="section[id^='tabpanel'][data-tab='cli-m365-ps'] pre">
+    <span class="glyphicon glyphicon-copy" aria-hidden="true"></span>
+    <span class="article-clipboard__message done">Copied</span>
+</button>
+
+<pre><code class="lang-powershell">
+$site = &quot;https://yourtenant.sharepoint.com/sites/Yoursite/&quot;
+
+$m365Status = m365 status
+if ($m365Status -match &quot;Logged Out&quot;) {
+    m365 login
+}
+
+$ray = &quot;folder1&quot;,
+       &quot;folder2&quot;,
+       &quot;folder3&quot;
+
+foreach ($name in $ray) {
+
+    #create page
+    $fileName = &quot;$name.aspx&quot;
+    m365 spo page add --name $fileName --title $name --webUrl $site
+    
+    #add sections
+    m365 spo page section add --name $fileName --webUrl $site --sectionTemplate TwoColumn --order 1
+    
+    #add text webpart
+    m365 spo page text add --webUrl $site --pageName $fileName --text $name --section 1 --column 1
+    
+    #add doclib
+    $webpartProperties = '{\&quot;selectedListId\&quot;:\&quot;DC4B61E0-01BE-4A87-B8E1-B9AEF4E34153\&quot;,\&quot;selectedFolderPath\&quot;:\&quot;' + $name + '\&quot;,\&quot;hideCommandBar\&quot;:\&quot;false\&quot;}'
+    m365 spo page clientsidewebpart add --webUrl $site --pageName $fileName --standardWebPart List --section 1 --column 1 --webPartProperties $webpartProperties
+    m365 spo page set --name $fileName --webUrl $site --publish
+}
+
+</code></pre>
+<div class="highlight-tool">
+<p>Check out the <strong>CLI for Microsoft 365</strong> to learn more at: <a href="https://aka.ms/cli-m365">https://aka.ms/cli-m365</a></p>
 </div>
 </section>
 </div>
@@ -124,11 +198,17 @@ foreach ($name in $ray) {
 <tr>
 <td>Marijn Somers</td>
 </tr>
+<tr>
+<td><a href="https://github.com/Adam-it">Adam Wójcik</a></td>
+</tr>
+<tr>
+<td><a href="https://www.toddklindt.com">Todd Klindt</a></td>
+</tr>
 </tbody>
 </table>
 <h2 id="disclaimer">Disclaimer</h2>
 <p><strong>THESE SAMPLES ARE PROVIDED <em>AS IS</em> WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING ANY IMPLIED WARRANTIES OF FITNESS FOR A PARTICULAR PURPOSE, MERCHANTABILITY, OR NON-INFRINGEMENT.</strong></p>
-<img src="https://telemetry.sharepointpnp.com/script-samples/scripts/template-script-submission" aria-hidden="true">
+<img src="https://pnptelemetry.azurewebsites.net/script-samples/scripts/template-script-submission" aria-hidden="true">
 </article>
           </div>
         </div>

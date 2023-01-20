@@ -33,12 +33,41 @@
     
     
     <meta property="docfx:newtab" content="true">
+    <script type="text/javascript">
+      (function(c,l,a,r,i,t,y){
+          c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+          t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+          y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+      })(window, document, "clarity", "script", "8j6pedl344");
+  </script>
   </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
     <div id="wrapper">
       <header>
         
         <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
           <div class="container">
+             <div class="github-mark">
+              <a href="https://github.com/pnp/script-samples" title="Go to repository">
+               <div class="github-wrapper">
+                  <div class="github-icon">
+                    <img src="https://pnp.github.io/script-samples/assets/icons/github-light-64px.png" alt="GitHub Icon Image">
+                  </div>
+                  <div class="github-repository">
+                    <span>GitHub</span>
+                    <ul class="github-facts">
+                      <li>
+                        <i class="fa fa-code-fork" aria-hidden="true"></i>
+                        <span class="github-forks"></span>
+                      </li>
+                      <li>
+                        <i class="fa fa-star-o" aria-hidden="true"></i>
+                        <span class="github-stars"></span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </a>
+            </div>
             <div class="navbar-header">
               <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
                 <span class="sr-only">Toggle navigation</span>
@@ -64,7 +93,7 @@
           <div class="col-md-12">
             <article class="content wrap" id="_content" data-uid="">
                   <div class="contribution-panel mobile-hide pull-right">
-                      <a href="https://github.com/pnp/script-samples/blob/main/scripts/spo-empty-tenant-recyclebin/README.md/#L1" title="Improve this Doc" class="improve-doc-lg"><i class="glyphicon glyphicon-pencil"></i></a>
+                      <a href="https://github.com/tecchan1107/script-samples/blob/main/scripts/spo-empty-tenant-recyclebin/README.md/#L1" title="Improve this Doc" class="improve-doc-lg"><i class="glyphicon glyphicon-pencil"></i></a>
                   </div>
                     <h1 id="empty-the-tenant-recycle-bin">Empty the tenant recycle bin</h1>
 
@@ -72,28 +101,28 @@
 <p>Your deleted modern SharePoint sites are not going to disappear from the UI before they have been removed from the tenant recycle bin. You can either wait for three months, delete them manually via the SharePoint admin center, or run the script below.</p>
 <div class="WARNING">
 <h5>Warning</h5>
-<p>Please be aware this script contains a command that will remove or delete an artefact, ensure you test and understand the implications of running the script.</p>
+<p>Please be aware this script contains a command that will remove or delete an artifact, ensure you test and understand the implications of running the script.</p>
 </div>
-
-<p><img src="assets/example.png" alt="Example Screenshot"></p>
 <div class="tabGroup" id="tabgroup_CeZOj-G++Q">
 <ul role="tablist">
 <li role="presentation">
-<a href="#tabpanel_CeZOj-G++Q_cli-m365-ps" role="tab" aria-controls="tabpanel_CeZOj-G++Q_cli-m365-ps" data-tab="cli-m365-ps" tabindex="0" aria-selected="true">CLI for Microsoft 365 using PowerShell</a>
-</li>
-<li role="presentation">
-<a href="#tabpanel_CeZOj-G++Q_cli-m365-bash" role="tab" aria-controls="tabpanel_CeZOj-G++Q_cli-m365-bash" data-tab="cli-m365-bash" tabindex="-1">CLI for Microsoft 365 using Bash</a>
+<a href="#tabpanel_CeZOj-G++Q_pnpps" role="tab" aria-controls="tabpanel_CeZOj-G++Q_pnpps" data-tab="pnpps" tabindex="0" aria-selected="true">PnP PowerShell</a>
 </li>
 </ul>
-<section id="tabpanel_CeZOj-G++Q_cli-m365-ps" role="tabpanel" data-tab="cli-m365-ps"><button class="article-clipboard" title="Copy to clipboard" data-toggle="tooltip" data-placement="top" data-clipboard-target="section[id^='tabpanel'][data-tab='cli-m365-ps'] pre">
+<section id="tabpanel_CeZOj-G++Q_pnpps" role="tabpanel" data-tab="pnpps"><button class="article-clipboard" title="Copy to clipboard" data-toggle="tooltip" data-placement="top" data-clipboard-target="section[id^='tabpanel'][data-tab='pnpps'] pre">
     <span class="glyphicon glyphicon-copy" aria-hidden="true"></span>
     <span class="article-clipboard__message done">Copied</span>
 </button>
 
-<pre><code class="lang-powershell">$deletedSites = m365 spo tenant recyclebinitem list -o json | ConvertFrom-Json
+<pre><code class="lang-powershell">Connect-PnPOnline -Url 'https://contoso-admin.sharepoint.com' -Interactive #Change to your tenant admin site address
+
+$deletedSites = Get-PnPTenantRecycleBinItem
 $deletedSites | Format-Table Url
 
-if ($deletedSites.Count -eq 0) { break }
+if ($deletedSites.Count -eq 0) 
+{ 
+    break 
+}
 
 Read-Host -Prompt &quot;Press Enter to start deleting (CTRL + C to exit)&quot;
 
@@ -104,43 +133,12 @@ foreach ($deletedSite in $deletedSites)
 {
   $progress++
   Write-Host $progress / $total&quot;:&quot; $deletedSite.Url
-  m365 spo tenant recyclebinitem remove -u $deletedSite.Url --confirm
+  Clear-PnPTenantRecycleBinItem -Url $deletedSite.Url -Wait -Force
 }
+
 </code></pre>
 <div class="highlight-tool">
-<p>Check out the <strong>CLI for Microsoft 365</strong> to learn more at: <a href="https://aka.ms/cli-m365">https://aka.ms/cli-m365</a></p>
-</div>
-</section>
-<section id="tabpanel_CeZOj-G++Q_cli-m365-bash" role="tabpanel" data-tab="cli-m365-bash" aria-hidden="true" hidden="hidden"><button class="article-clipboard" title="Copy to clipboard" data-toggle="tooltip" data-placement="top" data-clipboard-target="section[id^='tabpanel'][data-tab='cli-m365-bash'] pre">
-    <span class="glyphicon glyphicon-copy" aria-hidden="true"></span>
-    <span class="article-clipboard__message done">Copied</span>
-</button>
-
-<pre><code class="lang-bash">#!/bin/bash
-
-# requires jq: https://stedolan.github.io/jq/
-
-deletedsites=( $(m365 spo tenant recyclebinitem list -o json | jq -r '.[].Url') )
-
-if [ ${#deletedsites[@]} = 0 ]; then
-  exit 1
-fi
-
-printf '%s\n' &quot;${deletedsites[@]}&quot;
-echo &quot;Press Enter to start deleting (CTRL + C to exit)&quot;
-read foo
-
-progress=0
-total=${#deletedsites[@]}
-
-for deletedsite in &quot;${deletedsites[@]}&quot;; do
-  ((progress++))
-  printf '%s / %s:%s\n' &quot;$progress&quot; &quot;$total&quot; &quot;$deletedsite&quot;
-  m365 spo tenant recyclebinitem remove -u $deletedsite --confirm
-done
-</code></pre>
-<div class="highlight-tool">
-<p>Check out the <strong>CLI for Microsoft 365</strong> to learn more at: <a href="https://aka.ms/cli-m365">https://aka.ms/cli-m365</a></p>
+<p>Check out the <strong>PnP PowerShell</strong> to learn more at: <a href="https://aka.ms/pnp/powershell">https://aka.ms/pnp/powershell</a></p>
 </div>
 </section>
 </div>
@@ -155,13 +153,13 @@ done
 </thead>
 <tbody>
 <tr>
-<td>Laura Kokkarinen</td>
+<td><a href="https://github.com/LeonArmston">Leon Armston</a></td>
 </tr>
 </tbody>
 </table>
 <h2 id="disclaimer">Disclaimer</h2>
 <p><strong>THESE SAMPLES ARE PROVIDED <em>AS IS</em> WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING ANY IMPLIED WARRANTIES OF FITNESS FOR A PARTICULAR PURPOSE, MERCHANTABILITY, OR NON-INFRINGEMENT.</strong></p>
-<img src="https://telemetry.sharepointpnp.com/script-samples/scripts/spo-empty-tenant-recyclebin" aria-hidden="true">
+<img src="https://pnptelemetry.azurewebsites.net/script-samples/scripts/spo-empty-tenant-recyclebin" aria-hidden="true">
 </article>
           </div>
         </div>

@@ -33,12 +33,41 @@
     
     
     <meta property="docfx:newtab" content="true">
+    <script type="text/javascript">
+      (function(c,l,a,r,i,t,y){
+          c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+          t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+          y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+      })(window, document, "clarity", "script", "8j6pedl344");
+  </script>
   </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
     <div id="wrapper">
       <header>
         
         <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
           <div class="container">
+             <div class="github-mark">
+              <a href="https://github.com/pnp/script-samples" title="Go to repository">
+               <div class="github-wrapper">
+                  <div class="github-icon">
+                    <img src="https://pnp.github.io/script-samples/assets/icons/github-light-64px.png" alt="GitHub Icon Image">
+                  </div>
+                  <div class="github-repository">
+                    <span>GitHub</span>
+                    <ul class="github-facts">
+                      <li>
+                        <i class="fa fa-code-fork" aria-hidden="true"></i>
+                        <span class="github-forks"></span>
+                      </li>
+                      <li>
+                        <i class="fa fa-star-o" aria-hidden="true"></i>
+                        <span class="github-stars"></span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </a>
+            </div>
             <div class="navbar-header">
               <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
                 <span class="sr-only">Toggle navigation</span>
@@ -64,7 +93,7 @@
           <div class="col-md-12">
             <article class="content wrap" id="_content" data-uid="">
                   <div class="contribution-panel mobile-hide pull-right">
-                      <a href="https://github.com/pnp/script-samples/blob/main/scripts/spo-add-app-catalog/README.md/#L1" title="Improve this Doc" class="improve-doc-lg"><i class="glyphicon glyphicon-pencil"></i></a>
+                      <a href="https://github.com/tecchan1107/script-samples/blob/main/scripts/spo-add-app-catalog/README.md/#L1" title="Improve this Doc" class="improve-doc-lg"><i class="glyphicon glyphicon-pencil"></i></a>
                   </div>
                     <h1 id="add-app-catalog-to-sharepoint-site">Add App Catalog to SharePoint site</h1>
 
@@ -74,29 +103,13 @@
 <div class="tabGroup" id="tabgroup_CeZOj-G++Q">
 <ul role="tablist">
 <li role="presentation">
-<a href="#tabpanel_CeZOj-G++Q_cli-m365-ps" role="tab" aria-controls="tabpanel_CeZOj-G++Q_cli-m365-ps" data-tab="cli-m365-ps" tabindex="0" aria-selected="true">CLI for Microsoft 365 using PowerShell</a>
+<a href="#tabpanel_CeZOj-G++Q_pnpps" role="tab" aria-controls="tabpanel_CeZOj-G++Q_pnpps" data-tab="pnpps" tabindex="0" aria-selected="true">PnP PowerShell</a>
 </li>
 <li role="presentation">
-<a href="#tabpanel_CeZOj-G++Q_pnpps" role="tab" aria-controls="tabpanel_CeZOj-G++Q_pnpps" data-tab="pnpps" tabindex="-1">PnP PowerShell</a>
+<a href="#tabpanel_CeZOj-G++Q_spoms-ps" role="tab" aria-controls="tabpanel_CeZOj-G++Q_spoms-ps" data-tab="spoms-ps" tabindex="-1">SPO Management Shell</a>
 </li>
 </ul>
-<section id="tabpanel_CeZOj-G++Q_cli-m365-ps" role="tabpanel" data-tab="cli-m365-ps"><button class="article-clipboard" title="Copy to clipboard" data-toggle="tooltip" data-placement="top" data-clipboard-target="section[id^='tabpanel'][data-tab='cli-m365-ps'] pre">
-    <span class="glyphicon glyphicon-copy" aria-hidden="true"></span>
-    <span class="article-clipboard__message done">Copied</span>
-</button>
-
-<pre><code class="lang-powershell">
-$site = &quot;https://contoso.sharepoint.com/sites/site&quot;
-m365 login
-m365 spo site appcatalog add --url $site
-Write-output &quot;App Catalog Created on &quot; $site
-
-</code></pre>
-<div class="highlight-tool">
-<p>Check out the <strong>CLI for Microsoft 365</strong> to learn more at: <a href="https://aka.ms/cli-m365">https://aka.ms/cli-m365</a></p>
-</div>
-</section>
-<section id="tabpanel_CeZOj-G++Q_pnpps" role="tabpanel" data-tab="pnpps" aria-hidden="true" hidden="hidden"><button class="article-clipboard" title="Copy to clipboard" data-toggle="tooltip" data-placement="top" data-clipboard-target="section[id^='tabpanel'][data-tab='pnpps'] pre">
+<section id="tabpanel_CeZOj-G++Q_pnpps" role="tabpanel" data-tab="pnpps"><button class="article-clipboard" title="Copy to clipboard" data-toggle="tooltip" data-placement="top" data-clipboard-target="section[id^='tabpanel'][data-tab='pnpps'] pre">
     <span class="glyphicon glyphicon-copy" aria-hidden="true"></span>
     <span class="article-clipboard__message done">Copied</span>
 </button>
@@ -112,9 +125,47 @@ Write-output &quot;App Catalog Created on &quot; $site
 <p>Check out the <strong>PnP PowerShell</strong> to learn more at: <a href="https://aka.ms/pnp/powershell">https://aka.ms/pnp/powershell</a></p>
 </div>
 </section>
+<section id="tabpanel_CeZOj-G++Q_spoms-ps" role="tabpanel" data-tab="spoms-ps" aria-hidden="true" hidden="hidden"><button class="article-clipboard" title="Copy to clipboard" data-toggle="tooltip" data-placement="top" data-clipboard-target="section[id^='tabpanel'][data-tab='spoms-ps'] pre">
+    <span class="glyphicon glyphicon-copy" aria-hidden="true"></span>
+    <span class="article-clipboard__message done">Copied</span>
+</button>
+
+<pre><code class="lang-powershell">
+$AdminSiteURL = &quot;https://domain-admin.sharepoint.com&quot;
+$Username = &quot;chandani@domain.onmicrosoft.com&quot;
+$Password = &quot;******&quot;
+$SecureStringPwd = $Password | ConvertTo-SecureString -AsPlainText -Force 
+$Cred = New-Object System.Management.Automation.PSCredential -ArgumentList $Username, $SecureStringPwd
+
+Function Login() {
+    [cmdletbinding()]
+    param([parameter(Mandatory = $true, ValueFromPipeline = $true)] $creds)
+    Write-Host &quot;Connecting to Tenant Admin Site '$($AdminSiteURL)'&quot; -f Yellow   
+    Connect-SPOService -url $AdminCenterURL -Credential $Cred
+    Write-Host &quot;Connection Successfull&quot; -f Green 
+}
+
+Function AddAppCatalogToSiteCollection {
+    $SiteURL = Read-Host &quot;Enter Site URL&quot;
+    $Site = Get-SPOSite $SiteURL 
+    Write-Host &quot;Adding SharePoint site collection app catalog...&quot; -f Yellow
+    Add-SPOSiteCollectionAppCatalog -Site $Site
+    Write-Host &quot;Added SharePoint site collection app catalog successfully...&quot; -f Green
+}
+
+Function StartProcessing {
+    Login($Cred);
+    AddAppCatalogToSiteCollection
+}
+
+StartProcessing
+
+</code></pre>
+<div class="highlight-tool">
+<p>Check out the <strong>SPO Management Shell</strong> to learn more at: <a href="https://docs.microsoft.com/en-us/powershell/sharepoint/sharepoint-online/introduction-sharepoint-online-management-shell?view=sharepoint-ps">Introduction SharePoint Online Management Shell | Microsoft Docs</a></p>
 </div>
-<h2 id="source-credit">Source Credit</h2>
-<p>Sample first appeared on <a href="https://pnp.github.io/cli-microsoft365/sample-scripts/spo/add-app-catalog/">https://pnp.github.io/cli-microsoft365/sample-scripts/spo/add-app-catalog/</a></p>
+</section>
+</div>
 <h2 id="contributors">Contributors</h2>
 <table>
 <thead>
@@ -124,16 +175,16 @@ Write-output &quot;App Catalog Created on &quot; $site
 </thead>
 <tbody>
 <tr>
-<td>David Ramalho</td>
+<td>Paul Bullock</td>
 </tr>
 <tr>
-<td>Paul Bullock</td>
+<td>Chandani Prajapati</td>
 </tr>
 </tbody>
 </table>
 <h2 id="disclaimer">Disclaimer</h2>
 <p><strong>THESE SAMPLES ARE PROVIDED <em>AS IS</em> WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING ANY IMPLIED WARRANTIES OF FITNESS FOR A PARTICULAR PURPOSE, MERCHANTABILITY, OR NON-INFRINGEMENT.</strong></p>
-<img src="https://telemetry.sharepointpnp.com/script-samples/scripts/add-app-catalogue-to-sp-site" aria-hidden="true">
+<img src="https://pnptelemetry.azurewebsites.net/script-samples/scripts/add-app-catalogue-to-sp-site" aria-hidden="true">
 </article>
           </div>
         </div>

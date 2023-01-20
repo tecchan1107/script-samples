@@ -33,12 +33,41 @@
     
     
     <meta property="docfx:newtab" content="true">
+    <script type="text/javascript">
+      (function(c,l,a,r,i,t,y){
+          c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+          t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+          y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+      })(window, document, "clarity", "script", "8j6pedl344");
+  </script>
   </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
     <div id="wrapper">
       <header>
         
         <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
           <div class="container">
+             <div class="github-mark">
+              <a href="https://github.com/pnp/script-samples" title="Go to repository">
+               <div class="github-wrapper">
+                  <div class="github-icon">
+                    <img src="https://pnp.github.io/script-samples/assets/icons/github-light-64px.png" alt="GitHub Icon Image">
+                  </div>
+                  <div class="github-repository">
+                    <span>GitHub</span>
+                    <ul class="github-facts">
+                      <li>
+                        <i class="fa fa-code-fork" aria-hidden="true"></i>
+                        <span class="github-forks"></span>
+                      </li>
+                      <li>
+                        <i class="fa fa-star-o" aria-hidden="true"></i>
+                        <span class="github-stars"></span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </a>
+            </div>
             <div class="navbar-header">
               <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
                 <span class="sr-only">Toggle navigation</span>
@@ -71,7 +100,7 @@
           <div class="col-md-12">
             <article class="content wrap" id="_content" data-uid="">
                   <div class="contribution-panel mobile-hide pull-right">
-                      <a href="https://github.com/pnp/script-samples/blob/main/docfx/contributing/submitting-pull-requests.md/#L1" title="Improve this Doc" class="improve-doc-lg"><i class="glyphicon glyphicon-pencil"></i></a>
+                      <a href="https://github.com/tecchan1107/script-samples/blob/main/docfx/contributing/submitting-pull-requests.md/#L1" title="Improve this Doc" class="improve-doc-lg"><i class="glyphicon glyphicon-pencil"></i></a>
                   </div>
                     <h1 id="submitting-pull-requests">Submitting Pull Requests</h1>
 
@@ -86,9 +115,13 @@
 <li>Create a pull request in your own fork and target the <code>main</code> branch</li>
 <li>Fill up the provided PR template with the requested details</li>
 </ol>
-<h2 id="want-to-practice-the-setup">Want to practice the setup?</h2>
+<h2 id="when-the-sample-is-submitted">When the sample is submitted</h2>
+<p>We will review the submission, make small tweaks if required and provide feedback if needed for anything large. If the submission is approved, we will merge it into the <code>main</code> branch and it will be published to the <a href="https://pnp.github.io/script-samples/">PnP Script Samples</a> site.</p>
+<p>Once published, we will begin to promote the sample on social media, see our details on <a href="recognition.html">Recognizing Contributors</a>.</p>
+<h2 id="other-tips">Other tips</h2>
+<h3 id="want-to-practice-the-setup">Want to practice the setup?</h3>
 <p>If you feel insecure about that process or are new to GitHub, please consider to attend the <a href="https://pnp.github.io/sharing-is-caring/#pnp-sic-events">Sharing Is Caring sessions from the PnP team</a> in which the Microsoft 365 PnP team provides hands-on guidance for first time contributors.</p>
-<h2 id="submission-guidelines">Submission Guidelines</h2>
+<h3 id="submission-guidelines">Submission Guidelines</h3>
 <p>Before you submit your pull request consider the following guidelines:</p>
 <ul>
 <li><p>Search <a href="https://github.com/pnp/script-samples/pulls">GitHub</a> for an open or closed Pull Request
@@ -105,11 +138,11 @@ git remote add upstream https://github.com/pnp/script-samples.git
 </code></pre>
 </li>
 <li><p>Make your changes in a new git branch:</p>
-<pre><code class="lang-shell">git checkout -b working-with-files-in-libraries master
+<pre><code class="lang-shell">git checkout -b working-with-files-in-libraries main
 </code></pre>
 </li>
 </ul>
-<h2 id="keeping-your-fork-up-to-date">Keeping your fork up to date</h2>
+<h3 id="keeping-your-fork-up-to-date">Keeping your fork up to date</h3>
 <ul>
 <li><p>Ensure your fork is updated and not behind the upstream <strong>script-samples</strong> repo. Refer to these resources for more information on syncing your repo:</p>
 <ul>
@@ -119,19 +152,19 @@ git remote add upstream https://github.com/pnp/script-samples.git
 </li>
 <li><p>For a quick cheat sheet:</p>
 <pre><code class="lang-shell"># assuming you are in the folder of your locally cloned fork....
-git checkout master
+git checkout main
 
 # assuming you have a remote named `upstream` pointing official **script-samples** repo
 git fetch upstream
 
-# update your local master to be a mirror of what's in the main repo
-git pull --rebase upstream master
+# update your local main to be a mirror of what's in the main repo
+git pull --rebase upstream main
 
 # switch to your branch where you are working, say &quot;working-with-files-in-libraries&quot;
 git checkout working-with-files-in-libraries
 
-# update your branch to update it's fork point to the current tip of master &amp; put your changes on top of it
-git rebase master
+# update your branch to update it's fork point to the current tip of main &amp; put your changes on top of it
+git rebase main
 </code></pre>
 </li>
 </ul>
@@ -141,6 +174,10 @@ git rebase master
 </code></pre>
 </li>
 </ul>
+<h2 id="signing-the-cla">Signing the CLA</h2>
+<p>Before we can accept your pull requests you will be asked to sign electronically Contributor License Agreement (CLA), which is a pre-requisite for any contributions all PnP repositories. This will be one-time process, so for any future contributions you will not be asked to re-sign anything. After the CLA has been signed, our PnP core team members will have a look at your submission for a final verification of the submission. <strong>Please do not delete your development branch until the submission has been closed.</strong></p>
+<p>You can find Microsoft CLA from the following address - <a href="https://cla.microsoft.com">https://cla.microsoft.com</a>.</p>
+<img src="https://pnptelemetry.azurewebsites.net/script-samples/contributing/submitting-pull-requests" aria-hidden="true">
 </article>
           </div>
         </div>
