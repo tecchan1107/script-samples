@@ -18,6 +18,7 @@
     <meta property="og:image" content="https://pnp.github.io/script-samples/assets/social-media-screenshot.png">
     <meta property="og:image:alt" content="Screenshot example of the PnP Script Samples Site">
     <meta property="og:site_name" content="PnP Script Samples">
+    <meta name="msvalidate.01" content="04EFEDA66EC42C08A1247C979E2F9ADD">
     <meta property="og:description" content="A sample gallery of scripts to manage all things Microsoft 365.">
   
     <link rel="shortcut icon" href="https://c.s-microsoft.com/favicon.ico?v2">
@@ -103,7 +104,7 @@
 <ul>
 <li>Create CSV file using the format supplied below and modify to reflect the values of your sites/libraries that you wish to deploy Syntex models to.</li>
 <li>Open Windows PowerShell ISE</li>
-<li>Edit Script and add required parameters for Syntex Content Centre URL and path to CSV file</li>
+<li>Edit Script and add required parameters for Syntex Content Center URL and path to CSV file</li>
 <li>Press run</li>
 </ul>
 <div class="tabGroup" id="tabgroup_CeZOj-G++Q">
@@ -124,7 +125,7 @@
 ###### Declare and Initialize Variables ######  
 
 #Change To Reflect Your Syntex Content Center
-$syntexContentCentre = &quot;https://contoso.sharepoint.com/sites/HRContentCenter&quot; 
+$syntexContentCenter = &quot;https://contoso.sharepoint.com/sites/HRContentCenter&quot; 
 
 #Path to CSV file
 $csvFilePath = &quot;Libraries.csv&quot;
@@ -139,8 +140,8 @@ $logFilePath=&quot;.\log-&quot;+$currentTime+&quot;.log&quot;
 ## Start the Transcript  
 Start-Transcript -Path $logFilePath 
 
-## Connect to your Syntex Content Centre
-Connect-PnPOnline -Url $syntexContentCentre -Interactive
+## Connect to your Syntex Content Center
+Connect-PnPOnline -Url $syntexContentCenter -Interactive
 
 ## Import CSV file
 $libraries = Import-Csv -Path $csvFilePath -Delimiter &quot;;&quot;

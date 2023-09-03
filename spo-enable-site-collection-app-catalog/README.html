@@ -18,6 +18,7 @@
     <meta property="og:image" content="https://pnp.github.io/script-samples/assets/social-media-screenshot.png">
     <meta property="og:image:alt" content="Screenshot example of the PnP Script Samples Site">
     <meta property="og:site_name" content="PnP Script Samples">
+    <meta name="msvalidate.01" content="04EFEDA66EC42C08A1247C979E2F9ADD">
     <meta property="og:description" content="A sample gallery of scripts to manage all things Microsoft 365.">
   
     <link rel="shortcut icon" href="https://c.s-microsoft.com/favicon.ico?v2">
@@ -132,7 +133,7 @@
 <pre><code class="lang-powershell"># Example: .\Enable-SiteCollectionAppCatalog.ps1 -AdminUrl &quot;https://contoso-admin.sharepoint.com&quot; -CsvPath &quot;.\SiteURLs.csv&quot;
 [CmdletBinding()]
 param (
-    [Parameter(Mandatory = $true, HelpMessage = &quot;URL of the SharePoint Admin Centre, e.g.https://contoso-admin.sharepoint.com&quot;)]
+    [Parameter(Mandatory = $true, HelpMessage = &quot;URL of the SharePoint Admin Center, e.g.https://contoso-admin.sharepoint.com&quot;)]
     [string]$AdminUrl,
     [Parameter(Mandatory = $false, HelpMessage = &quot;Path to CSV file with list of SharePoint sites to enable Site Collection App Catalog&quot;)]
     [string]$CsvPath = &quot;.\SiteURLs.csv&quot;
@@ -168,7 +169,7 @@ end {
 <pre><code class="lang-powershell"># Example: .\Enable-SiteCollectionAppCatalog.ps1 -AdminUrl &quot;https://contoso-admin.sharepoint.com&quot; -CsvPath &quot;.\SiteURLs.csv&quot;
 [CmdletBinding()]
 param (
-    [Parameter(Mandatory = $true, HelpMessage = &quot;URL of the SharePoint Admin Centre, e.g.https://contoso-admin.sharepoint.com&quot;)]
+    [Parameter(Mandatory = $true, HelpMessage = &quot;URL of the SharePoint Admin Center, e.g.https://contoso-admin.sharepoint.com&quot;)]
     [string]$AdminUrl,
     [Parameter(Mandatory = $false, HelpMessage = &quot;Path to CSV file with list of SharePoint sites to enable Site Collection App Catalog&quot;)]
     [string]$CsvPath = &quot;.\SiteURLs.csv&quot;
@@ -176,7 +177,7 @@ param (
 
 begin  {
     Write-Host &quot;Connecting to SharePoint Admin Site '$($AdminUrl)'&quot; -f Yellow
-    Connect-PnPOnline -Url $TenantAdminURL
+    Connect-PnPOnline -Url $AdminUrl
 }
 process {
     $data = Import-Csv -Path $CsvPath

@@ -18,6 +18,7 @@
     <meta property="og:image" content="https://pnp.github.io/script-samples/assets/social-media-screenshot.png">
     <meta property="og:image:alt" content="Screenshot example of the PnP Script Samples Site">
     <meta property="og:site_name" content="PnP Script Samples">
+    <meta name="msvalidate.01" content="04EFEDA66EC42C08A1247C979E2F9ADD">
     <meta property="og:description" content="A sample gallery of scripts to manage all things Microsoft 365.">
   
     <link rel="shortcut icon" href="https://c.s-microsoft.com/favicon.ico?v2">
@@ -131,17 +132,17 @@ $svcprincipalSharePoint.AppRoles | FT ID, DisplayName
 # Show the Delegated Permissions
 $svcprincipalSharePoint.Oauth2Permissions | FT ID, UserConsentDisplayName
 
-$Sharepoint = New-Object -TypeName &quot;Microsoft.Open.AzureAD.Model.RequiredResourceAccess&quot;
-$Sharepoint.ResourceAppId = $svcprincipalSharePoint.AppId
+$SharePoint = New-Object -TypeName &quot;Microsoft.Open.AzureAD.Model.RequiredResourceAccess&quot;
+$SharePoint.ResourceAppId = $svcprincipalSharePoint.AppId
 
 # Add permissions to the app
 $applicationPermissions = New-Object -TypeName &quot;Microsoft.Open.AzureAD.Model.ResourceAccess&quot; -ArgumentList &quot;9bff6588-13f2-4c48-bbf2-ddab62256b36&quot;,&quot;Scope&quot; # Read and write items and lists in all site collections
 $delegatedPermission = New-Object -TypeName &quot;Microsoft.Open.AzureAD.Model.ResourceAccess&quot; -ArgumentList &quot;2cfdc887-d7b4-4798-9b33-3d98d6b95dd2&quot;,&quot;Scope&quot; # Read and write your files
-$Sharepoint.ResourceAccess = $delegatedPermission , $applicationPermissions
+$SharePoint.ResourceAccess = $delegatedPermission , $applicationPermissions
 
 $ADApplication = Get-AzureADApplication -All $true | ? { $_.AppId -match $newApp.AppId }
  
-Set-AzureADApplication -ObjectId $ADApplication.ObjectId -RequiredResourceAccess $Sharepoint
+Set-AzureADApplication -ObjectId $ADApplication.ObjectId -RequiredResourceAccess $SharePoint
 
 
 # Connect to SharePoint Online

@@ -18,6 +18,7 @@
     <meta property="og:image" content="https://pnp.github.io/script-samples/assets/social-media-screenshot.png">
     <meta property="og:image:alt" content="Screenshot example of the PnP Script Samples Site">
     <meta property="og:site_name" content="PnP Script Samples">
+    <meta name="msvalidate.01" content="04EFEDA66EC42C08A1247C979E2F9ADD">
     <meta property="og:description" content="A sample gallery of scripts to manage all things Microsoft 365.">
   
     <link rel="shortcut icon" href="https://c.s-microsoft.com/favicon.ico?v2">
@@ -230,7 +231,7 @@ Request-PnPReindexUserProfile -url https://contoso.sharepoint.com/sites/IT -Docu
 
         if([string]::IsNullOrWhiteSpace($DocumentLibrary)) {
             # Find default doclib to store the job file and logs in since one was not passed
-            $DocumentLibraryObj = (Get-PnPList -Includes IsSystemList | Where-Object -Property IsSystemList -EQ -Value $false | Where-Object -Property BaseType -EQ -Value &quot;DocumentLibrary“ | Sort-Object -Property Created)[0]
+            $DocumentLibraryObj = (Get-PnPList -Includes IsSystemList | Where-Object -Property IsSystemList -EQ -Value $false | Where-Object -Property BaseType -EQ -Value &quot;DocumentLibrary&quot; | Sort-Object -Property Created)[0]
             $Ignore = Get-PnPProperty -ClientObject $DocumentLibraryObj -Property RootFolder
             $DocumentLibraryName = $DocumentLibraryObj.RootFolder.Name
         } else {
