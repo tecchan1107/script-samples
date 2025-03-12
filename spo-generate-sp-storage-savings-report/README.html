@@ -122,9 +122,6 @@
 </button>
 
 <pre><code class="lang-powershell">
-
-
-
 #The purpose of this script is to crete an overview: The total amount of SharePoint Storage used by this Site Collection, and how much could be saved by trimming the versions
 
 #Set Variables
@@ -328,9 +325,25 @@ Try {
                 HandleWeb -site $Site -web $web -root $false 
             
             }
-            if($outputArray.Count -gt 0)
+             if($outputArray.Count -gt 0)
             {
-                $outputArray  | Export-Csv -Path &quot;$outputPath/$index.csv&quot; -Force -Encoding utf8BOM -Delimiter &quot;|&quot;
+                #calculate the total size of the potential savings
+                $totalSize = 0
+                $totalSizeReduced = 0
+                foreach($element in $outputArray)
+                {
+                    $totalSize = $totalSize + $element.TotalFileSize
+                    $totalSizeReduced = $totalSizeReduced + $element.TotalFileSizeReduced
+                }
+                $totalSize = [Math]::Round($totalSize,2)
+                $totalSizeReduced = [Math]::Round($totalSizeReduced,2)
+                $savings = $totalSize - $totalSizeReduced
+                $savings=[Math]::Round($savings,0)
+
+                #$outputArray  | Export-Csv -Path &quot;$outputPath/$index.csv&quot; -Force -Encoding utf8BOM -Delimiter &quot;|&quot;
+                $shortSiteUrl = $SiteURL.Split(&quot;/&quot;)[-1]
+                $outputArray  | Export-Csv -Path &quot;$outputPath/$shortSiteUrl($savings).csv&quot; -Force -Encoding utf8BOM -Delimiter &quot;|&quot;
+                
             }
             
         }
@@ -348,16 +361,12 @@ Catch {
 }
 
 
-
-
-
-
-
-
-
 </code></pre>
 <div class="highlight-tool">
 <p>Check out the <strong>PnP PowerShell</strong> to learn more at: <a href="https://aka.ms/pnp/powershell">https://aka.ms/pnp/powershell</a></p>
+</div>
+<div class="highlight-tool">
+<p>The way you login into PnP PowerShell has changed please read <a href="https://github.com/pnp/powershell/discussions/4249">PnP Management Shell EntraID app is deleted : what should I do ?</a></p>
 </div>
 </section>
 </div>

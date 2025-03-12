@@ -101,9 +101,9 @@
 <h2 id="summary">Summary</h2>
 <p>SharePoint Online provides user interface for defining column and view formatting and forms configuration:</p>
 <ul>
-<li><a href="https://docs.microsoft.com/en-us/sharepoint/dev/declarative-customization/view-formatting">Use view formatting to customize SharePoint</a>,</li>
-<li><a href="https://docs.microsoft.com/en-us/sharepoint/dev/declarative-customization/list-form-conditional-show-hide">Show or hide columns in a list or library form</a> and</li>
-<li><a href="https://docs.microsoft.com/en-us/sharepoint/dev/declarative-customization/list-form-configuration">Configure the list form</a>.</li>
+<li><a href="https://learn.microsoft.com/sharepoint/dev/declarative-customization/view-formatting">Use view formatting to customize SharePoint</a>,</li>
+<li><a href="https://learn.microsoft.com/sharepoint/dev/declarative-customization/list-form-conditional-show-hide">Show or hide columns in a list or library form</a> and</li>
+<li><a href="https://learn.microsoft.com/sharepoint/dev/declarative-customization/list-form-configuration">Configure the list form</a>.</li>
 </ul>
 <p>However, the <code>Get-PnPSiteTemplate -Handlers Lists</code> command does not include these customizations. These scripts bridge this gap.
 The Get-ListFormatting script exports:</p>
@@ -323,6 +323,9 @@ Set-ListFormatting -folderPath $folderPath -listName $list1
 </code></pre>
 <div class="highlight-tool">
 <p>Check out the <strong>PnP PowerShell</strong> to learn more at: <a href="https://aka.ms/pnp/powershell">https://aka.ms/pnp/powershell</a></p>
+</div>
+<div class="highlight-tool">
+<p>The way you login into PnP PowerShell has changed please read <a href="https://github.com/pnp/powershell/discussions/4249">PnP Management Shell EntraID app is deleted : what should I do ?</a></p>
 </div>
 </section>
 </div>

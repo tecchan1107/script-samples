@@ -348,6 +348,12 @@ $(function () {
         $('#navbar ul a.active').parents('li').addClass(active);
         renderBreadcrumb();
         showSearch();
+
+        // if window url is site root then set first item in navbar to active
+        if (window.location.pathname === '/' || window.location.pathname === '/script-samples/') {
+          $('#navbar ul li:first-child').addClass(active);
+        }
+
       }
       
       function showSearch() {
@@ -1195,5 +1201,13 @@ $(function () {
           // Exclude tabbed content case
           $('a:not([data-tab])').click(function (e) { delegateAnchors(e); });
       });
+    }
+
+    // Hide the contribution panel on home page, by-tool, by-product pages
+    if (window.location.pathname === '/' || window.location.pathname === '/index.html'  || window.location.pathname === '/by-tool.html' 
+        || window.location.pathname === '/by-product.html' || window.location.pathname === '/compact-view.html' ||
+        window.location.pathname === '/script-samples/' || window.location.pathname === '/script-samples/index.html'  || window.location.pathname === '/script-samples/by-tool.html' 
+        || window.location.pathname === '/script-samples/by-product.html' || window.location.pathname === '/script-samples/compact-view.html') {
+      $('.contribution-panel').hide();
     }
   });

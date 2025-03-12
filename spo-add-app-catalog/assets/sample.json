@@ -31,6 +31,16 @@
       "Deploy",
       "Configure"
     ],
+    "tags": [
+      "Connect-PnPOnline",
+      "Add-PnPSiteCollectionAppCatalog",
+      "Connect-SPOService",
+      "Get-SPOSite",
+      "Add-SPOSiteCollectionAppCatalog",
+      "m365 status",
+      "m365 login",
+      "m365 spo site appcatalog add"
+    ],
     "thumbnails": [
       {
         "type": "image",
@@ -63,7 +73,7 @@
       {
         "name": "Introduction to the SharePoint Online Management Shell",
         "description": "Check out the SPO Management Shell documentation site to get started and for the reference to the cmdlets.",
-        "url": "https://docs.microsoft.com/en-us/powershell/sharepoint/sharepoint-online/introduction-sharepoint-online-management-shell?view=sharepoint-ps"
+        "url": "https://learn.microsoft.com/powershell/sharepoint/sharepoint-online/introduction-sharepoint-online-management-shell"
       },
       {
         "name": "Want to learn more about PnP PowerShell and the cmdlets",

@@ -133,8 +133,7 @@ $ErrorActionPreference=&quot;Stop&quot;
 write-host $(&quot;Start time &quot; + (Get-Date))
 
 Connect-PnPOnline -URL $SiteURL -Interactive
-#Get the web &amp; Root folder of the library
-$Web = Get-PnPWeb
+#Get Root folder of the library
 $Library = Get-PnPList -Identity $LibraryName -Includes RootFolder
 $Folder = $Library.RootFolder
 
@@ -177,6 +176,9 @@ write-host $(&quot;End time &quot; + (Get-Date))
 </code></pre>
 <div class="highlight-tool">
 <p>Check out the <strong>PnP PowerShell</strong> to learn more at: <a href="https://aka.ms/pnp/powershell">https://aka.ms/pnp/powershell</a></p>
+</div>
+<div class="highlight-tool">
+<p>The way you login into PnP PowerShell has changed please read <a href="https://github.com/pnp/powershell/discussions/4249">PnP Management Shell EntraID app is deleted : what should I do ?</a></p>
 </div>
 </section>
 <section id="tabpanel_CeZOj-G++Q_cli-m365-ps" role="tabpanel" data-tab="cli-m365-ps" aria-hidden="true" hidden="hidden"><button class="article-clipboard" title="Copy to clipboard" data-toggle="tooltip" data-placement="top" data-clipboard-target="section[id^='tabpanel'][data-tab='cli-m365-ps'] pre">
@@ -221,6 +223,9 @@ write-host $(&quot;End time &quot; + (Get-Date))
 </code></pre>
 <div class="highlight-tool">
 <p>Check out the <strong>CLI for Microsoft 365</strong> to learn more at: <a href="https://aka.ms/cli-m365">https://aka.ms/cli-m365</a></p>
+</div>
+<div class="highlight-tool-red">
+<p>Important changes coming to the way you login into CLI for Microsoft 365 (effective 9th September 2024) see <a href="https://pnp.github.io/blog/post/changes-pnp-management-shell-registration/">Changes in PnP Management Shell registration in Microsoft 365</a></p>
 </div>
 </section>
 </div>

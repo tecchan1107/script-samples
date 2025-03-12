@@ -9,7 +9,7 @@
       "This powershell script will export all the powerapps of all its environment in a particular tenant and its role assignments(user access details) in csv format."
     ],
     "creationDateTime": "2021-12-02",
-    "updateDateTime": "2021-12-02",
+    "updateDateTime": "2023-12-12",
     "products": [
       "PowerApps"
     ],
@@ -24,7 +24,11 @@
       "Report",
       "Security"
     ],
-    "tags": [],
+    "tags": [
+      "Add-PowerAppsAccount",
+      "Get-PowerAppRoleAssignment",
+      "Get-AdminPowerApp"
+    ],
     "thumbnails": [
       {
         "type": "image",
@@ -35,6 +39,11 @@
     ],
     "authors": [
       {
+        "gitHubAccount": "ValerasNarbutas",
+        "pictureUrl": "https://avatars.githubusercontent.com/ValerasNarbutas",
+        "name": "Valeras Narbutas"
+      },
+      {
         "gitHubAccount": "siddharth-vaghasia",
         "pictureUrl": "https://avatars.githubusercontent.com/u/9557557?s=400&u=cbb0afefedb5a1d5db510a2e5e6579c8e6fc66ad&v=4",
         "name": "Siddharth Vaghasia"
@@ -44,7 +53,7 @@
       {
         "name": "Want to learn more about Power Apps PowerShell and the cmdlets",
         "description": "Check out the Power Apps PowerShell documentation site to get started and for the reference to the cmdlets.",
-        "url": "https://docs.microsoft.com/en-us/power-platform/admin/powerapps-powershell"
+        "url": "https://learn.microsoft.com/power-platform/admin/powerapps-powershell"
       }
     ]
   }

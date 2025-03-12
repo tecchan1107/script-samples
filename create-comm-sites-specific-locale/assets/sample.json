@@ -30,6 +30,15 @@
     "categories": [
       "Provision"
     ],
+    "tags": [
+      "Connect-PnPOnline",
+      "New-PnPTenantSite",
+      "Connect-SPOService",
+      "New-SPOSite",
+      "m365 status",
+      "m365 login",
+      "m365 spo site add"
+    ],
     "thumbnails": [
       {
         "type": "image",
@@ -60,7 +69,7 @@
       {
         "name": "Introduction to the SharePoint Online Management Shell",
         "description": "Check out the SPO Management Shell documentation site to get started and for the reference to the cmdlets.",
-        "url": "https://docs.microsoft.com/en-us/powershell/sharepoint/sharepoint-online/introduction-sharepoint-online-management-shell?view=sharepoint-ps"
+        "url": "https://learn.microsoft.com/powershell/sharepoint/sharepoint-online/introduction-sharepoint-online-management-shell"
       },
       {
         "name": "Want to learn more about CLI for Microsoft 365 and the commands",

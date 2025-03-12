@@ -114,7 +114,7 @@
 </tr>
 <tr>
 <td><a href="aad-analyze-users-hibp/README.html">Analyze users for known data breaches with have i been pwned</a></td>
-<td style="text-align: center;">m365 login, m365 status, m365 aad user hibp, m365 aad user list, Albert-Jan</td>
+<td style="text-align: center;">m365 login, m365 status, Albert-Jan</td>
 <td style="text-align: center;">ConvertFrom-Json, ForEach-Object, Write-Host, Start-Sleep</td>
 </tr>
 <tr>
@@ -123,19 +123,39 @@
 <td style="text-align: center;">Get-Date, Get-MgApplicationOwner, Export-Csv</td>
 </tr>
 <tr>
+<td><a href="aad-control-guestaccount-m365-groups-teams/README.html">Prevent Guests from Being Added to a Specific Microsoft 365 Group or Microsoft Teams team</a></td>
+<td style="text-align: center;">Connect-PnPOnline, Disconnect-PnPOnline, Get-PnPMicrosoft365Group, Get-PnPMicrosoft365GroupSettings, New-PnPMicrosoft365Group, New-PnPMicrosoft365GroupSettings, Set-PnPMicrosoft365Group, Set-PnPMicrosoft365GroupSettings</td>
+<td style="text-align: center;">Split-Path, New-Item, ForEach-Object, Where-Object</td>
+</tr>
+<tr>
 <td><a href="aad-delete-m365-groups-and-sharepoint-sites/README.html">Delete all Microsoft 365 groups and SharePoint sites</a></td>
-<td style="text-align: center;">Connect-PnPOnline, Get-PnPTenant, Get-PnPTenantSite, Remove-PnPDeletedMicrosoft365Group, Remove-PnPMicrosoft365Group, Remove-PnPTenantDeletedSite, Remove-PnPTenantSite</td>
-<td style="text-align: center;">Format-Table, Read-Host, Start-Sleep</td>
+<td style="text-align: center;">m365 login, m365 logout, m365 status, m365 entra m365group list, m365 entra m365group remove, Connect-PnPOnline, Disconnect-PnPOnline, Get-PnPTenant, Get-PnPTenantSite, Remove-PnPDeletedMicrosoft365Group, Remove-PnPMicrosoft365Group, Remove-PnPTenantDeletedSite, Remove-PnPTenantSite</td>
+<td style="text-align: center;">Format-Table, Read-Host, ForEach-Object, Start-Sleep, ConvertFrom-Json, Write-Host</td>
 </tr>
 <tr>
 <td><a href="aad-ensure-ownersaremembers-m365groups/README.html">Ensuring m365 group owners are m365 group members</a></td>
-<td style="text-align: center;">Add-PnPMicrosoft365GroupMember, Connect-PnPOnline, Get-PnPMicrosoft365Group, Get-PnPMicrosoft365GroupMember, Get-PnPMicrosoft365GroupOwner, Get-PnPTenant, Get-PnPTenantSite</td>
-<td style="text-align: center;">Split-Path, Where-Object, ForEach-Object, foreach-object, New-Object, Add-Member, Write-host, sort-object</td>
+<td style="text-align: center;">m365 login, m365 logout, m365 status, m365 entra m365group user add, m365 entra m365group user list, Add-PnPMicrosoft365GroupMember, Connect-PnPOnline, Get-PnPMicrosoft365Group, Get-PnPMicrosoft365GroupMember, Get-PnPMicrosoft365GroupOwner, Get-PnPTenant, Get-PnPTenantSite</td>
+<td style="text-align: center;">Split-Path, Where-Object, ForEach-Object, foreach-object, New-Object, Add-Member, Write-host, sort-object, Export-CSV, ConvertFrom-Json</td>
 </tr>
 <tr>
 <td><a href="aad-get-app-permission/README.html">Get Azure AD app permission info (delegated or application)</a></td>
-<td style="text-align: center;">m365 login, m365 status, m365 aad sp get, m365 cli config get, m365 cli config set, Connect-MgGraph</td>
+<td style="text-align: center;">m365 login, m365 status, m365 cli config get, m365 cli config set, Connect-MgGraph</td>
 <td style="text-align: center;">Get-CLIValue, ConvertFrom-Json, Get-AADPermission, Where-Object, Write-Host, Select-Object, Format-List, Write-Warning, Write-Error, Get-MgServicePrincipal</td>
+</tr>
+<tr>
+<td><a href="aad-get-duplicate-m365group/README.html">Identifying Duplicate Microsoft 365 Group Names</a></td>
+<td style="text-align: center;">Connect-PnPOnline, Disconnect-PnPOnline</td>
+<td style="text-align: center;">built-in, Clear-Host, Join-Path, Group-Object, Where-Object, Export-Csv</td>
+</tr>
+<tr>
+<td><a href="aad-get-tenantid/README.html">Get Tenant ID</a></td>
+<td style="text-align: center;">Get-PnPTenant, Get-PnPTenantId</td>
+<td style="text-align: center;">Get-TenantIdFromDomain, Invoke-WebRequest, Write-Error, ConvertFrom-Json, Get-TenantIdFromSubscriptionId, Get-Help</td>
+</tr>
+<tr>
+<td><a href="aad-grant-serviceprincipal-api-permissions/README.html">Grant Managed Identity permissions to audit and cleanup SPFx App Principal permissions</a></td>
+<td style="text-align: center;">Connect-MgGraph, Connect-PnPOnline, Get-PnPSite, Get-PnPSiteCollectionAppCatalog, Get-PnPTenant, Get-PnPTenantAppCatalogUrl, Grant-PnPAzureADAppSitePermission</td>
+<td style="text-align: center;">System-Managed, site-level, Set-ManagedIdentityAPIPermissions, Set-SiteAppCatalogPermissions, tenant-level, Export-MsIdAppConsentGrantReport, Import-Module, Write-Host, Get-MgServicePrincipal, ForEach-Object, Where-Object, New-MgServicePrincipalAppRoleAssignment</td>
 </tr>
 <tr>
 <td><a href="aad-graph-create-dynamic-groups-project-visio/README.html">Create Dynamic Install and Uninstall Azure AD Groups using Graph</a></td>
@@ -148,19 +168,39 @@
 <td style="text-align: center;">Sign-In, Invoke-RestMethod, Start-Transcript, ConvertFrom-Json, Write-Host, read-host, Stop-Transcript, Test-GuestUserManagementList, New-GuestUserManagementList, Write-Verbose, Out-Null, Write-Error, Add-GuestUserManagementListItem, Get-JoinedTeams, Select-Object, Get-GuestUserSignInActivity, ForEach-Object, Add-Member</td>
 </tr>
 <tr>
+<td><a href="aad-inactive-guest-delete/README.html">Delete inactive Guest User</a></td>
+<td style="text-align: center;">Connect-MgGraph</td>
+<td style="text-align: center;">sign-in, Get-MgUser, Write-Host, ForEach-Object, Read-Host, Remove-MgUser, Disconnect-MgGraph</td>
+</tr>
+<tr>
+<td><a href="aad-renew-m365-group/README.html">Automate Renewal of Expiring M365 Groups or or Microsoft Teams teams</a></td>
+<td style="text-align: center;">Connect-PnPOnline, Disconnect-PnPOnline, Get-PnPMicrosoft365ExpiringGroup, Get-PnPMicrosoft365Group, Reset-PnPMicrosoft365GroupExpiration</td>
+<td style="text-align: center;">Split-Path, New-Item, ForEach-Object, Select-Object</td>
+</tr>
+<tr>
 <td><a href="aad-replace-membership-of-selected-groups/README.html">Replace a user's membership in selected Microsoft 365 Groups or Teams</a></td>
 <td style="text-align: center;">Add-PnPMicrosoft365GroupMember, Add-PnPMicrosoft365GroupOwner, Connect-PnPOnline, Get-PnPMicrosoft365Group, Get-PnPMicrosoft365GroupMember, Get-PnPMicrosoft365GroupOwner, Remove-PnPMicrosoft365Group, Remove-PnPMicrosoft365GroupMember, Remove-PnPMicrosoft365GroupOwner</td>
 <td style="text-align: center;">Replace-Membership, Import-Csv, ForEach-Object, Write-Host, Where-Object</td>
 </tr>
 <tr>
 <td><a href="aad-replace-owner-with-a-different-one/README.html">Replace an owner in a Microsoft 365 Group or Microsoft Team</a></td>
-<td style="text-align: center;">Add-PnPMicrosoft365GroupOwner, Connect-PnPOnline, Disconnect-PnPOnline, Get-PnPMicrosoft365Group, Get-PnPMicrosoft365GroupOwner, Remove-PnPMicrosoft365Group, Remove-PnPMicrosoft365GroupOwner</td>
-<td style="text-align: center;">Read-Host, Split-Path, where-object, New-Object, Add-Member, write-host</td>
+<td style="text-align: center;">m365 login, m365 logout, m365 status, m365 entra m365group list, m365 entra m365group user add, m365 entra m365group user list, m365 entra m365group user remove, Add-PnPMicrosoft365GroupOwner, Connect-PnPOnline, Disconnect-PnPOnline, Get-PnPMicrosoft365Group, Get-PnPMicrosoft365GroupOwner, Remove-PnPMicrosoft365Group, Remove-PnPMicrosoft365GroupOwner</td>
+<td style="text-align: center;">Read-Host, Split-Path, where-object, ForEach-Object, New-Object, Add-Member, write-host, ConvertFrom-Json</td>
+</tr>
+<tr>
+<td><a href="aad-update-m365-global-unified-settings/README.html">Update Global Microsoft 365 Group Settings</a></td>
+<td style="text-align: center;">Connect-PnPOnline, Get-PnPMicrosoft365Group, Get-PnPMicrosoft365GroupSettings, Invoke-PnPGraphMethod</td>
+<td style="text-align: center;">Clear-Host</td>
 </tr>
 <tr>
 <td><a href="azure-delete-allresources-resourcegroup/README.html">Delete all resources from a resource group</a></td>
 <td style="text-align: center;"></td>
 <td style="text-align: center;">ConvertFrom-Json, Write-Host, Read-Host</td>
+</tr>
+<tr>
+<td><a href="azure-ocr-openai-json-invoice-extractor/README.html">Get data from OpenAI deployment/model</a></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">Get-Content, ConvertFrom-Json, Invoke-RestMethod, Start-Sleep, ConvertTo-Json, Get-TextFromDocument, Get-Inputs, Get-Data, Write-Output</td>
 </tr>
 <tr>
 <td><a href="azure-open-ai-byod-powershell/README.html">Bring you own data with Azure Open AI example</a></td>
@@ -191,6 +231,11 @@
 <td><a href="create-dummy-docs-versions-in-library/README.html">Create bulk dummy documents inc versions in SharePoint Document library</a></td>
 <td style="text-align: center;">m365 login, m365 status, m365 spo file add, m365 spo file checkin, m365 spo file checkout, m365 spo folder add, m365 spo list get, m365 spo list set, Add-PnPFile, Add-PnPFolder, Connect-PnPOnline, Set-PnPFileCheckedIn, Set-PnPFileCheckedOut, Set-PnPList</td>
 <td style="text-align: center;">Get-Module, Install-Module, Get-ChildItem, Get-Date, write-host, write-output, Write-host, Write-Host, New-Versions, Out-Null, Write-Progress, ConvertFrom-Json</td>
+</tr>
+<tr>
+<td><a href="export-data-from-microsoft-search/README.html">Export data from MS Search</a></td>
+<td style="text-align: center;">Connect-PnPOnline, Get-PnPSearchExternalSchema, Invoke-PnPGraphMethod</td>
+<td style="text-align: center;">ConvertTo-Json</td>
 </tr>
 <tr>
 <td><a href="export-inactive-sites-based-on-days-to-csv/README.html">Export Inactive Sites Based On Days To CSV</a></td>
@@ -233,19 +278,24 @@
 <td style="text-align: center;">ConvertFrom-JSON, Write-Host, ConvertFrom-Json, out-null</td>
 </tr>
 <tr>
-<td><a href="generate-markdown-lcids/README.html"> Generate Markdown Report of LCIDs</a></td>
+<td><a href="generate-markdown-lcids/README.html">Generate Markdown Report of LCIDs</a></td>
 <td style="text-align: center;">m365 login, m365 status, m365 spo web installedlanguage list, Connect-PnPOnline, Get-PnPWeb</td>
 <td style="text-align: center;">Sort-Object, Write-Host, ConvertFrom-Json</td>
 </tr>
 <tr>
 <td><a href="get-all-site-collections-subwebs/README.html">How to to get all site collections with their sub webs</a></td>
-<td style="text-align: center;">m365 login, m365 status, m365 spo site list, m365 spo web list, Connect-PnPOnline, Get-PnPSubWeb, Get-PnPTenant, Get-PnPTenantSite</td>
+<td style="text-align: center;">m365 login, m365 status, m365 spo web list, Connect-PnPOnline, Get-PnPSubWeb, Get-PnPTenant, Get-PnPTenantSite</td>
 <td style="text-align: center;">sub-webs, ConvertTo-SecureString, New-Object, Write-Host, Get-PnPSubWebs, Connect-PNPonline, ConvertFrom-Json</td>
 </tr>
 <tr>
 <td><a href="get-disabled-or-inactive-user-accounts/README.html">Get disabled or inactive user accounts</a></td>
-<td style="text-align: center;">Connect-PnPOnline, Get-PnPGraphAccessToken, Invoke-PnPGraphMethod</td>
-<td style="text-align: center;">Get-UserFromGraph, Get-UserFromSharePointSearch, Invoke-PnPSearchQuery, Invoke-RestMethod, Get-UserFromGraphThatHasntLoggedInResently, Export-Csv</td>
+<td style="text-align: center;">Connect-PnPOnline, Invoke-PnPGraphMethod</td>
+<td style="text-align: center;">Get-UserFromGraph, Get-UserFromSharePointSearch, Invoke-PnPSearchQuery, Get-PnPGraphAccessToken, Invoke-RestMethod, Get-UserFromGraphThatHasntLoggedInResently, Export-Csv</td>
+</tr>
+<tr>
+<td><a href="get-spo-invalid-user-accounts/README.html">Get Site Collection invalid user accounts</a></td>
+<td style="text-align: center;">Connect-PnPOnline, Get-PnPUser, Invoke-PnPGraphMethod, Submit-PnPSearchQuery</td>
+<td style="text-align: center;">Get-AllUsersFromUPA, Get-UserFromGraph, Write-Host, Where-Object, Export-Csv</td>
 </tr>
 <tr>
 <td><a href="graph-assign-permissions-managed-identity/README.html">Assign Graph permissions to a Managed Identity</a></td>
@@ -254,8 +304,8 @@
 </tr>
 <tr>
 <td><a href="graph-call-graph/README.html">Authenticate with and call the Microsoft Graph</a></td>
-<td style="text-align: center;">m365 util accesstoken get, Connect-MgGraph, Connect-PnPOnline, Get-PnPGraphAccessToken</td>
-<td style="text-align: center;">Invoke-RestMethod, Get-MgUser, Disconnect-MgGraph</td>
+<td style="text-align: center;">m365 util accesstoken get, Connect-MgGraph, Connect-PnPOnline</td>
+<td style="text-align: center;">Invoke-RestMethod, Get-PnPGraphAccessToken, Get-MgUser, Disconnect-MgGraph</td>
 </tr>
 <tr>
 <td><a href="graph-common-operations/README.html">Microsoft Graph PowerShell SDK for Common Operations</a></td>
@@ -293,6 +343,11 @@
 <td style="text-align: center;">Find-MgGraphCommand, Get-MgUser, sign-in, Get-MgContext, Select-MgProfile, Export-Csv, Disconnect-MgGraph</td>
 </tr>
 <tr>
+<td><a href="graph-get-licenses-by-sku-email-if-low/README.html">Microsoft 365 License Monitoring and Alert Script</a></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">hard-coded, Install-Module, Import-Module, ConvertTo-SecureString, Get-MsalToken, Invoke-RestMethod, Where-Object, ForEach-Object, Write-Output</td>
+</tr>
+<tr>
 <td><a href="graph-get-teams-tabs-export-to-csv/README.html">Locate all Teams having a Wiki and export the list to CSV</a></td>
 <td style="text-align: center;">m365 util accesstoken get, Connect-MgGraph</td>
 <td style="text-align: center;">Export-Csv</td>
@@ -316,6 +371,11 @@
 <td><a href="graph-upload-file-to-sharepoint/README.html">Uploads a large file to SharePoint using MS Graph REST API and PowerShell </a></td>
 <td style="text-align: center;"></td>
 <td style="text-align: center;">Pre-requisites, Write-Host, Where-Object, ConvertFrom-Json, Invoke-WebRequest, Out-Null</td>
+</tr>
+<tr>
+<td><a href="m365-get-unifiedlog-spo-dlp-exchange-entra/README.html">Get Unified log for SharePoint DLP Exchange and Entra</a></td>
+<td style="text-align: center;">m365 login, m365 status, m365 purview auditlog list, Connect-PnPOnline, Get-PnPUnifiedAuditLog</td>
+<td style="text-align: center;">Split-Path, ForEach-Object, sort-object, Write-Host, Get-Date, ConvertFrom-Json</td>
 </tr>
 <tr>
 <td><a href="magic-tooltips-module/README.html">Get Started with Tooltip for Connected Account</a></td>
@@ -354,7 +414,7 @@
 </tr>
 <tr>
 <td><a href="planner-migration-spo-list/README.html">Planner migration to SharePoint list</a></td>
-<td style="text-align: center;">m365 login, m365 status, m365 aad user get, m365 planner bucket list, m365 planner plan list, m365 planner task get, m365 planner task list, m365 spo field add, m365 spo list add, m365 spo list view field add, m365 spo list view set, m365 spo listitem add, m365 spo listitem set, Albert-Jan, Add-PnPField, Add-PnPFieldFromXml, Add-PnPListItem, Add-PnPView, Connect-PnPOnline, Get-PnPAzureADUser, Get-PnPPlannerBucket, Get-PnPPlannerPlan, Get-PnPPlannerTask, New-PnPList, Set-PnPList, Set-PnPListItem, Set-PnPView</td>
+<td style="text-align: center;">m365 login, m365 status, m365 planner bucket list, m365 planner plan list, m365 planner task get, m365 planner task list, m365 spo field add, m365 spo list add, m365 spo list view field add, m365 spo list view set, m365 spo listitem add, m365 spo listitem set, Albert-Jan, Add-PnPField, Add-PnPFieldFromXml, Add-PnPListItem, Add-PnPView, Connect-PnPOnline, Get-PnPAzureADUser, Get-PnPPlannerBucket, Get-PnPPlannerPlan, Get-PnPPlannerTask, New-PnPList, Set-PnPList, Set-PnPListItem, Set-PnPView</td>
 <td style="text-align: center;">ConvertFrom-Json, ForEach-Object, Where-Object, Write-Host</td>
 </tr>
 <tr>
@@ -364,8 +424,8 @@
 </tr>
 <tr>
 <td><a href="power-automate-replace-owner/README.html">Replace owner in all Power Automate flows</a></td>
-<td style="text-align: center;">m365 login, m365 status, m365 aad user get, m365 flow list, m365 flow owner ensure, m365 flow owner list, m365 flow owner remove, m365 pp environment get</td>
-<td style="text-align: center;">Import-Module, Replace-PnPOwnerInFlows, Write-host, ConvertFrom-Json, Write-Host</td>
+<td style="text-align: center;">m365 login, m365 status, m365 entra user get, m365 flow list, m365 flow owner ensure, m365 flow owner list, m365 flow owner remove, m365 pp environment get, Add-PnPFlowOwner, Connect-PnPOnline, Get-PnPFlow, Get-PnPFlowOwner, Get-PnPPowerPlatformEnvironment, Remove-PnPFlow, Remove-PnPFlowOwner</td>
+<td style="text-align: center;">Import-Module, Replace-PnPOwnerInFlows, Write-host, ConvertFrom-Json, Write-Host, get-pnpentraiduser, get-pnpflow</td>
 </tr>
 <tr>
 <td><a href="powerapps-bulk-useraccess/README.html">Add/Remove users(bulk) from Power Apps from CSV file</a></td>
@@ -373,9 +433,19 @@
 <td style="text-align: center;">co-owner, Install-Module, Add-PowerAppsAccount, write-host, New-Object, Add-Member, Co-Owner, Get-UsersOrGroupsFromGraph, Remove-AdminPowerAppRoleAssignment, Set-AdminPowerAppRoleAssignment, Export-Csv</td>
 </tr>
 <tr>
+<td><a href="powerapps-get-all-apps/README.html">Get all PowerApps in your tenant</a></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">Get-AdminPowerApp, New-Object, Export-Csv</td>
+</tr>
+<tr>
+<td><a href="powerapps-get-all-bootstrap-icons/README.html">Get all Bootstrap Icons to use in your powerapps</a></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">Invoke-WebRequest, Write-Host, Write-Error, Read-Host, Add-Type, Set-Content, Remove-item</td>
+</tr>
+<tr>
 <td><a href="powerapps-get-app-users-list-csv/README.html">Export all PowerApps details and its Role assignments from Tenant in CSV format</a></td>
 <td style="text-align: center;"></td>
-<td style="text-align: center;">Install-Module, Add-PowerAppsAccount, write-host, Get-PowerAppRoleAssignment, New-Object, Add-Member, Export-Csv</td>
+<td style="text-align: center;">pre-release, Install-Module, Add-PowerAppsAccount, write-host, Get-PowerAppRoleAssignment, New-Object, Add-Member, Export-Csv</td>
 </tr>
 <tr>
 <td><a href="remove-delete-option-library/README.html">Remove delete option on a document library</a></td>
@@ -389,7 +459,7 @@
 </tr>
 <tr>
 <td><a href="ReportTermUse/README.html">Report of where a Term is used</a></td>
-<td style="text-align: center;">m365 login, m365 status, m365 spo field list, m365 spo list list, m365 spo listitem list, m365 spo site list, m365 spo web list, Connect-PnPOnline, Disconnect-PnPOnline, Get-PnPField, Get-PnPList, Get-PnPListItem, Get-PnPSubWeb, Get-PnPTenant, Get-PnPTenantSite</td>
+<td style="text-align: center;">m365 login, m365 status, m365 spo field list, m365 spo list list, m365 spo listitem list, m365 spo web list, Connect-PnPOnline, Disconnect-PnPOnline, Get-PnPField, Get-PnPList, Get-PnPListItem, Get-PnPSubWeb, Get-PnPTenant, Get-PnPTenantSite</td>
 <td style="text-align: center;">Get-Credential, Where-Object, Select-Object, Out-Null, Write-host, write-host, Export-Csv, ConvertFrom-Json</td>
 </tr>
 <tr>
@@ -409,8 +479,8 @@
 </tr>
 <tr>
 <td><a href="spo-add-bulk-users-to-groups/README.html">Add bulk users to SharePoint site groups from CSV.</a></td>
-<td style="text-align: center;">Add-PnPGroupMember, Connect-PnPOnline, Get-PnPGroup, Get-PnPGroupMember, Add-SPOUser, Connect-SPOService, Get-SPOSite, Get-SPOUser</td>
-<td style="text-align: center;">ConvertTo-SecureString, New-Object, Write-Host, Import-Csv, Write-host, Get-PnPGroupMembers, write-host</td>
+<td style="text-align: center;">m365 login, m365 logout, m365 status, m365 spo group get, m365 spo group member add, m365 spo group member list, Add-PnPGroupMember, Connect-PnPOnline, Get-PnPGroup, Get-PnPGroupMember, Add-SPOUser, Connect-SPOService, Get-SPOSite, Get-SPOUser</td>
+<td style="text-align: center;">ConvertTo-SecureString, New-Object, Write-Host, Import-Csv, Write-host, Get-PnPGroupMembers, write-host, ConvertFrom-Json</td>
 </tr>
 <tr>
 <td><a href="spo-add-contenttypehub-format-field-to-List/README.html">Add Content Type Hub with calendar format field to List</a></td>
@@ -428,9 +498,9 @@
 <td style="text-align: center;"></td>
 </tr>
 <tr>
-<td><a href="spo-add-dummy-folders-and-files/README.html">Add dummy folders and files.</a></td>
-<td style="text-align: center;">Add-PnPFile, Add-PnPFolder, Connect-PnPOnline</td>
-<td style="text-align: center;">Get-ChildItem, Out-Null, Write-host, write-host</td>
+<td><a href="spo-add-dummy-folders-and-files/README.html">Add dummy folders and files to a SharePoint library</a></td>
+<td style="text-align: center;">m365 login, m365 logout, m365 status, m365 spo file add, m365 spo folder add, Add-PnPFile, Add-PnPFolder, Connect-PnPOnline</td>
+<td style="text-align: center;">Get-ChildItem, Out-Null, Write-Host, Read-Host, site-relative, write-host</td>
 </tr>
 <tr>
 <td><a href="spo-add-fields-to-contenttypes/README.html">Create fields and add to Content Types</a></td>
@@ -463,9 +533,9 @@
 <td style="text-align: center;">Invoke-SPOListDesign, Create-Index, Start-Transcript, Import-Csv, ForEach-Object, Write-host, Stop-Transcript</td>
 </tr>
 <tr>
-<td><a href="spo-add-multiple-folders-in-libraries-using-csv-file/README.html">Add multiple folders in libraries using a csv file</a></td>
-<td style="text-align: center;">Connect-PnPOnline, Get-PnPList, Get-PnPWeb, Resolve-PnPFolder</td>
-<td style="text-align: center;">Import-Csv, Out-Null, Write-host, write-host</td>
+<td><a href="spo-add-multiple-folders-in-libraries-using-csv-file/README.html">Add multiple folders in libraries using a CSV file</a></td>
+<td style="text-align: center;">m365 login, m365 logout, m365 status, m365 spo folder add, m365 spo list get, Connect-PnPOnline, Get-PnPList, Get-PnPWeb, Resolve-PnPFolder</td>
+<td style="text-align: center;">Import-Csv, Out-Null, Write-host, write-host, Read-Host, ConvertFrom-Json</td>
 </tr>
 <tr>
 <td><a href="spo-add-multiple-lists-using-csv-file/README.html">Add multiple lists or libraries using csv file</a></td>
@@ -489,7 +559,7 @@
 </tr>
 <tr>
 <td><a href="spo-add-sppkg-ad-app-certificate/README.html">Add SharePoint Framework package to the app catalog and Azure AD app certificate</a></td>
-<td style="text-align: center;">m365 login, m365 status, m365 aad app add, m365 spo set, m365 spo app add, m365 spo site apppermission add</td>
+<td style="text-align: center;">m365 login, m365 status, m365 spo set, m365 spo app add, m365 spo site apppermission add</td>
 <td style="text-align: center;">New-SelfSignedCertificate, Export-Certificate, ConvertTo-SecureString, Export-PfxCertificate, ConvertFrom-Json</td>
 </tr>
 <tr>
@@ -516,11 +586,6 @@
 <td><a href="spo-apply-column-format/README.html">Script allow copy column format in SharePoint and apply to different column.</a></td>
 <td style="text-align: center;">m365 login, m365 status, m365 spo field get, m365 spo field set, Connect-PnPOnline, Get-PnPField, Set-PnPField</td>
 <td style="text-align: center;">Invoke-WebRequest, ConvertFrom-Json</td>
-</tr>
-<tr>
-<td><a href="spo-apply-custom-form-formatting-json/README.html">Sample showing how to apply a custom Form Formatting as part of your Site Provisioning</a></td>
-<td style="text-align: center;">Connect-PnPOnline, Get-PnPContentType, Get-PnPContext, Get-PnPFile, Get-PnPList</td>
-<td style="text-align: center;">Write-Host, Push-OutputBinding, Where-Object</td>
 </tr>
 <tr>
 <td><a href="spo-apply-json-view-formatting/README.html">Apply SharePoint JSON View Formatting</a></td>
@@ -563,9 +628,24 @@
 <td style="text-align: center;">Start-Transcript, Import-Csv, Stop-Transcript</td>
 </tr>
 <tr>
+<td><a href="spo-bulk-remove-retention-labels/README.html">Bulk remove retention labels from files in a SharePoint Library</a></td>
+<td style="text-align: center;">Connect-PnPOnline, Get-PnPContext, Get-PnPList, Get-PnPListItem, Invoke-PnPSPRestMethod</td>
+<td style="text-align: center;">Clear-Host, Split-Collection, Write-Host, write-host, Where-Object, Select-Object, ForEach-Object</td>
+</tr>
+<tr>
 <td><a href="spo-change-list-url/README.html">Change SharePoint Online List URL</a></td>
 <td style="text-align: center;">Connect-PnPOnline, Get-PnPList, Invoke-PnPQuery, Set-PnPList, sharepoint-online</td>
 <td style="text-align: center;"></td>
+</tr>
+<tr>
+<td><a href="spo-change-retention-labels/README.html">M365 Consultant's Script Kit - Change Retention Labels</a></td>
+<td style="text-align: center;">Connect-PnPOnline, Get-PnPField, Get-PnPList, Get-PnPListItem, Set-PnPList, Set-PnPListItem</td>
+<td style="text-align: center;">Pre-requisites, Start-Transcript, Import-Module, Import-Csv, Select-Object, Write-Host, write-host, stop-Transcript</td>
+</tr>
+<tr>
+<td><a href="spo-check-unaccessable-homepages/README.html">Scan for potential inaccessible site collection homepages</a></td>
+<td style="text-align: center;">m365 login, m365 logout, m365 status, m365 spo listitem list, m365 spo web get, Connect-PnPOnline, Disconnect-PnPOnline, Get-PnPHomePage, Get-PnPList, Get-PnPListItem, Get-PnPListItemPermission, Get-PnPTenant, Get-PnPTenantSite</td>
+<td style="text-align: center;">Where-Object, New-Object, Write-Host, Out-Null, Export-Csv, ConvertFrom-Json</td>
 </tr>
 <tr>
 <td><a href="spo-cleanup-site-column-usage/README.html">Clean Up Unwanted Site Columns from Content Types and Lists/Libraries</a></td>
@@ -581,6 +661,16 @@
 <td><a href="spo-copy-directory-structure-to-sharepoint-list/README.html">Copy the folder structure of a directory to a SharePoint list</a></td>
 <td style="text-align: center;">Add-PnPListItem, Connect-PnPOnline, Get-PnPList</td>
 <td style="text-align: center;">new-PnPBatch, add-listitemwithLevels, Invoke-PnpBatch, get-folders, Get-ChildItem, Write-Host</td>
+</tr>
+<tr>
+<td><a href="spo-copy-hubsite-navigation/README.html">Copy a hub navigation from a source site to any desired target hub site</a></td>
+<td style="text-align: center;">Add-PnPNavigationNode, Connect-PnPOnline, Get-PnPConnection, Get-PnPNavigationNode, Remove-PnPNavigationNode</td>
+<td style="text-align: center;">Copy-Hubnavigation, Write-Host, New-HubnavigationElement, Get-ToplevelHubnavigation</td>
+</tr>
+<tr>
+<td><a href="spo-copy-library-across-tenants/README.html">Copying a document library between different tenants with resume functionality</a></td>
+<td style="text-align: center;">Add-PnPField, Add-PnPFile, Connect-PnPOnline, Get-PnPFile, Get-PnPList, Get-PnPListItem, Resolve-PnPFolder</td>
+<td style="text-align: center;">app-only, Export-Excel, Import-Excel, Sort-Object, Write-Host, Copy-Files, Where-Object, Get-Date, New-TimeSpan</td>
 </tr>
 <tr>
 <td><a href="spo-copy-library-view/README.html">Copy library view to another library(ies)</a></td>
@@ -638,14 +728,49 @@
 <td style="text-align: center;">Read-Host, Import-Csv</td>
 </tr>
 <tr>
+<td><a href="spo-csom-properties/README.html">Query advanced CSOM properties with PnP PowerShell</a></td>
+<td style="text-align: center;">Connect-PnPOnline, Get-PnPContext, Get-PnPGroup, Get-PnPList, Get-PnPProperty, Get-PnPSite, Invoke-PnPQuery</td>
+<td style="text-align: center;">Select-Object, Format-Table, ForEach-Object, Out-Null, Add-Type</td>
+</tr>
+<tr>
+<td><a href="spo-delete-companywide-anonymous-sharinglink/README.html">Deletes company-wide and anonymous sharing links</a></td>
+<td style="text-align: center;">Connect-PnPOnline, Get-PnPFile, Get-PnPFileSharingLink, Get-PnPFolder, Get-PnPFolderSharingLink, Get-PnPList, Remove-PnPFile, Remove-PnPFileSharingLink, Remove-PnPFolder, Remove-PnPFolderSharingLink</td>
+<td style="text-align: center;">company-wide, Split-Path, New-Object, Write-Host, Where-Object, invoke-pnpsprestmethod, Export-CSV, Write-host</td>
+</tr>
+<tr>
+<td><a href="spo-delete-expired-sharing-link-folder-file-item/README.html">Deletes expired and older sharing links for folder, file and item in SharePoint</a></td>
+<td style="text-align: center;">Connect-PnPOnline, Get-PnPList, Invoke-PnPSPRestMethod, Remove-PnPFile, Remove-PnPFileSharingLink, Remove-PnPFolder, Remove-PnPFolderSharingLink</td>
+<td style="text-align: center;">Read-Host, Split-Path, New-Item, write-host, invoke-pnpsprestmethod, Start-Sleep, Get-Date, ForEach-Object, New-Object, Write-Host, Where-Object, Export-CSV, Write-host</td>
+</tr>
+<tr>
 <td><a href="spo-delete-orphaned-temporary-sitepages/README.html">Delete orphaned temporary pages from Site Pages</a></td>
 <td style="text-align: center;">m365 login, m365 logout, m365 status, m365 spo file checkin, m365 spo file checkout, m365 spo list get, m365 spo page list, m365 spo page remove, Connect-PnPOnline, Disconnect-PnPOnline, Get-PnPContext, Get-PnPList, Invoke-PnPQuery</td>
 <td style="text-align: center;">Write-Host, Write-host, Export-Csv, ForEach-Object, ConvertFrom-Json</td>
 </tr>
 <tr>
+<td><a href="spo-delete-sharinglink-folder-file-item/README.html">Deletes sharing links for folder, file and item in SharePoint</a></td>
+<td style="text-align: center;">Connect-PnPOnline, Get-PnPList, Get-PnPListItem, Get-PnPProperty, Get-PnPWeb, Remove-PnPGroup</td>
+<td style="text-align: center;">Read-Host, Split-Path, New-Object, Write-Host, Where-Object, Export-CSV, Write-host</td>
+</tr>
+<tr>
+<td><a href="spo-delete-site-with-retention-policy/README.html">Delete SharePoint Online sites that have retention policies</a></td>
+<td style="text-align: center;">Connect-PnPOnline, Remove-PnPTenantSite</td>
+<td style="text-align: center;">Connect-IPPSSession, Get-RetentionCompliancePolicy, Select-Object, Write-Host, Set-RetentionCompliancePolicy</td>
+</tr>
+<tr>
+<td><a href="spo-delete-unused-spfx-apipermissions/README.html">Remove unused API Permissions assigned to SPFx App Principal</a></td>
+<td style="text-align: center;">Connect-MgGraph</td>
+<td style="text-align: center;">site-level, System-assigned, Get-GrantedAPIPermissions, Get-MgServicePrincipal, signed-in, ForEach-Object, get-MgServicePrincipalAppRoleAssignment, Write-Warning, Write-Error, Revoke-SelectedAPIPermissio, Revoke-SelectedAPIPermissions, Group-Object, Where-Object, ConvertTo-Json, Get-SPFxAPIPermissions, tenant-level, Get-SitesWithAppCatalog, Invoke-MgGraphRequest, Get-SPFSolutionsAndAPIPermissions, Get-Usage, Get-SpfxPermissionsByScope, Sort-Object, Get-Unique, Get-GrantedPermissionsByScope, Join-Arrays, Invoke-CleanupAPIPermissions</td>
+</tr>
+<tr>
 <td><a href="spo-deploy-install-update-spfx-hubsite-associatedsites/README.html">Deploys and Installs SharePoint Framework (SPFx) solutions to Hub Site and Associated Sites</a></td>
 <td style="text-align: center;">Add-PnPApp, Add-PnPSiteCollectionAppCatalog, Connect-PnPOnline, Disconnect-PnPOnline, Get-PnPApp, Get-PnPHubSite, Get-PnPSite, Get-PnPSiteCollectionAppCatalog, Get-PnPTenant, Get-PnPTenantSite, Get-PnPWeb, Install-PnPApp, Invoke-PnPSPRestMethod, Update-PnPApp</td>
 <td style="text-align: center;">Split-Path, Get-ChildItem, Where-Object, ForEach-Object, Write-Host, New-Object, Add-Member, Start-Sleep, where-object, Export-CSV</td>
+</tr>
+<tr>
+<td><a href="spo-deploy-install-update-spfx-hubsiteassociatedsites-tenantappcatalog/README.html">Deploying SPFx Packages from Tenant App Catalog to Hub Site and Associated Sites</a></td>
+<td style="text-align: center;">Approve-PnPTenantServicePrincipalPermissionRequest, Connect-PnPOnline, Get-PnPApp, Get-PnPConnection, Get-PnPHubSite, Get-PnPHubSiteChild, Get-PnPTenant, Get-PnPTenantServicePrincipal, Get-PnPTenantServicePrincipalPermissionRequests, Get-PnPTenantSite, Get-PnPWeb, Install-PnPApp, Invoke-PnPSPRestMethod, Update-PnPApp</td>
+<td style="text-align: center;">tenant-level, Split-Path, Get-ChildItem, Write-Host, Add-pnpapp, ForEach-Object, New-Object, Add-Member, where-object, Export-CSV, start-sleep</td>
 </tr>
 <tr>
 <td><a href="spo-deploy-pnpmodernsearch-webpart/README.html">Extract the configuration of a PnP Modern Search results web part and apply it on another site collection</a></td>
@@ -661,6 +786,16 @@
 <td><a href="spo-detect-theme/README.html">Detect Installed Theme</a></td>
 <td style="text-align: center;">Connect-PnPOnline, Get-PnPTenant, Get-PnPTenantTheme, Get-PnPWeb</td>
 <td style="text-align: center;">Install-Module, Write-Host</td>
+</tr>
+<tr>
+<td><a href="spo-dev-agent-config-creation/README.html">Creating SharePoint Agents (.agent Files) with PowerShell</a></td>
+<td style="text-align: center;">Connect-PnPOnline, Submit-PnPSearchQuery</td>
+<td style="text-align: center;">Get-ConversationStarters, Read-Host, Write-Host, Get-Capabilities, ConvertTo-Json, Out-File</td>
+</tr>
+<tr>
+<td><a href="spo-dev-tenant-report-export/README.html">Report and Export Solutions from M365 Developer Tenant</a></td>
+<td style="text-align: center;">Connect-PnPOnline, Export-PnPFlow, Export-PnPPowerApp, Get-PnPApp, Get-PnPAzureADApp, Get-PnPAzureADAppPermission, Get-PnPFile, Get-PnPFlow, Get-PnPList, Get-PnPListItem, Get-PnPPowerApp, Get-PnPPowerPlatformEnvironment, Get-PnPSite, Get-PnPSiteTemplate, Get-PnPTeamsApp, Get-PnPTenant, Get-PnPTenantAppCatalogUrl, Get-PnPTenantSite</td>
+<td style="text-align: center;">Start-Transcript, New-Item, Write-Host, Select-Object, Export-Csv, Where-Object, Remove-Item, ForEach-Object, Add-Member, ConvertTo-Json, Stop-Transcript</td>
 </tr>
 <tr>
 <td><a href="spo-disable-list-comments/README.html">Disable SharePoint List Commenting at list level</a></td>
@@ -683,6 +818,21 @@
 <td style="text-align: center;">Read-Host, Where-Object, Write-Host</td>
 </tr>
 <tr>
+<td><a href="spo-download-all-doclibs/README.html">Download all documents from all document libraries in a site, including version history</a></td>
+<td style="text-align: center;">Connect-PnPOnline, Get-PnPConnection, Get-PnPContext, Get-PnPFile, Get-PnPList, Get-PnPListItem, Get-PnPProperty, sharepoint-online</td>
+<td style="text-align: center;">Import-Module, Download-SharePointFiles, Write-Verbose, New-Item, Out-Null, Where-Object, Write-Host, Join-Path</td>
+</tr>
+<tr>
+<td><a href="spo-download-files-and-archive/README.html">Download all files from array of documents urls and archive them</a></td>
+<td style="text-align: center;">m365 login, m365 logout, m365 status, m365 spo file get, Connect-PnPOnline, Disconnect-PnPOnline, Get-PnPFile</td>
+<td style="text-align: center;">Import-Csv, Select-Object, New-Item, Join-Path, Compress-Archive, Write-Host</td>
+</tr>
+<tr>
+<td><a href="spo-download-files-from-doclib/README.html">Download all files from Document Libarary/Folder</a></td>
+<td style="text-align: center;">m365 login, m365 spo file get, m365 spo file list, m365 spo folder get, Connect-PnPOnline, Get-PnPFile, Get-PnPFolder, Get-PnPFolderItem, Get-PnPList</td>
+<td style="text-align: center;">Download-FilesFromSharePoint, Join-Path, Write-Host, ConvertFrom-Json, New-Item</td>
+</tr>
+<tr>
 <td><a href="spo-download-sppkgs/README.html">Download sppkgs from App Catalog</a></td>
 <td style="text-align: center;">Connect-PnPOnline, Disconnect-PnPOnline, Get-PnPFile, Get-PnPFolder, Get-PnPList, Get-PnPProperty</td>
 <td style="text-align: center;">Clear-Host, ConvertTo-SecureString, New-Object, New-Item, Get-ChildItem, ForEach-Object, Write-Progress, Write-host, Write-Host</td>
@@ -703,6 +853,11 @@
 <td style="text-align: center;">Set-SPOTemporarilyDisableAppBar</td>
 </tr>
 <tr>
+<td><a href="spo-enable-disable-search-crawling/README.html">Enable/Disable Search Crawling on Sites and Libraries</a></td>
+<td style="text-align: center;">m365 login, m365 logout, m365 status, m365 spo list get, m365 spo list set, m365 spo site set, m365 spo web get, m365 spo web set, Connect-PnPOnline, Disconnect-PnPOnline, Get-PnPList, Get-PnPWeb, Set-PnPList, Set-PnPSite, Set-PnPWeb</td>
+<td style="text-align: center;">Write-Host, Read-Host, ConvertFrom-Json</td>
+</tr>
+<tr>
 <td><a href="spo-enable-page-scheduling/README.html">Enable page scheduling on a modern site pages library</a></td>
 <td style="text-align: center;">Connect-PnPOnline, Disconnect-PnPOnline, Enable-PnPPageScheduling</td>
 <td style="text-align: center;">Write-Host</td>
@@ -711,6 +866,11 @@
 <td><a href="spo-enable-site-collection-app-catalog/README.html">Enable Site Collection App Catalog on a specific sites using CSV</a></td>
 <td style="text-align: center;">m365 login, m365 logout, m365 status, m365 spo site appcatalog add, Add-PnPSiteCollectionAppCatalog, Connect-PnPOnline, Disconnect-PnPOnline, Add-SPOSiteCollectionAppCatalog, Connect-SPOService, Disconnect-SPOService, Get-SPOSite</td>
 <td style="text-align: center;">Write-Host, Import-Csv</td>
+</tr>
+<tr>
+<td><a href="spo-ensure-cts-before-template/README.html">Ensure all required Content Types are available before Get-PnPSiteTemplate </a></td>
+<td style="text-align: center;">Add-PnPContentType, Add-PnPContentTypesFromContentTypeHub, Connect-PnPOnline, Get-PnPContentType, Get-PnPList, Get-PnPProperty, Get-PnPSite, Get-PnPSiteTemplate</td>
+<td style="text-align: center;">Write-Host, write-host, Where-Object, Out-Null</td>
 </tr>
 <tr>
 <td><a href="spo-export-all-customformatting/README.html">Backup all custom formatting on a site</a></td>
@@ -743,6 +903,11 @@
 <td style="text-align: center;">checked-out, Get-CheckedOutItems, Invoke-PnPSearchQuery, Write-Host, New-Object, Add-Member, Export-Csv</td>
 </tr>
 <tr>
+<td><a href="spo-export-content-type-details-to-csv/README.html">Export Content Type Details To CSV</a></td>
+<td style="text-align: center;">m365 login, m365 logout, m365 status, m365 spo contenttype list, Connect-PnPOnline, Disconnect-PnPOnline, Get-PnPContentType, Get-PnPProperty</td>
+<td style="text-align: center;">Read-Host, ConvertTo-SecureString, New-Object, Write-Host, select-object, foreach-object, Export-Csv, ConvertFrom-Json</td>
+</tr>
+<tr>
 <td><a href="spo-export-data-to-sharepoint-lists/README.html">Export CSV To SharePoint List Data</a></td>
 <td style="text-align: center;">m365 login, m365 status, m365 spo field add, m365 spo list add, m365 spo list view field add, m365 spo listitem add, Add-PnPField, Add-PnPListItem, New-PnPList</td>
 <td style="text-align: center;">Import-Csv, ConvertTo-SecureString, New-Object, Write-Host, Connect-PnpOnline, Write-host</td>
@@ -758,9 +923,19 @@
 <td style="text-align: center;">Get-Credential, Write-Progress, ForEach-Object, New-Item, Out-Null, Write-host, Write-Host, Where-Object, write-host, Get-SiteCollections</td>
 </tr>
 <tr>
+<td><a href="spo-export-hub-site-hierarchy/README.html">Export of the Hierarchy of Hub Sites</a></td>
+<td style="text-align: center;">m365 login, m365 logout, m365 status, m365 spo hubsite list, Connect-PnPOnline, Disconnect-PnPOnline, Get-PnPHubSite, Get-PnPTenant, Get-PnPTenantSite</td>
+<td style="text-align: center;">Join-Path, Where-Object, Write-Host, New-Item, Out-File, Write-Error, ConvertFrom-Json</td>
+</tr>
+<tr>
 <td><a href="spo-export-hub-sites-details-to-csv/README.html">Get Hub Sites Information And Export It To CSV</a></td>
 <td style="text-align: center;">m365 login, m365 status, m365 spo hubsite list, Connect-PnPOnline, Get-PnPHubSite, Connect-SPOService, Get-SPOHubSite</td>
 <td style="text-align: center;">ConvertTo-SecureString, New-Object, Write-Host, Export-Csv, ConvertFrom-Json</td>
+</tr>
+<tr>
+<td><a href="spo-export-import-folderstructure/README.html">Export and import library folder structure</a></td>
+<td style="text-align: center;">Add-PnPFolder, Connect-PnPOnline, Get-PnPFile, Get-PnPFolder, Get-PnPFolderItem, Get-PnPList, Get-PnPListItem, Get-PnPProperty, Set-PnPList, Set-PnPListItem</td>
+<td style="text-align: center;">Get-Folderstructure, write-host, ConvertFrom-Json, Write-Host, ConvertTo-Json, Out-File, Set-FolderstructurefromJson, connect-pnponline</td>
 </tr>
 <tr>
 <td><a href="spo-export-page-html/README.html">Export HTML content from SharePoint Online modern pages</a></td>
@@ -789,7 +964,7 @@
 </tr>
 <tr>
 <td><a href="spo-export-site-usage-reports/README.html">Get Site Usage Reports And Export It To CSV</a></td>
-<td style="text-align: center;">m365 login, m365 status, m365 spo site list, Connect-PnPOnline, Get-PnPTenant, Get-PnPTenantSite</td>
+<td style="text-align: center;">m365 login, m365 status, Connect-PnPOnline, Get-PnPTenant, Get-PnPTenantSite</td>
 <td style="text-align: center;">ConvertTo-SecureString, New-Object, Write-Host, Export-Csv, Split-Path, ConvertFrom-Json</td>
 </tr>
 <tr>
@@ -814,7 +989,7 @@
 </tr>
 <tr>
 <td><a href="spo-export-upa-accounts/README.html">Export User Profiles to csv</a></td>
-<td style="text-align: center;">m365 login, m365 aad user get, m365 aad user list, Connect-PnPOnline, Get-PnPUser, Get-PnPUserProfileProperty, sharepoint-online</td>
+<td style="text-align: center;">m365 login, Connect-PnPOnline, Get-PnPUser, Get-PnPUserProfileProperty, sharepoint-online</td>
 <td style="text-align: center;">Connect-AzAccount, Get-AzADUser, Write-host, New-Object, Add-Member, Write-Progress, Write-Host, Export-Csv, write-host</td>
 </tr>
 <tr>
@@ -829,8 +1004,23 @@
 </tr>
 <tr>
 <td><a href="spo-file-version-trimmer/README.html">File Version Trimmer</a></td>
-<td style="text-align: center;">m365 login, m365 logout, m365 status, m365 spo file list, m365 spo file version list, m365 spo file version remove, Connect-PnPOnline, Disconnect-PnPOnline, Get-PnPFile, Get-PnPFileVersion, Get-PnPList, Get-PnPListItem, Get-PnPTenant, Get-PnPTenantSite, Remove-PnPFile, Remove-PnPFileVersion</td>
+<td style="text-align: center;">m365 login, m365 logout, m365 status, m365 spo file list, m365 spo file version list, m365 spo file version remove, Connect-PnPOnline, Disconnect-PnPOnline, Get-PnPFile, Get-PnPFileVersion, Get-PnPLibraryFileVersionBatchDeleteJobStatus, Get-PnPList, Get-PnPListItem, Get-PnPSite, Get-PnPSiteFileVersionBatchDeleteJobStatus, Get-PnPTenant, Get-PnPTenantSite, New-PnPLibraryFileVersionBatchDeleteJob, New-PnPSite, New-PnPSiteFileVersionBatchDeleteJob, Remove-PnPFile, Remove-PnPFileVersion</td>
 <td style="text-align: center;">New-Object, Where-Object, Select-Object, Out-Null, write-host, Write-Host, Write-Output, Get-SiteCollections, Export-Csv, Read-Host, site-relative, ConvertFrom-Json</td>
+</tr>
+<tr>
+<td><a href="spo-find-links-in-canvas/README.html">Find Links in Modern Page</a></td>
+<td style="text-align: center;">Connect-PnPOnline, Disconnect-PnPOnline, Get-PnPList, Get-PnPListItem, Get-PnPWeb</td>
+<td style="text-align: center;">Get-Date, Get-Location, Import-Csv, Join-Path, New-Item, select-string, Add-Content</td>
+</tr>
+<tr>
+<td><a href="spo-find-script-editor-webpart-using-search/README.html">Find every page that contains a Modern Script Editor web part</a></td>
+<td style="text-align: center;">Connect-PnPOnline</td>
+<td style="text-align: center;">Invoke-PnPSearchQuery, New-Object, Add-Member, Export-Csv</td>
+</tr>
+<tr>
+<td><a href="spo-find-spfx-packages-installed-tenant-sitecollection-appcatalog/README.html">Find SharePoint Framework (SPFx) Packages in Tenant and Site Collection App Catalogs</a></td>
+<td style="text-align: center;">Connect-PnPOnline, Get-PnPApp, Get-PnPConnection, Get-PnPSite, Get-PnPSiteCollectionAppCatalog, Get-PnPTenant, Get-PnPTenantSite, Get-PnPWeb, Invoke-PnPSPRestMethod</td>
+<td style="text-align: center;">third-party, Split-Path, Get-ChildItem, Where-Object, ForEach-Object, where-object, Write-Host, New-Object, Add-Member, write-host, Export-CSV</td>
 </tr>
 <tr>
 <td><a href="spo-find-web-part-in-pages/README.html">Find Web Part in Pages e.g., Twitter Web Part</a></td>
@@ -843,6 +1033,11 @@
 <td style="text-align: center;">Import-CSV, ForEach-Object, Write-Host</td>
 </tr>
 <tr>
+<td><a href="spo-generate-sp-file-count-report/README.html">Generate file count report</a></td>
+<td style="text-align: center;">Connect-PnPOnline, Get-PnPList, Get-PnPListItem, Get-PnPTenant, Get-PnPTenantSite</td>
+<td style="text-align: center;">sub-folders, Write-Host, Where-Object, ForEach-Object, Measure-Object, Select-Object, write-host, Sort-Object, Export-Csv, Invoke-Item</td>
+</tr>
+<tr>
 <td><a href="spo-generate-sp-storage-savings-report/README.html">Report of SharePoint Storage Savings by trimming document versions</a></td>
 <td style="text-align: center;">Connect-PnPOnline, Get-PnPFile, Get-PnPList, Get-PnPListItem, Get-PnPProperty, Get-PnPSubWeb, Get-PnPTenant, Get-PnPTenantSite</td>
 <td style="text-align: center;">Where-Object, write-host, Select-Object, Out-Null, Write-Host, Get-SiteCollections, Write-host, Export-Csv</td>
@@ -853,9 +1048,19 @@
 <td style="text-align: center;">ConvertTo-SecureString, New-Object, Write-Host, Export-Csv, ConvertFrom-Json, select-object</td>
 </tr>
 <tr>
+<td><a href="spo-get-all-hub-site-main-sites-and-navigation-nodes/README.html">Get All Hub Site Main Sites and Navigation Nodes</a></td>
+<td style="text-align: center;">Connect-PnPOnline, Disconnect-PnPOnline, Get-PnPHubSite, Get-PnPHubSiteChild, Get-PnPNavigationNode</td>
+<td style="text-align: center;">top-level, Format-Table</td>
+</tr>
+<tr>
 <td><a href="spo-get-and-export-list-fields/README.html">Get SharePoint List Fields With Required properties And Export It To CSV</a></td>
 <td style="text-align: center;">m365 login, m365 status, m365 spo field get, m365 spo field list, Connect-PnPOnline, Get-PnPField</td>
 <td style="text-align: center;">ConvertTo-SecureString, New-Object, Read-Host, Write-Host, Export-Csv, ConvertFrom-Json, ConvertTo-Csv, Out-File</td>
+</tr>
+<tr>
+<td><a href="spo-get-checkedoutfiles-nocheckedinversion/README.html">Get Checked Out Files including those with no checked in version</a></td>
+<td style="text-align: center;">Connect-PnPOnline, Get-PnPContext, Get-PnPList, Get-PnPListItem, Get-PnPTenant, Get-PnPTenantSite, Get-PnPUser</td>
+<td style="text-align: center;">Split-Path, Where-Object, ForEach-Object, write-host, Checked-Out, New-Object, Add-Member, sort-object</td>
 </tr>
 <tr>
 <td><a href="spo-get-contenttype-usage-listitem-listversion/README.html">Get Content Type usage within a site collection.</a></td>
@@ -863,14 +1068,39 @@
 <td style="text-align: center;">Remove-Item, Where-Object, Write-host, New-Object, Add-Member, Start-Sleep, Export-CSV, write-host</td>
 </tr>
 <tr>
-<td><a href="spo-get-customfields-lists/README.html">Get custom fields within lists and libraries within a site </a></td>
-<td style="text-align: center;">Connect-PnPOnline, Disconnect-PnPOnline, Get-PnPField, Get-PnPList</td>
-<td style="text-align: center;">Split-Path, ForEach-Object, New-Object, Add-Member, Export-Csv</td>
+<td><a href="spo-get-customfields-lists/README.html">Get custom fields within lists and libraries within a site</a></td>
+<td style="text-align: center;">m365 login, m365 logout, m365 status, m365 spo field list, m365 spo list list, Connect-PnPOnline, Disconnect-PnPOnline, Get-PnPField, Get-PnPList</td>
+<td style="text-align: center;">Split-Path, ForEach-Object, New-Object, Add-Member, Export-Csv, ConvertFrom-Json, Write-Host</td>
+</tr>
+<tr>
+<td><a href="spo-get-details-spfx-packages-tenant-sitecollection-appcatalog/README.html">Retrieve SPFx Details from Tenant and Site Collection App Catalogs</a></td>
+<td style="text-align: center;">Connect-PnPOnline, Get-PnPConnection, Get-PnPSite, Get-PnPSiteCollectionAppCatalog, Get-PnPTenant, Get-PnPTenantAppCatalogUrl, Get-PnPTenantSite, Invoke-PnPSPRestMethod</td>
+<td style="text-align: center;">tenant-level, Read-Host, Split-Path, Where-Object, Add-Member, ForEach-Object, write-host, Export-CSV</td>
+</tr>
+<tr>
+<td><a href="spo-get-everyone-everyoneexceptexternalusers/README.html">Audit 'Everyone' and  'Everyone except external users' claim within a SharePoint site</a></td>
+<td style="text-align: center;">Connect-PnPOnline, Get-PnPConnection, Get-PnPGroup, Get-PnPGroupMember, Get-PnPList, Get-PnPListItem, Get-PnPProperty, Get-PnPSite, Get-PnPSiteSensitivityLabel, Get-PnPTenant, Get-PnPTenantSite, Get-PnPWeb</td>
+<td style="text-align: center;">Clear-Host, Read-Host, invoke-pnpsprestmethod, write-host, Start-Sleep, New-Object, Extract-Guid, ForEach-Object, Write-Host, Where-Object, foreach-object, Join-Path, Select-Object</td>
+</tr>
+<tr>
+<td><a href="spo-get-existing-site-structure/README.html">Get (or export) an existing site structure in a SharePoint Online tenant</a></td>
+<td style="text-align: center;">Connect-PnPOnline, Get-PnPHomeSite, Get-PnPHubSite, Get-PnPHubSiteChild, Get-PnPList, Get-PnPTenant, Get-PnPTenantInfo, Get-PnPTenantSite</td>
+<td style="text-align: center;">sub-functions, High-level, Get-SiteStructure, ConvertTo-Json, Initialize-Routine, Clear-Host, Get-StartSite, Write-Host, Get-SiteInfo, Get-SiteContent, Get-HomeSite, Get-HubSite, Get-AssignedSites, Where-Object, Write-Error</td>
 </tr>
 <tr>
 <td><a href="spo-get-files-and-creators-modifiers/README.html">Get all files in a Document Library along with Created By and Modified By</a></td>
 <td style="text-align: center;">Connect-PnPOnline, Get-PnPList, Get-PnPListItem, Get-PnPTenant, Get-PnPTenantSite</td>
 <td style="text-align: center;">Export-CSV, Where-Object, Select-Object, Export-Csv</td>
+</tr>
+<tr>
+<td><a href="spo-get-files-retentionlabel-sensitivitylabel/README.html">Get Files with Retention or Sensitivity Labels in SharePoint Online</a></td>
+<td style="text-align: center;">Connect-PnPOnline, Get-PnPConnection, Get-PnPList, Get-PnPListItem, Get-PnPTenant, Get-PnPTenantSite</td>
+<td style="text-align: center;">Split-Path, Where-Object, ForEach-Object, Write-Host, Write-Output, foreach-object, Export-Csv</td>
+</tr>
+<tr>
+<td><a href="spo-get-folder-item/README.html">Retrieves all files properties within a specified folder.</a></td>
+<td style="text-align: center;">Connect-PnPOnline, Get-PnPList, Get-PnPListItem</td>
+<td style="text-align: center;">Read-Host, Write-Progress, foreach-object, write-host, Export-Csv</td>
 </tr>
 <tr>
 <td><a href="spo-get-items-not-indexed-since-last-update/README.html">Pinpoint the items/docs that hasn't been indexed yet</a></td>
@@ -903,6 +1133,41 @@
 <td style="text-align: center;">Where-Object, Select-Object, Connect-MicrosoftTeams, Write-Host, ConvertFrom-Json</td>
 </tr>
 <tr>
+<td><a href="spo-get-permission-audit/README.html">Get permissions including unique permissions up to item level including sharing links</a></td>
+<td style="text-align: center;">Connect-PnPOnline, Get-PnPFile, Get-PnPFileSharingLink, Get-PnPFolder, Get-PnPFolderSharingLink, Get-PnPGroup, Get-PnPGroupMember, Get-PnPList, Get-PnPListItem, Get-PnPMicrosoft365Group, Get-PnPMicrosoft365GroupMember, Get-PnPMicrosoft365GroupOwner, Get-PnPProperty, Get-PnPSite, Get-PnPSiteSensitivityLabel, Get-PnPWeb</td>
+<td style="text-align: center;">Clear-Host, Read-Host, invoke-pnpsprestmethod, write-host, Start-Sleep, New-Object, Extract-Guid, where-object, ForEach-Object, Write-Host, Where-Object, Join-Path, Select-Object</td>
+</tr>
+<tr>
+<td><a href="spo-get-sharepoint-storage-currentquota/README.html">Get SharePoint Storage Usage Against Allocated Quota</a></td>
+<td style="text-align: center;">Get-PnPTenant, Get-PnPTenantSite</td>
+<td style="text-align: center;">connect-pnpOnline, Sort-Object, Select-Object, export-csv</td>
+</tr>
+<tr>
+<td><a href="spo-get-sharinglinks/README.html">Get sharing links within the tenant</a></td>
+<td style="text-align: center;">Connect-PnPOnline, Get-PnPFile, Get-PnPFileSharingLink, Get-PnPFolder, Get-PnPFolderSharingLink, Get-PnPList, Get-PnPListItem, Get-PnPProperty, Get-PnPTenant, Get-PnPTenantSite</td>
+<td style="text-align: center;">Read-Host, Split-Path, New-Object, Where-Object, ForEach-Object, Write-Host, Export-CSV, Write-host</td>
+</tr>
+<tr>
+<td><a href="spo-get-site-list-ids/README.html">Get Site Ids to URL</a></td>
+<td style="text-align: center;">Connect-PnPOnline, Submit-PnPSearchQuery</td>
+<td style="text-align: center;">Add-Type, Select-FileDialog, New-Object, Write-Error, Get-ExecutionPolicy, Write-Host, Set-ExecutionPolicy, Get-Module, Read-Host, Install-Module, Import-Module, Get-Content, Get-Date, Write-Progress, Add-Member, Export-Csv</td>
+</tr>
+<tr>
+<td><a href="spo-get-site-sharing-settings/README.html">Get SharePoint site sharing Settings</a></td>
+<td style="text-align: center;">Connect-PnPOnline, Get-PnPConnection, Get-PnPMicrosoft365Group, Get-PnPMicrosoft365GroupEndpoint, Get-PnPMicrosoft365GroupSettings, Get-PnPTenant, Get-PnPTenantSite, New-PnPMicrosoft365Group, New-PnPMicrosoft365GroupSettings</td>
+<td style="text-align: center;">Split-Path, New-Item, Write-Host, Where-Object, foreach-object, connect-PnPOnline, invoke-pnpsprestmethod</td>
+</tr>
+<tr>
+<td><a href="spo-get-siteid-from-microsoftgraph/README.html">Retrieves site id from Microsoft Graph</a></td>
+<td style="text-align: center;">Connect-PnPOnline, Invoke-PnPGraphMethod</td>
+<td style="text-align: center;">New-Object, write-host</td>
+</tr>
+<tr>
+<td><a href="spo-get-sites-membership-as-admin/README.html">Get sites membership as an admin</a></td>
+<td style="text-align: center;">m365 login, m365 logout, m365 status, m365 spo site admin list, m365 spo tenant site membership list</td>
+<td style="text-align: center;">ConvertFrom-Json, Where-Object, ForEach-Object, Write-host, New-Object, Export-Csv</td>
+</tr>
+<tr>
 <td><a href="spo-get-sites-membership-report/README.html">Get membership report of a site</a></td>
 <td style="text-align: center;">Connect-PnPOnline, Disconnect-PnPOnline, Get-PnPGroup, Get-PnPGroupMember, Get-PnPMicrosoft365Group, Get-PnPMicrosoft365GroupMember, Get-PnPMicrosoft365GroupOwner, Get-PnPSite, Get-PnPSiteCollectionAdmin, Get-PnPTenant, Get-PnPTenantSite</td>
 <td style="text-align: center;">Split-Path, Where-Object, ForEach-Object, New-Object, Add-Member, select-object, sort-object</td>
@@ -913,9 +1178,24 @@
 <td style="text-align: center;">Export-Csv</td>
 </tr>
 <tr>
+<td><a href="spo-get-sp-site-page-viewers-details/README.html">Retrieve &amp; Store SharePoint Site Pages Viewers</a></td>
+<td style="text-align: center;">Add-PnPListItem, Connect-PnPOnline, Disconnect-PnPOnline</td>
+<td style="text-align: center;">cross-platform, Connect-ExchangeOnline, Search-UnifiedAuditLog, Write-Host, Write-Error, Disconnect-ExchangeOnline</td>
+</tr>
+<tr>
+<td><a href="spo-get-spfx-apipermissions/README.html">GET API Permissions for SPFx solutions</a></td>
+<td style="text-align: center;">Connect-MgGraph, Connect-PnPOnline, Disconnect-PnPOnline, Get-PnPList, Get-PnPListItem, Get-PnPProperty, Get-PnPSite, Get-PnPSiteCollectionAppCatalog, Get-PnPTenant, Get-PnPTenantAppCatalogUrl, Get-PnPWeb, Remove-PnPSiteCollectionAdmin, Set-PnPTenant, Set-PnPTenantSite</td>
+<td style="text-align: center;">tenant-level, site-level, Site-level, Import-Module, Get-APIPermissions, Clear-Host, Get-MgServicePrincipal, signed-in, ForEach-Object, get-MgServicePrincipalAppRoleAssignment, Write-Host, Where-Object, Select-Object, Export-Excel, Write-host</td>
+</tr>
+<tr>
 <td><a href="spo-get-storage-site-versionsrecyclebin/README.html">Get storage breakdown by file size, file version size and recycle bin</a></td>
 <td style="text-align: center;">Connect-PnPOnline, Get-PnPFile, Get-PnPFileVersion, Get-PnPList, Get-PnPListItem, Get-PnPRecycleBinItem, Get-PnPTenant, Get-PnPTenantSite</td>
 <td style="text-align: center;">Split-Path, New-Object, Where-Object, ForEach-Object, Write-host, Select-Object, Measure-Object, Out-Null, Write-Output, Write-Host, Export-Csv</td>
+</tr>
+<tr>
+<td><a href="spo-get-termstores-hierarchy-using-csom/README.html">How to retrieve the hierarchy of all term stores for all levels?</a></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">Add-Type, ConvertTo-SecureString, New-Object, Write-Host, write-host</td>
 </tr>
 <tr>
 <td><a href="spo-get-usage-from-audit-logs/README.html">Gets usage from a particular user(s) or site(s) from the Unified Audit Log</a></td>
@@ -928,7 +1208,7 @@
 <td style="text-align: center;">Out-Null</td>
 </tr>
 <tr>
-<td><a href="spo-group-permission-report/README.html">Get permission group report of a site.</a></td>
+<td><a href="spo-group-permission-report/README.html">Get permission group report of a site</a></td>
 <td style="text-align: center;">m365 login, m365 status, m365 adaptivecard send, m365 spo group list, m365 spo list get, m365 spo list list, m365 spo web get</td>
 <td style="text-align: center;">Write-Host, ConvertFrom-Json, Get-Date</td>
 </tr>
@@ -1003,6 +1283,16 @@
 <td style="text-align: center;">ForEach-Object, Write-host, write-host</td>
 </tr>
 <tr>
+<td><a href="spo-locate-orphaned-termstore-terms/README.html">Locate orphaned Termstore Terms</a></td>
+<td style="text-align: center;">Connect-PnPOnline, Get-PnPTerm, Get-PnPTermGroup, Get-PnPTermSet</td>
+<td style="text-align: center;">Out-Null, New-Object, Write-Host, Invoke-PnPSearchQuery, Where-Object</td>
+</tr>
+<tr>
+<td><a href="spo-mailchimp-integration/README.html">Integrate MailChimp Campaigns API with SPO to create wiki pages based on email sent from MailChimp</a></td>
+<td style="text-align: center;">Add-PnPFile, Add-PnPWikiPage, Connect-PnPOnline, Get-PnPContext, Get-PnPFile, Move-PnPFile</td>
+<td style="text-align: center;">Connect-ToSharePoint, Get-MailChimpCampaigns, Invoke-RestMethod, Extract-HTMLContent, Clean-HTMLContent, Create-PublishWikiPage, Write-Host, Invoke-WebRequest, Add-PnpFolder</td>
+</tr>
+<tr>
 <td><a href="spo-modern-page-publishing-report/README.html">SharePoint Modern Page Publishing Report</a></td>
 <td style="text-align: center;">m365 login, m365 status, m365 spo page list, m365 spo web get, Connect-PnPOnline, Get-PnPList, Get-PnPListItem, Get-PnPWeb</td>
 <td style="text-align: center;">Write-Host, Get-Location, Out-File, ConvertFrom-Json, ForEach-Object, New-Object, ConvertTo-Csv</td>
@@ -1038,6 +1328,11 @@
 <td style="text-align: center;">Create-QuickLinkList, Create-PropertiesJson, Where-Object</td>
 </tr>
 <tr>
+<td><a href="spo-record-lock-unlock-file/README.html">Lock and Unlock a file leveraging Microsoft Graph API</a></td>
+<td style="text-align: center;">Connect-PnPOnline, Get-PnPList, Get-PnPListItem, Invoke-PnPGraphMethod</td>
+<td style="text-align: center;">Read-Host, Get-UrlComponents, New-Object, Where-Object, Select-Object, write-host</td>
+</tr>
+<tr>
 <td><a href="spo-recover-meeting-recordings/README.html">SPO Recover Deleted Meeting Recordings</a></td>
 <td style="text-align: center;">Get-PnPRecycleBinItem, Restore-PnPRecycleBinItem, Get-SPODeletedSite, Get-SPOSite, Set-SPOUser, sharepoint-online</td>
 <td style="text-align: center;">Connect-spoService, import-csv, Restore-SPODeleted, write-host, Connect-pnponline, Write-host, Disconnect-pnponline</td>
@@ -1048,19 +1343,49 @@
 <td style="text-align: center;">ConvertTo-SecureString, New-Object, Write-Host, Read-Host, Select-Object, Where-Object, Export-Csv, ConvertFrom-Json</td>
 </tr>
 <tr>
+<td><a href="spo-register-app-login-using-app/README.html">Register and login to SharePoint using an app</a></td>
+<td style="text-align: center;">Connect-PnPOnline, Set-PnPTenant, Set-PnPTenantSite</td>
+<td style="text-align: center;">Register-PnPEntraIDApp</td>
+</tr>
+<tr>
+<td><a href="spo-register-org-assets-library/README.html">Register SharePoint Organization Assets Library</a></td>
+<td style="text-align: center;">m365 login, m365 logout, m365 status, m365 spo orgassetslibrary add, Add-PnPOrgAssetsLibrary, Connect-PnPOnline, Disconnect-PnPOnline, Add-SPOOrgAssetsLibrary, Connect-SPOService, Disconnect-SPOService, sharepoint-online</td>
+<td style="text-align: center;">Read-Host</td>
+</tr>
+<tr>
+<td><a href="spo-reindex-list-where-term-is-used/README.html">Reindex Search index for lists where a specific term is used (when you have renamed the term)</a></td>
+<td style="text-align: center;">Connect-PnPOnline, Get-PnPList, Request-PnPReIndexList</td>
+<td style="text-align: center;">Invoke-PnPSearchQuery, Write-Host, Export-Csv</td>
+</tr>
+<tr>
+<td><a href="spo-reindex-sites/README.html">Reindex SharePoint sites</a></td>
+<td style="text-align: center;">m365 login, m365 logout, m365 status, m365 spo web reindex, Connect-PnPOnline, Disconnect-PnPOnline, Get-PnPTenant, Get-PnPTenantSite, Request-PnPReIndexList, Request-PnPReIndexWeb</td>
+<td style="text-align: center;">Re-index, re-index, re-indexing, Re-crawls, Read-Host, Where-Object, ForEach-Object, Write-host, ConvertFrom-Json, Re-indexing</td>
+</tr>
+<tr>
+<td><a href="spo-remove-access-requests/README.html">Remove site access requests</a></td>
+<td style="text-align: center;">Connect-PnPOnline, Disconnect-PnPOnline, Get-PnPList, Get-PnPListItem, Invoke-PnPBatch, New-PnPBatch, Remove-PnPList, Remove-PnPListItem</td>
+<td style="text-align: center;">Where-Object, ForEach-Object</td>
+</tr>
+<tr>
 <td><a href="spo-remove-custom-themes/README.html">Delete custom color themes from SharePoint</a></td>
 <td style="text-align: center;">m365 login, m365 logout, m365 status, m365 spo theme list, m365 spo theme remove, Connect-PnPOnline, Disconnect-PnPOnline, Get-PnPTenant, Get-PnPTenantTheme, Remove-PnPTenantTheme, Connect-SPOService, Disconnect-SPOService, Get-SPOTheme, Remove-SPOTheme</td>
 <td style="text-align: center;">Format-Table, Read-Host, write-host, ConvertFrom-Json</td>
 </tr>
 <tr>
-<td><a href="spo-remove-large-library/README.html">Delete a library exceeding the list threshold limit. </a></td>
-<td style="text-align: center;">m365 login, m365 status, m365 spo file list, m365 spo file remove, m365 spo folder list, m365 spo folder remove, m365 spo list remove, Connect-PnPOnline, Get-PnPFolder, Get-PnPFolderItem, Get-PnPList, Get-PnPWeb, Remove-PnPFile, Remove-PnPFolder, Remove-PnPList</td>
+<td><a href="spo-remove-large-library/README.html">Delete a library exceeding the list threshold limit</a></td>
+<td style="text-align: center;">m365 login, m365 status, m365 spo file list, m365 spo file remove, m365 spo folder list, m365 spo folder remove, m365 spo list remove, Connect-PnPOnline, Get-PnPFolder, Get-PnPFolderItem, Get-PnPList, Remove-PnPFile, Remove-PnPFolder, Remove-PnPList</td>
 <td style="text-align: center;">write-host, Write-Host, ConvertFrom-Json</td>
 </tr>
 <tr>
 <td><a href="spo-remove-list-designs/README.html">Delete custom SharePoint list designs</a></td>
 <td style="text-align: center;">Connect-PnPOnline, Get-PnPList, Get-PnPListDesign, Get-PnPSite, Get-PnPSiteScript, Remove-PnPList, Remove-PnPListDesign, Remove-PnPSiteScript</td>
 <td style="text-align: center;">Where-Object, Format-Table, Read-Host, Write-Host</td>
+</tr>
+<tr>
+<td><a href="spo-remove-org-assets-library/README.html">Remove SharePoint Organization Assets Library</a></td>
+<td style="text-align: center;">m365 login, m365 logout, m365 status, m365 spo orgassetslibrary remove, Connect-PnPOnline, Disconnect-PnPOnline, Remove-PnPOrgAssetsLibrary, Connect-SPOService, Disconnect-SPOService, Remove-SPOOrgAssetsLibrary, sharepoint-online</td>
+<td style="text-align: center;">Read-Host</td>
 </tr>
 <tr>
 <td><a href="spo-remove-orphaned-redirect-sites/README.html">Remove orphaned redirect sites</a></td>
@@ -1083,9 +1408,29 @@
 <td style="text-align: center;">Where-Object, Format-Table, Read-Host, Write-Host, ConvertFrom-Json</td>
 </tr>
 <tr>
+<td><a href="spo-remove-teamify-link/README.html">Remove the Teamify link on Group sites</a></td>
+<td style="text-align: center;">m365 login, m365 spo propertybag set, Connect-PnPOnline, Set-PnPPropertyBagValue, Set-PnPSite, Set-PnPTeamifyPromptHidden</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
 <td><a href="spo-remove-webpart-from-pages/README.html">Remove modern web parts from pages</a></td>
 <td style="text-align: center;">Connect-PnPOnline, Disconnect-PnPOnline, Get-PnPList, Get-PnPListItem, Get-PnPPage, Remove-PnPPage, Remove-PnPPageComponent</td>
 <td style="text-align: center;">Write-Host, ForEach-Object, Where-Object, Remove-WebPartFromPages</td>
+</tr>
+<tr>
+<td><a href="spo-reorder-list-content-type/README.html">Reorder Content Types in SharePoint List</a></td>
+<td style="text-align: center;">Connect-PnPOnline, Disconnect-PnPOnline, Get-PnPList, Invoke-PnPQuery</td>
+<td style="text-align: center;">New-Object</td>
+</tr>
+<tr>
+<td><a href="spo-repair-user-idmismatch/README.html">Repair IdMismatch for user cross all Sites</a></td>
+<td style="text-align: center;">Connect-PnPOnline, Get-PnPTenant, Get-PnPTenantSite, Get-PnPUser, Get-PnPUserProfileProperty, Remove-PnPSiteCollectionAdmin, Remove-PnPUser, Set-PnPTenant, Set-PnPTenantSite</td>
+<td style="text-align: center;">New-Object, Export-Csv, Write-host, Get-Date, Add-Content, New-Item, Add-ScriptLog, Remove-UserIDMismatch, Where-Object, Add-ReportRecord</td>
+</tr>
+<tr>
+<td><a href="spo-replace-people-in-people-web-part/README.html">Replace specific users in the People web part</a></td>
+<td style="text-align: center;">Connect-PnPOnline, Get-PnPList, Get-PnPListItem, Get-PnPTenant, Get-PnPTenantSite</td>
+<td style="text-align: center;">Where-Object, ConvertFrom-Json, ConvertTo-Json, Write-Host, Get-PnPClientSidePage, Export-Csv</td>
 </tr>
 <tr>
 <td><a href="spo-request-pnp-reindex-user-profile/README.html">Request Reindex of SharePoint User Profile Properties</a></td>
@@ -1106,6 +1451,11 @@
 <td><a href="spo-search-export-to-csv/README.html">Run A Search Query And Export To CSV</a></td>
 <td style="text-align: center;">m365 login, m365 status, m365 spo search, Submit-PnPSearchQuery</td>
 <td style="text-align: center;">Export-Csv, Write-Host, Out-File</td>
+</tr>
+<tr>
+<td><a href="spo-serviceprincipals-sites.selected-permission-sites/README.html">Audit Service Principal Access to SharePoint Sites with Sites.Selected Permissions</a></td>
+<td style="text-align: center;">Connect-PnPOnline, Get-PnPAzureADApp, Get-PnPAzureADAppSitePermission, Get-PnPTenant, Get-PnPTenantSite</td>
+<td style="text-align: center;">grant-PnPAzureADAppSitePermission, Split-Path, New-Item, Write-Host, Where-Object, foreach-object, connect-PnPOnline, ForEach-Object</td>
 </tr>
 <tr>
 <td><a href="spo-set-home-site/README.html">Set Home site for SharePoint online tenant</a></td>
@@ -1133,14 +1483,54 @@
 <td style="text-align: center;">Select-Object, Export-Csv</td>
 </tr>
 <tr>
+<td><a href="spo-time-based-file-reports/README.html">M365 Consultant's Script Kit</a></td>
+<td style="text-align: center;">Add-PnPFile, Connect-PnPOnline, Get-PnPList, Get-PnPListItem</td>
+<td style="text-align: center;">Pre-requisites, app-only, Get-Date, Start-Transcript, Write-host, Import-Csv, Write-Host, write-host, Sort-Object, Export-Excel, stop-Transcript, Where-Object, Format-List, Stop-Transcript</td>
+</tr>
+<tr>
 <td><a href="spo-translate-list/README.html">Translate columns in a SharePoint list</a></td>
 <td style="text-align: center;">Add-PnPListItem, Connect-PnPOnline, Get-PnPList, Get-PnPListItem, Remove-PnPList, Remove-PnPListItem</td>
 <td style="text-align: center;">ID-App, ID-Languages, Translate-List, get-pnpList, Get-PNPField, Write-Error, new-PnPBatch, Invoke-PnpBatch, Where-Object, Write-Host, ConvertTo-Json, Invoke-WebRequest, ConvertFrom-Json, ID-Ease, re-translate</td>
 </tr>
 <tr>
+<td><a href="spo-trim-and-m365-archive-sitecollection/README.html">Trim file versions and archive Site Collection using Microsoft365 Archive</a></td>
+<td style="text-align: center;">Connect-PnPOnline, Get-PnPFile, Get-PnPFileVersion, Get-PnPList, Get-PnPListItem, Remove-PnPFile, Remove-PnPFileVersion, Set-PnPSite, Set-PnPSiteArchiveState</td>
+<td style="text-align: center;">Where-Object, Select-Object, Out-Null, write-host, Write-Host, Write-Output</td>
+</tr>
+<tr>
+<td><a href="spo-uninstall-spfx-hubsiteassociatedsites-tenantappcatalog/README.html">Retracting SPFx Solutions from Hub Site and associated sites</a></td>
+<td style="text-align: center;">Connect-PnPOnline, Disconnect-PnPOnline, Get-PnPApp, Get-PnPConnection, Get-PnPHubSite, Get-PnPHubSiteChild, Get-PnPTenant, Get-PnPTenantSite, Get-PnPWeb, Invoke-PnPSPRestMethod, Remove-PnPApp, Uninstall-PnPApp</td>
+<td style="text-align: center;">tenant-level, Split-Path, Get-ChildItem, ForEach-Object, where-object, Select-Object, Write-Host, New-Object, Add-Member, Export-CSV</td>
+</tr>
+<tr>
+<td><a href="spo-update-branding-sitelogo-thumbnail/README.html">Update SharePoint Site Logo and Thumbnail</a></td>
+<td style="text-align: center;">Add-PnPFile, Connect-PnPOnline, Get-PnPFile, Get-PnPHubSite, Get-PnPHubSiteChild, Set-PnPWeb, Set-PnPWebHeader</td>
+<td style="text-align: center;">Start-Transcript, ForEach-Object, Out-Null, Stop-Transcript</td>
+</tr>
+<tr>
+<td><a href="spo-update-document-library-templates/README.html">Add document templates to the New dropdown in a document library</a></td>
+<td style="text-align: center;">Connect-PnPOnline, Copy-PnPFile, Get-PnPContentType, Get-PnPFile, Get-PnPList, Get-PnPView, Invoke-PnPQuery, New-PnPList</td>
+<td style="text-align: center;">Start-Sleep, Where-Object</td>
+</tr>
+<tr>
+<td><a href="spo-update-highlightcontentwebpart-seeall/README.html">How to Hide the 'See All' Button in the Highlighted Content Web Part</a></td>
+<td style="text-align: center;">Connect-PnPOnline, Disconnect-PnPOnline, Set-PnPPage, Set-PnPPageWebPart</td>
+<td style="text-align: center;">Get-PnPClientSidePage, Where-Object</td>
+</tr>
+<tr>
 <td><a href="spo-update-largelist-pnpbatch-with-retry/README.html">Update large list with PnP-Batch with retries to address throttling challenges</a></td>
 <td style="text-align: center;">Connect-PnPOnline, Get-PnPList, Get-PnPListItem, Invoke-PnPBatch, New-PnPBatch, Set-PnPList, Set-PnPListItem</td>
 <td style="text-align: center;">PnP-Batch, ForEach-Object, write-host, Write-Host, Start-Sleep</td>
+</tr>
+<tr>
+<td><a href="spo-update-list-icons-and-color/README.html">Update list icons &amp; color</a></td>
+<td style="text-align: center;">Connect-PnPOnline, Get-PnPList, Invoke-PnPQuery, Set-PnPList</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td><a href="spo-update-list-item-as-system/README.html">Update a SharePoint list item without changing the Modified By and Modified fields</a></td>
+<td style="text-align: center;">Connect-PnPOnline, Disconnect-PnPOnline, Set-PnPList, Set-PnPListItem</td>
+<td style="text-align: center;"></td>
 </tr>
 <tr>
 <td><a href="spo-update-modern-webpart-properties/README.html">Update web part properties on modern pages</a></td>
@@ -1198,6 +1588,11 @@
 <td style="text-align: center;">Get-login, Get-Teams, ConvertFrom-Json, Get-Channels, Get-Messages, Get-MessageReplies, Write-Progress, ConvertTo-Json, Out-File, Write-Host, Write-Error</td>
 </tr>
 <tr>
+<td><a href="teams-export-details-using-teams-cli/README.html">Fetch Microsoft Teams Details And Export To CSV</a></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">ConvertTo-SecureString, New-Object, Write-Host, Connect-MicrosoftTeams, Get-Team, Get-TeamChannel, Select-Object, Export-Csv</td>
+</tr>
+<tr>
 <td><a href="teams-export-direct-routing-calls/README.html">Export Microsoft Teams Direct Routing Calls</a></td>
 <td style="text-align: center;">m365 login, m365 status, m365 teams report directroutingcalls</td>
 <td style="text-align: center;">Get-AccessToken, Invoke-WebRequest, Get-GraphQueryOutput, Write-Host, Invoke-RestMethod, Select-Object, Start-Sleep, Start-Transcript, New-TimeSpan, Get-Date, Export-Csv, Stop-Transcript, Out-File</td>
@@ -1223,14 +1618,34 @@
 <td style="text-align: center;">Import-Module, Get-Member, ForEach-Object, Add-Member, Write-Output, Where-object, Get-UserInfo, Invoke-RestMethod, ForEach-object, Sort-Object, Select-Object, Export-Csv, ConvertFrom-Json</td>
 </tr>
 <tr>
-<td><a href="teams-get-templates/README.html">Collect and export Teams templates</a></td>
+<td><a href="teams-get-channel-spo-urls/README.html">Retrieving SharePoint Site URL for Teams Channels</a></td>
+<td style="text-align: center;">Connect-PnPOnline, Get-PnPTeamsTeam, Get-PnPTenant, Get-PnPTenantSite</td>
+<td style="text-align: center;">Where-Object</td>
+</tr>
+<tr>
+<td><a href="teams-get-templates/README.html">Get Teams Templates</a></td>
 <td style="text-align: center;">Add-PnPStoredCredential, Get-PnPStoredCredential</td>
 <td style="text-align: center;">Write-Output, Add-Type, New-Object, Write-Host, Invoke-RestMethod, Out-Null, Get-TenantId, Add-Member, Write-Log, Get-TeamsApiTokens, ForEach-Object, Get-Member, Where-object, Select-Object, Resolve-Path, Export-Csv, Format-Table</td>
+</tr>
+<tr>
+<td><a href="teams-list-all-app-descriptions/README.html">Get All Teams App Descriptions</a></td>
+<td style="text-align: center;">Connect-PnPOnline, Invoke-PnPGraphMethod</td>
+<td style="text-align: center;">New-Item, Write-Host, ForEach-Object, ConvertTo-Json, Out-String, Export-Csv</td>
 </tr>
 <tr>
 <td><a href="teams-list-guestusers/README.html">List guests within Teams in a tenant</a></td>
 <td style="text-align: center;">m365 login, m365 status, m365 teams team list, m365 teams user list, Connect-PnPOnline, Get-PnPTeamsTeam, Get-PnPTeamsUser</td>
 <td style="text-align: center;">Install-Module, Connect-MicrosoftTeams, get-team, Where-Object, Write-Host, Export-Csv, Write-host, ConvertFrom-Json</td>
+</tr>
+<tr>
+<td><a href="teams-list-installed-apps/README.html">List installed apps within Teams in a tenant</a></td>
+<td style="text-align: center;">m365 login, m365 status, m365 teams team app list, m365 teams team list</td>
+<td style="text-align: center;">Get-AccessToken, Invoke-WebRequest, Get-GraphQueryOutput, Write-Host, Invoke-RestMethod, Select-Object, Start-Sleep, Start-Transcript, Export-Csv, Stop-Transcript, ConvertFrom-Json, ForEach-Object</td>
+</tr>
+<tr>
+<td><a href="teams-list-ownerless-teams/README.html">List ownerless teams</a></td>
+<td style="text-align: center;">Connect-PnPOnline, Get-PnPMicrosoft365Group</td>
+<td style="text-align: center;">Where-Object, Select-Object, Join-String, Export-Csv</td>
 </tr>
 <tr>
 <td><a href="teams-list-teams-owners-and-members/README.html">List all Microsoft Teams team's Owners and Members</a></td>
@@ -1239,7 +1654,7 @@
 </tr>
 <tr>
 <td><a href="tenant-health-notify-teams/README.html">Get notified in Microsoft Teams about SharePoint health incidents</a></td>
-<td style="text-align: center;">m365 login, m365 aad approleassignment add, m365 adaptivecard send, m365 spo set, m365 spo list add, m365 spo list get, m365 spo listitem add, m365 spo listitem list, m365 spo listitem remove, m365 tenant serviceannouncement healthissue list</td>
+<td style="text-align: center;">m365 login, m365 adaptivecard send, m365 spo set, m365 spo list add, m365 spo list get, m365 spo listitem add, m365 spo listitem list, m365 spo listitem remove, m365 tenant serviceannouncement healthissue list</td>
 <td style="text-align: center;">ConvertFrom-Json, Where-Object, out-null</td>
 </tr>
 <tr>
@@ -1265,8 +1680,16 @@
 </thead>
 <tbody>
 <tr>
-<td>m365 login<br>m365 logout<br>m365 request<br>m365 status<br>m365 aad app add<br>m365 aad approleassignment add<br>m365 aad sp get<br>m365 aad user get<br>m365 aad user hibp<br>m365 aad user list<br>m365 adaptivecard send<br>m365 cli config get<br>m365 cli config set<br>m365 context option set<br>m365 flow list<br>m365 flow environment get<br>m365 flow environment list<br>m365 flow owner ensure<br>m365 flow owner list<br>m365 flow owner remove<br>m365 flow run get<br>m365 flow run list<br>m365 planner bucket add<br>m365 planner bucket list<br>m365 planner plan add<br>m365 planner plan get<br>m365 planner plan list<br>m365 planner task add<br>m365 planner task get<br>m365 planner task list<br>m365 pp environment get<br>m365 spfx package generate<br>m365 spo search<br>m365 spo set<br>m365 spo app add<br>m365 spo app deploy<br>m365 spo app get<br>m365 spo app install<br>m365 spo app list<br>m365 spo contenttype add<br>m365 spo contenttype field remove<br>m365 spo contenttype field set<br>m365 spo contenttype get<br>m365 spo contenttype set<br>m365 spo feature enable<br>m365 spo feature list<br>m365 spo field add<br>m365 spo field get<br>m365 spo field list<br>m365 spo field remove<br>m365 spo field set<br>m365 spo file add<br>m365 spo file checkin<br>m365 spo file checkout<br>m365 spo file get<br>m365 spo file list<br>m365 spo file remove<br>m365 spo file sharinginfo get<br>m365 spo file version list<br>m365 spo file version remove<br>m365 spo folder add<br>m365 spo folder list<br>m365 spo folder remove<br>m365 spo group add<br>m365 spo group list<br>m365 spo homesite set<br>m365 spo hubsite connect<br>m365 spo hubsite get<br>m365 spo hubsite list<br>m365 spo list add<br>m365 spo list contenttype add<br>m365 spo list contenttype default set<br>m365 spo list contenttype list<br>m365 spo list contenttype remove<br>m365 spo list get<br>m365 spo list list<br>m365 spo list remove<br>m365 spo list roleassignment add<br>m365 spo list roleinheritance break<br>m365 spo list set<br>m365 spo list view add<br>m365 spo list view field add<br>m365 spo list view get<br>m365 spo list view list<br>m365 spo list view set<br>m365 spo listitem add<br>m365 spo listitem attachment list<br>m365 spo listitem get<br>m365 spo listitem list<br>m365 spo listitem remove<br>m365 spo listitem roleinheritance reset<br>m365 spo listitem set<br>m365 spo page add<br>m365 spo page clientsidewebpart add<br>m365 spo page header set<br>m365 spo page list<br>m365 spo page remove<br>m365 spo page section add<br>m365 spo page set<br>m365 spo page text add<br>m365 spo site add<br>m365 spo site appcatalog add<br>m365 spo site apppermission add<br>m365 spo site get<br>m365 spo site hubsite connect<br>m365 spo site list<br>m365 spo site recyclebinitem clear<br>m365 spo site recyclebinitem list<br>m365 spo site recyclebinitem restore<br>m365 spo site set<br>m365 spo sitedesign add<br>m365 spo sitedesign apply<br>m365 spo sitedesign list<br>m365 spo sitedesign remove<br>m365 spo sitedesign set<br>m365 spo sitescript add<br>m365 spo sitescript list<br>m365 spo sitescript remove<br>m365 spo tenant recyclebinitem list<br>m365 spo tenant recyclebinitem remove<br>m365 spo tenant settings set<br>m365 spo term group list<br>m365 spo term list<br>m365 spo term set list<br>m365 spo theme list<br>m365 spo theme remove<br>m365 spo theme set<br>m365 spo user list<br>m365 spo userprofile get<br>m365 spo userprofile set<br>m365 spo web get<br>m365 spo web installedlanguage list<br>m365 spo web list<br>m365 teams channel get<br>m365 teams channel list<br>m365 teams message list<br>m365 teams message reply list<br>m365 teams message send<br>m365 teams report directroutingcalls<br>m365 teams report pstncalls<br>m365 teams tab list<br>m365 teams team get<br>m365 teams team list<br>m365 teams user list<br>m365 tenant serviceannouncement healthissue list<br>m365 tenant serviceannouncement message list<br>m365 util accesstoken get<br></td>
-<td>m365 _global<br>m365 docs<br>m365 setup<br>m365 version<br>m365 aad app get<br>m365 aad app list<br>m365 aad app remove<br>m365 aad app role add<br>m365 aad app role list<br>m365 aad app role remove<br>m365 aad app set<br>m365 aad approleassignment list<br>m365 aad approleassignment remove<br>m365 aad group get<br>m365 aad group list<br>m365 aad group remove<br>m365 aad groupsetting add<br>m365 aad groupsetting get<br>m365 aad groupsetting list<br>m365 aad groupsetting remove<br>m365 aad groupsetting set<br>m365 aad groupsettingtemplate get<br>m365 aad groupsettingtemplate list<br>m365 aad license list<br>m365 aad m365group add<br>m365 aad m365group conversation list<br>m365 aad m365group conversation post list<br>m365 aad m365group get<br>m365 aad m365group list<br>m365 aad m365group recyclebinitem clear<br>m365 aad m365group recyclebinitem list<br>m365 aad m365group recyclebinitem remove<br>m365 aad m365group recyclebinitem restore<br>m365 aad m365group remove<br>m365 aad m365group renew<br>m365 aad m365group report activitycounts<br>m365 aad m365group report activitydetail<br>m365 aad m365group report activityfilecounts<br>m365 aad m365group report activitygroupcounts<br>m365 aad m365group report activitystorage<br>m365 aad m365group set<br>m365 aad m365group teamify<br>m365 aad m365group user add<br>m365 aad m365group user list<br>m365 aad m365group user remove<br>m365 aad m365group user set<br>m365 aad oauth2grant add<br>m365 aad oauth2grant list<br>m365 aad oauth2grant remove<br>m365 aad oauth2grant set<br>m365 aad policy list<br>m365 aad siteclassification disable<br>m365 aad siteclassification enable<br>m365 aad siteclassification get<br>m365 aad siteclassification set<br>m365 aad sp add<br>m365 aad sp list<br>m365 aad user add<br>m365 aad user guest add<br>m365 aad user license add<br>m365 aad user license list<br>m365 aad user license remove<br>m365 aad user password validate<br>m365 aad user recyclebinitem clear<br>m365 aad user recyclebinitem list<br>m365 aad user recyclebinitem remove<br>m365 aad user recyclebinitem restore<br>m365 aad user remove<br>m365 aad user set<br>m365 aad user signin list<br>m365 app get<br>m365 app open<br>m365 app permission add<br>m365 app permission list<br>m365 booking business get<br>m365 booking business list<br>m365 cli consent<br>m365 cli doctor<br>m365 cli issue<br>m365 cli reconsent<br>m365 cli completion clink update<br>m365 cli completion pwsh setup<br>m365 cli completion pwsh update<br>m365 cli completion sh setup<br>m365 cli completion sh update<br>m365 cli config list<br>m365 cli config reset<br>m365 context init<br>m365 context remove<br>m365 context option list<br>m365 context option remove<br>m365 file add<br>m365 file list<br>m365 file convert pdf<br>m365 flow disable<br>m365 flow enable<br>m365 flow export<br>m365 flow get<br>m365 flow remove<br>m365 flow run cancel<br>m365 flow run resubmit<br>m365 graph changelog list<br>m365 graph schemaextension add<br>m365 graph schemaextension get<br>m365 graph schemaextension list<br>m365 graph schemaextension remove<br>m365 graph schemaextension set<br>m365 graph subscription add<br>m365 onedrive list<br>m365 onedrive report activityfilecounts<br>m365 onedrive report activityusercounts<br>m365 onedrive report activityuserdetail<br>m365 onedrive report usageaccountcounts<br>m365 onedrive report usageaccountdetail<br>m365 onedrive report usagefilecounts<br>m365 onedrive report usagestorage<br>m365 onenote notebook list<br>m365 onenote page list<br>m365 outlook mail send<br>m365 outlook message get<br>m365 outlook message list<br>m365 outlook message move<br>m365 outlook report mailactivitycounts<br>m365 outlook report mailactivityusercounts<br>m365 outlook report mailactivityuserdetail<br>m365 outlook report mailappusageappsusercounts<br>m365 outlook report mailappusageusercounts<br>m365 outlook report mailappusageuserdetail<br>m365 outlook report mailappusageversionsusercounts<br>m365 outlook report mailboxusagedetail<br>m365 outlook report mailboxusagemailboxcount<br>m365 outlook report mailboxusagequotastatusmailboxcounts<br>m365 outlook report mailboxusagestorage<br>m365 outlook room list<br>m365 outlook roomlist list<br>m365 pa app consent set<br>m365 pa app export<br>m365 pa app get<br>m365 pa app list<br>m365 pa app owner set<br>m365 pa app permission ensure<br>m365 pa app permission list<br>m365 pa app permission remove<br>m365 pa app remove<br>m365 pa connector export<br>m365 pa connector list<br>m365 pa environment get<br>m365 pa environment list<br>m365 planner bucket get<br>m365 planner bucket remove<br>m365 planner bucket set<br>m365 planner plan remove<br>m365 planner plan set<br>m365 planner roster add<br>m365 planner roster get<br>m365 planner roster member add<br>m365 planner roster member get<br>m365 planner roster member list<br>m365 planner roster member remove<br>m365 planner roster plan list<br>m365 planner roster remove<br>m365 planner task checklistitem add<br>m365 planner task checklistitem list<br>m365 planner task checklistitem remove<br>m365 planner task reference add<br>m365 planner task reference list<br>m365 planner task reference remove<br>m365 planner task remove<br>m365 planner task set<br>m365 planner tenant settings list<br>m365 planner tenant settings set<br>m365 pp aibuildermodel get<br>m365 pp aibuildermodel list<br>m365 pp aibuildermodel remove<br>m365 pp card clone<br>m365 pp card get<br>m365 pp card list<br>m365 pp card remove<br>m365 pp chatbot get<br>m365 pp chatbot list<br>m365 pp chatbot remove<br>m365 pp dataverse table get<br>m365 pp dataverse table list<br>m365 pp dataverse table remove<br>m365 pp dataverse table row list<br>m365 pp dataverse table row remove<br>m365 pp environment list<br>m365 pp gateway get<br>m365 pp gateway list<br>m365 pp managementapp add<br>m365 pp managementapp list<br>m365 pp solution get<br>m365 pp solution list<br>m365 pp solution publish<br>m365 pp solution publisher add<br>m365 pp solution publisher get<br>m365 pp solution publisher list<br>m365 pp solution publisher remove<br>m365 pp solution remove<br>m365 pp tenant settings list<br>m365 pp tenant settings set<br>m365 purview auditlog list<br>m365 purview retentionevent add<br>m365 purview retentionevent get<br>m365 purview retentionevent list<br>m365 purview retentionevent remove<br>m365 purview retentioneventtype add<br>m365 purview retentioneventtype get<br>m365 purview retentioneventtype list<br>m365 purview retentioneventtype remove<br>m365 purview retentioneventtype set<br>m365 purview retentionlabel add<br>m365 purview retentionlabel get<br>m365 purview retentionlabel list<br>m365 purview retentionlabel remove<br>m365 purview retentionlabel set<br>m365 purview sensitivitylabel get<br>m365 purview sensitivitylabel list<br>m365 purview sensitivitylabel policysettings list<br>m365 purview threatassessment get<br>m365 search externalconnection add<br>m365 search externalconnection get<br>m365 search externalconnection list<br>m365 search externalconnection remove<br>m365 search externalconnection schema add<br>m365 skype report activitycounts<br>m365 skype report activityusercounts<br>m365 skype report activityuserdetail<br>m365 spfx doctor<br>m365 spfx project doctor<br>m365 spfx project externalize<br>m365 spfx project github workflow add<br>m365 spfx project permissions grant<br>m365 spfx project rename<br>m365 spfx project upgrade<br>m365 spo get<br>m365 spo app instance list<br>m365 spo app remove<br>m365 spo app retract<br>m365 spo app teamspackage download<br>m365 spo app uninstall<br>m365 spo app upgrade<br>m365 spo applicationcustomizer add<br>m365 spo applicationcustomizer get<br>m365 spo applicationcustomizer list<br>m365 spo applicationcustomizer remove<br>m365 spo applicationcustomizer set<br>m365 spo apppage add<br>m365 spo apppage set<br>m365 spo cdn get<br>m365 spo cdn origin add<br>m365 spo cdn origin list<br>m365 spo cdn origin remove<br>m365 spo cdn policy list<br>m365 spo cdn policy set<br>m365 spo cdn set<br>m365 spo commandset add<br>m365 spo commandset get<br>m365 spo commandset list<br>m365 spo commandset remove<br>m365 spo commandset set<br>m365 spo contenttype list<br>m365 spo contenttype remove<br>m365 spo contenttypehub get<br>m365 spo customaction add<br>m365 spo customaction clear<br>m365 spo customaction get<br>m365 spo customaction list<br>m365 spo customaction remove<br>m365 spo customaction set<br>m365 spo eventreceiver get<br>m365 spo eventreceiver list<br>m365 spo eventreceiver remove<br>m365 spo externaluser list<br>m365 spo feature disable<br>m365 spo file checkout undo<br>m365 spo file copy<br>m365 spo file move<br>m365 spo file rename<br>m365 spo file retentionlabel ensure<br>m365 spo file retentionlabel remove<br>m365 spo file roleassignment add<br>m365 spo file roleassignment remove<br>m365 spo file roleinheritance break<br>m365 spo file roleinheritance reset<br>m365 spo file sharinglink add<br>m365 spo file sharinglink clear<br>m365 spo file sharinglink get<br>m365 spo file sharinglink list<br>m365 spo file sharinglink remove<br>m365 spo file sharinglink set<br>m365 spo file version clear<br>m365 spo file version get<br>m365 spo file version restore<br>m365 spo folder copy<br>m365 spo folder get<br>m365 spo folder move<br>m365 spo folder rename<br>m365 spo folder retentionlabel ensure<br>m365 spo folder retentionlabel remove<br>m365 spo folder roleassignment add<br>m365 spo folder roleassignment remove<br>m365 spo folder roleinheritance break<br>m365 spo folder roleinheritance reset<br>m365 spo group get<br>m365 spo group member add<br>m365 spo group member list<br>m365 spo group member remove<br>m365 spo group remove<br>m365 spo group set<br>m365 spo hidedefaultthemes get<br>m365 spo hidedefaultthemes set<br>m365 spo homesite get<br>m365 spo homesite remove<br>m365 spo hubsite data get<br>m365 spo hubsite disconnect<br>m365 spo hubsite register<br>m365 spo hubsite rights grant<br>m365 spo hubsite rights revoke<br>m365 spo hubsite set<br>m365 spo hubsite unregister<br>m365 spo knowledgehub get<br>m365 spo knowledgehub remove<br>m365 spo knowledgehub set<br>m365 spo list retentionlabel ensure<br>m365 spo list retentionlabel get<br>m365 spo list retentionlabel remove<br>m365 spo list roleassignment remove<br>m365 spo list roleinheritance reset<br>m365 spo list sensitivitylabel ensure<br>m365 spo list sitescript get<br>m365 spo list view field remove<br>m365 spo list view field set<br>m365 spo list view remove<br>m365 spo list webhook add<br>m365 spo list webhook get<br>m365 spo list webhook list<br>m365 spo list webhook remove<br>m365 spo list webhook set<br>m365 spo listitem attachment add<br>m365 spo listitem attachment get<br>m365 spo listitem attachment remove<br>m365 spo listitem attachment set<br>m365 spo listitem batch add<br>m365 spo listitem batch set<br>m365 spo listitem isrecord<br>m365 spo listitem record declare<br>m365 spo listitem record lock<br>m365 spo listitem record undeclare<br>m365 spo listitem record unlock<br>m365 spo listitem retentionlabel ensure<br>m365 spo listitem retentionlabel remove<br>m365 spo listitem roleassignment add<br>m365 spo listitem roleassignment remove<br>m365 spo listitem roleinheritance break<br>m365 spo mail send<br>m365 spo navigation node add<br>m365 spo navigation node get<br>m365 spo navigation node list<br>m365 spo navigation node remove<br>m365 spo navigation node set<br>m365 spo orgassetslibrary add<br>m365 spo orgassetslibrary list<br>m365 spo orgassetslibrary remove<br>m365 spo orgnewssite list<br>m365 spo orgnewssite remove<br>m365 spo orgnewssite set<br>m365 spo page column get<br>m365 spo page column list<br>m365 spo page control get<br>m365 spo page control list<br>m365 spo page control set<br>m365 spo page copy<br>m365 spo page get<br>m365 spo page section get<br>m365 spo page section list<br>m365 spo page template list<br>m365 spo propertybag get<br>m365 spo propertybag list<br>m365 spo propertybag remove<br>m365 spo propertybag set<br>m365 spo report activityfilecounts<br>m365 spo report activitypages<br>m365 spo report activityusercounts<br>m365 spo report activityuserdetail<br>m365 spo report siteusagedetail<br>m365 spo report siteusagefilecounts<br>m365 spo report siteusagepages<br>m365 spo report siteusagesitecounts<br>m365 spo report siteusagestorage<br>m365 spo roledefinition add<br>m365 spo roledefinition get<br>m365 spo roledefinition list<br>m365 spo roledefinition remove<br>m365 spo serviceprincipal grant add<br>m365 spo serviceprincipal grant list<br>m365 spo serviceprincipal grant revoke<br>m365 spo serviceprincipal permissionrequest approve<br>m365 spo serviceprincipal permissionrequest deny<br>m365 spo serviceprincipal permissionrequest list<br>m365 spo serviceprincipal set<br>m365 spo site appcatalog list<br>m365 spo site appcatalog remove<br>m365 spo site apppermission get<br>m365 spo site apppermission list<br>m365 spo site apppermission remove<br>m365 spo site apppermission set<br>m365 spo site chrome set<br>m365 spo site commsite enable<br>m365 spo site ensure<br>m365 spo site groupify<br>m365 spo site hubsite disconnect<br>m365 spo site hubsite theme sync<br>m365 spo site inplacerecordsmanagement set<br>m365 spo site recyclebinitem move<br>m365 spo site recyclebinitem remove<br>m365 spo site remove<br>m365 spo site rename<br>m365 spo sitedesign get<br>m365 spo sitedesign rights grant<br>m365 spo sitedesign rights list<br>m365 spo sitedesign rights revoke<br>m365 spo sitedesign run list<br>m365 spo sitedesign run status get<br>m365 spo sitedesign task get<br>m365 spo sitedesign task list<br>m365 spo sitedesign task remove<br>m365 spo sitescript get<br>m365 spo sitescript set<br>m365 spo storageentity get<br>m365 spo storageentity list<br>m365 spo storageentity remove<br>m365 spo storageentity set<br>m365 spo tenant appcatalog add<br>m365 spo tenant appcatalogurl get<br>m365 spo tenant applicationcustomizer add<br>m365 spo tenant applicationcustomizer get<br>m365 spo tenant applicationcustomizer list<br>m365 spo tenant applicationcustomizer remove<br>m365 spo tenant applicationcustomizer set<br>m365 spo tenant commandset add<br>m365 spo tenant commandset get<br>m365 spo tenant commandset list<br>m365 spo tenant commandset remove<br>m365 spo tenant commandset set<br>m365 spo tenant recyclebinitem restore<br>m365 spo tenant settings list<br>m365 spo term add<br>m365 spo term get<br>m365 spo term group add<br>m365 spo term group get<br>m365 spo term set add<br>m365 spo term set get<br>m365 spo theme apply<br>m365 spo theme get<br>m365 spo user ensure<br>m365 spo user get<br>m365 spo user remove<br>m365 spo web add<br>m365 spo web clientsidewebpart list<br>m365 spo web reindex<br>m365 spo web remove<br>m365 spo web retentionlabel list<br>m365 spo web roleassignment add<br>m365 spo web roleassignment remove<br>m365 spo web roleinheritance break<br>m365 spo web roleinheritance reset<br>m365 spo web set<br>m365 teams app install<br>m365 teams app list<br>m365 teams app publish<br>m365 teams app remove<br>m365 teams app uninstall<br>m365 teams app update<br>m365 teams cache remove<br>m365 teams channel add<br>m365 teams channel member add<br>m365 teams channel member list<br>m365 teams channel member remove<br>m365 teams channel member set<br>m365 teams channel remove<br>m365 teams channel set<br>m365 teams chat get<br>m365 teams chat list<br>m365 teams chat member add<br>m365 teams chat member list<br>m365 teams chat member remove<br>m365 teams chat message list<br>m365 teams chat message send<br>m365 teams funsettings list<br>m365 teams funsettings set<br>m365 teams guestsettings list<br>m365 teams guestsettings set<br>m365 teams meeting attendancereport list<br>m365 teams meeting get<br>m365 teams meeting list<br>m365 teams meeting transcript list<br>m365 teams membersettings list<br>m365 teams membersettings set<br>m365 teams message get<br>m365 teams messagingsettings list<br>m365 teams messagingsettings set<br>m365 teams report deviceusagedistributionusercounts<br>m365 teams report deviceusageusercounts<br>m365 teams report deviceusageuserdetail<br>m365 teams report useractivitycounts<br>m365 teams report useractivityusercounts<br>m365 teams report useractivityuserdetail<br>m365 teams tab add<br>m365 teams tab get<br>m365 teams tab remove<br>m365 teams team add<br>m365 teams team app list<br>m365 teams team archive<br>m365 teams team clone<br>m365 teams team remove<br>m365 teams team set<br>m365 teams team unarchive<br>m365 teams user app add<br>m365 teams user app list<br>m365 teams user app remove<br>m365 tenant id get<br>m365 tenant info get<br>m365 tenant report activeusercounts<br>m365 tenant report activeuserdetail<br>m365 tenant report office365activationcounts<br>m365 tenant report office365activationsusercounts<br>m365 tenant report office365activationsuserdetail<br>m365 tenant report servicesusercounts<br>m365 tenant security alerts list<br>m365 tenant serviceannouncement health get<br>m365 tenant serviceannouncement health list<br>m365 tenant serviceannouncement healthissue get<br>m365 tenant serviceannouncement message get<br>m365 todo list add<br>m365 todo list get<br>m365 todo list list<br>m365 todo list remove<br>m365 todo list set<br>m365 todo task add<br>m365 todo task get<br>m365 todo task list<br>m365 todo task remove<br>m365 todo task set<br>m365 viva connections app create<br>m365 yammer search<br>m365 yammer group list<br>m365 yammer group user add<br>m365 yammer group user remove<br>m365 yammer message add<br>m365 yammer message get<br>m365 yammer message like set<br>m365 yammer message list<br>m365 yammer message remove<br>m365 yammer network list<br>m365 yammer report activitycounts<br>m365 yammer report activityusercounts<br>m365 yammer report activityuserdetail<br>m365 yammer report deviceusagedistributionusercounts<br>m365 yammer report deviceusageusercounts<br>m365 yammer report deviceusageuserdetail<br>m365 yammer report groupsactivitycounts<br>m365 yammer report groupsactivitydetail<br>m365 yammer report groupsactivitygroupcounts<br>m365 yammer user get<br>m365 yammer user list<br></td>
+<td>m365 login<br>m365 logout<br>m365 request<br>m365 status<br>m365 adaptivecard send<br>m365 cli config get<br>m365 cli config set<br>m365 context option set<br>m365 entra m365group list<br>m365 entra m365group remove<br>m365 entra m365group user add<br>m365 entra m365group user list<br>m365 entra m365group user remove<br>m365 entra user get<br>m365 flow list<br>m365 flow environment get<br>m365 flow environment list<br>m365 flow owner ensure<br>m365 flow owner list<br>m365 flow owner remove<br>m365 flow run get<br>m365 flow run list<br>m365 planner bucket add<br>m365 planner bucket list<br>m365 planner plan add<br>m365 planner plan get<br>m365 planner plan list<br>m365 planner task add<br>m365 planner task get<br>m365 planner task list<br>m365 pp environment get<br>m365 purview auditlog list<br>m365 spfx package generate<br>m365 spo search<br>m365 spo set<br>m365 spo app add<br>m365 spo app deploy<br>m365 spo app get<br>m365 spo app install<br>m365 spo app list<br>m365 spo contenttype add<br>m365 spo contenttype field remove<br>m365 spo contenttype field set<br>m365 spo contenttype get<br>m365 spo contenttype list<br>m365 spo contenttype set<br>m365 spo feature enable<br>m365 spo feature list<br>m365 spo field add<br>m365 spo field get<br>m365 spo field list<br>m365 spo field remove<br>m365 spo field set<br>m365 spo file add<br>m365 spo file checkin<br>m365 spo file checkout<br>m365 spo file get<br>m365 spo file list<br>m365 spo file remove<br>m365 spo file sharinginfo get<br>m365 spo file version list<br>m365 spo file version remove<br>m365 spo folder add<br>m365 spo folder get<br>m365 spo folder list<br>m365 spo folder remove<br>m365 spo group add<br>m365 spo group get<br>m365 spo group list<br>m365 spo group member add<br>m365 spo group member list<br>m365 spo homesite set<br>m365 spo hubsite connect<br>m365 spo hubsite get<br>m365 spo hubsite list<br>m365 spo list add<br>m365 spo list contenttype add<br>m365 spo list contenttype default set<br>m365 spo list contenttype list<br>m365 spo list contenttype remove<br>m365 spo list get<br>m365 spo list list<br>m365 spo list remove<br>m365 spo list roleassignment add<br>m365 spo list roleinheritance break<br>m365 spo list set<br>m365 spo list view add<br>m365 spo list view field add<br>m365 spo list view get<br>m365 spo list view list<br>m365 spo list view set<br>m365 spo listitem add<br>m365 spo listitem attachment list<br>m365 spo listitem get<br>m365 spo listitem list<br>m365 spo listitem remove<br>m365 spo listitem roleinheritance reset<br>m365 spo listitem set<br>m365 spo orgassetslibrary add<br>m365 spo orgassetslibrary remove<br>m365 spo page add<br>m365 spo page clientsidewebpart add<br>m365 spo page header set<br>m365 spo page list<br>m365 spo page remove<br>m365 spo page section add<br>m365 spo page set<br>m365 spo page text add<br>m365 spo propertybag set<br>m365 spo site add<br>m365 spo site admin list<br>m365 spo site appcatalog add<br>m365 spo site apppermission add<br>m365 spo site get<br>m365 spo site hubsite connect<br>m365 spo site recyclebinitem clear<br>m365 spo site recyclebinitem list<br>m365 spo site recyclebinitem restore<br>m365 spo site set<br>m365 spo sitedesign add<br>m365 spo sitedesign apply<br>m365 spo sitedesign list<br>m365 spo sitedesign remove<br>m365 spo sitedesign set<br>m365 spo sitescript add<br>m365 spo sitescript list<br>m365 spo sitescript remove<br>m365 spo tenant recyclebinitem list<br>m365 spo tenant recyclebinitem remove<br>m365 spo tenant settings set<br>m365 spo tenant site membership list<br>m365 spo term group list<br>m365 spo term list<br>m365 spo term set list<br>m365 spo theme list<br>m365 spo theme remove<br>m365 spo theme set<br>m365 spo user list<br>m365 spo userprofile get<br>m365 spo userprofile set<br>m365 spo web get<br>m365 spo web installedlanguage list<br>m365 spo web list<br>m365 spo web reindex<br>m365 spo web set<br>m365 teams channel get<br>m365 teams channel list<br>m365 teams message list<br>m365 teams message reply list<br>m365 teams message send<br>m365 teams report directroutingcalls<br>m365 teams report pstncalls<br>m365 teams tab list<br>m365 teams team app list<br>m365 teams team get<br>m365 teams team list<br>m365 teams user list<br>m365 tenant serviceannouncement healthissue list<br>m365 tenant serviceannouncement message list<br>m365 util accesstoken get<br></td>
+<td>m365 _global<br>m365 docs<br>m365 search<br>m365 setup<br>m365 version<br>m365 app get<br>m365 app open<br>m365 app permission add<br>m365 app permission list<br>m365 booking business get<br>m365 booking business list<br>m365 cli consent<br>m365 cli doctor<br>m365 cli issue<br>m365 cli completion clink update<br>m365 cli completion pwsh setup<br>m365 cli completion pwsh update<br>m365 cli completion sh setup<br>m365 cli completion sh update<br>m365 cli config list<br>m365 cli config reset<br>m365 connection list<br>m365 connection remove<br>m365 connection set<br>m365 connection use<br>m365 context init<br>m365 context remove<br>m365 context option list<br>m365 context option remove<br>m365 entra administrativeunit add<br>m365 entra administrativeunit get<br>m365 entra administrativeunit list<br>m365 entra administrativeunit member add<br>m365 entra administrativeunit member get<br>m365 entra administrativeunit member list<br>m365 entra administrativeunit member remove<br>m365 entra administrativeunit remove<br>m365 entra administrativeunit roleassignment add<br>m365 entra app add<br>m365 entra app get<br>m365 entra app list<br>m365 entra app permission add<br>m365 entra app permission list<br>m365 entra app permission remove<br>m365 entra app remove<br>m365 entra app role add<br>m365 entra app role list<br>m365 entra app role remove<br>m365 entra app set<br>m365 entra approleassignment add<br>m365 entra approleassignment list<br>m365 entra approleassignment remove<br>m365 entra enterpriseapp add<br>m365 entra enterpriseapp get<br>m365 entra enterpriseapp list<br>m365 entra enterpriseapp remove<br>m365 entra group add<br>m365 entra group get<br>m365 entra group list<br>m365 entra group member add<br>m365 entra group member list<br>m365 entra group member set<br>m365 entra group remove<br>m365 entra group set<br>m365 entra groupsetting add<br>m365 entra groupsetting get<br>m365 entra groupsetting list<br>m365 entra groupsetting remove<br>m365 entra groupsetting set<br>m365 entra groupsettingtemplate get<br>m365 entra groupsettingtemplate list<br>m365 entra license list<br>m365 entra m365group add<br>m365 entra m365group conversation list<br>m365 entra m365group conversation post list<br>m365 entra m365group get<br>m365 entra m365group recyclebinitem clear<br>m365 entra m365group recyclebinitem list<br>m365 entra m365group recyclebinitem remove<br>m365 entra m365group recyclebinitem restore<br>m365 entra m365group renew<br>m365 entra m365group report activitycounts<br>m365 entra m365group report activitydetail<br>m365 entra m365group report activityfilecounts<br>m365 entra m365group report activitygroupcounts<br>m365 entra m365group report activitystorage<br>m365 entra m365group set<br>m365 entra m365group teamify<br>m365 entra m365group user set<br>m365 entra multitenant add<br>m365 entra multitenant get<br>m365 entra multitenant remove<br>m365 entra multitenant set<br>m365 entra oauth2grant add<br>m365 entra oauth2grant list<br>m365 entra oauth2grant remove<br>m365 entra oauth2grant set<br>m365 entra pim role assignment add<br>m365 entra pim role assignment eligibility list<br>m365 entra pim role assignment list<br>m365 entra pim role request list<br>m365 entra policy list<br>m365 entra siteclassification disable<br>m365 entra siteclassification enable<br>m365 entra siteclassification get<br>m365 entra siteclassification set<br>m365 entra user add<br>m365 entra user groupmembership list<br>m365 entra user guest add<br>m365 entra user hibp<br>m365 entra user license add<br>m365 entra user license list<br>m365 entra user license remove<br>m365 entra user list<br>m365 entra user password validate<br>m365 entra user recyclebinitem clear<br>m365 entra user recyclebinitem list<br>m365 entra user recyclebinitem remove<br>m365 entra user recyclebinitem restore<br>m365 entra user registrationdetails list<br>m365 entra user remove<br>m365 entra user set<br>m365 entra user signin list<br>m365 external connection add<br>m365 external connection doctor<br>m365 external connection get<br>m365 external connection list<br>m365 external connection remove<br>m365 external connection schema add<br>m365 external connection urltoitemresolver add<br>m365 external item add<br>m365 file add<br>m365 file copy<br>m365 file list<br>m365 file move<br>m365 file convert pdf<br>m365 flow disable<br>m365 flow enable<br>m365 flow export<br>m365 flow get<br>m365 flow remove<br>m365 flow recyclebinitem list<br>m365 flow recyclebinitem restore<br>m365 flow run cancel<br>m365 flow run resubmit<br>m365 graph changelog list<br>m365 graph schemaextension add<br>m365 graph schemaextension get<br>m365 graph schemaextension list<br>m365 graph schemaextension remove<br>m365 graph schemaextension set<br>m365 graph subscription add<br>m365 onedrive list<br>m365 onedrive report activityfilecounts<br>m365 onedrive report activityusercounts<br>m365 onedrive report activityuserdetail<br>m365 onedrive report usageaccountcounts<br>m365 onedrive report usageaccountdetail<br>m365 onedrive report usagefilecounts<br>m365 onedrive report usagestorage<br>m365 onenote notebook add<br>m365 onenote notebook list<br>m365 onenote page list<br>m365 outlook mail send<br>m365 outlook message get<br>m365 outlook message list<br>m365 outlook message move<br>m365 outlook message remove<br>m365 outlook report mailactivitycounts<br>m365 outlook report mailactivityusercounts<br>m365 outlook report mailactivityuserdetail<br>m365 outlook report mailappusageappsusercounts<br>m365 outlook report mailappusageusercounts<br>m365 outlook report mailappusageuserdetail<br>m365 outlook report mailappusageversionsusercounts<br>m365 outlook report mailboxusagedetail<br>m365 outlook report mailboxusagemailboxcount<br>m365 outlook report mailboxusagequotastatusmailboxcounts<br>m365 outlook report mailboxusagestorage<br>m365 outlook room list<br>m365 outlook roomlist list<br>m365 pa app consent set<br>m365 pa app export<br>m365 pa app get<br>m365 pa app list<br>m365 pa app owner set<br>m365 pa app permission ensure<br>m365 pa app permission list<br>m365 pa app permission remove<br>m365 pa app remove<br>m365 pa connector export<br>m365 pa connector list<br>m365 pa environment get<br>m365 pa environment list<br>m365 planner bucket get<br>m365 planner bucket remove<br>m365 planner bucket set<br>m365 planner plan remove<br>m365 planner plan set<br>m365 planner roster add<br>m365 planner roster get<br>m365 planner roster member add<br>m365 planner roster member get<br>m365 planner roster member list<br>m365 planner roster member remove<br>m365 planner roster plan list<br>m365 planner roster remove<br>m365 planner task checklistitem add<br>m365 planner task checklistitem list<br>m365 planner task checklistitem remove<br>m365 planner task reference add<br>m365 planner task reference list<br>m365 planner task reference remove<br>m365 planner task remove<br>m365 planner task set<br>m365 planner tenant settings list<br>m365 planner tenant settings set<br>m365 pp aibuildermodel get<br>m365 pp aibuildermodel list<br>m365 pp aibuildermodel remove<br>m365 pp card clone<br>m365 pp card get<br>m365 pp card list<br>m365 pp card remove<br>m365 pp chatbot get<br>m365 pp chatbot list<br>m365 pp chatbot remove<br>m365 pp dataverse table get<br>m365 pp dataverse table list<br>m365 pp dataverse table remove<br>m365 pp dataverse table row list<br>m365 pp dataverse table row remove<br>m365 pp environment list<br>m365 pp gateway get<br>m365 pp gateway list<br>m365 pp managementapp add<br>m365 pp managementapp list<br>m365 pp solution get<br>m365 pp solution list<br>m365 pp solution publish<br>m365 pp solution publisher add<br>m365 pp solution publisher get<br>m365 pp solution publisher list<br>m365 pp solution publisher remove<br>m365 pp solution remove<br>m365 pp tenant settings list<br>m365 pp tenant settings set<br>m365 purview retentionevent add<br>m365 purview retentionevent get<br>m365 purview retentionevent list<br>m365 purview retentionevent remove<br>m365 purview retentioneventtype add<br>m365 purview retentioneventtype get<br>m365 purview retentioneventtype list<br>m365 purview retentioneventtype remove<br>m365 purview retentioneventtype set<br>m365 purview retentionlabel add<br>m365 purview retentionlabel get<br>m365 purview retentionlabel list<br>m365 purview retentionlabel remove<br>m365 purview retentionlabel set<br>m365 purview sensitivitylabel get<br>m365 purview sensitivitylabel list<br>m365 purview sensitivitylabel policysettings list<br>m365 purview threatassessment add<br>m365 purview threatassessment get<br>m365 purview threatassessment list<br>m365 skype report activitycounts<br>m365 skype report activityusercounts<br>m365 skype report activityuserdetail<br>m365 spe containertype add<br>m365 spe containertype list<br>m365 spfx doctor<br>m365 spfx project azuredevops pipeline add<br>m365 spfx project doctor<br>m365 spfx project externalize<br>m365 spfx project github workflow add<br>m365 spfx project permissions grant<br>m365 spfx project rename<br>m365 spfx project upgrade<br>m365 spo get<br>m365 spo app instance list<br>m365 spo app remove<br>m365 spo app retract<br>m365 spo app teamspackage download<br>m365 spo app uninstall<br>m365 spo app upgrade<br>m365 spo applicationcustomizer add<br>m365 spo applicationcustomizer get<br>m365 spo applicationcustomizer list<br>m365 spo applicationcustomizer remove<br>m365 spo applicationcustomizer set<br>m365 spo apppage add<br>m365 spo apppage set<br>m365 spo cdn get<br>m365 spo cdn origin add<br>m365 spo cdn origin list<br>m365 spo cdn origin remove<br>m365 spo cdn policy list<br>m365 spo cdn policy set<br>m365 spo cdn set<br>m365 spo commandset add<br>m365 spo commandset get<br>m365 spo commandset list<br>m365 spo commandset remove<br>m365 spo commandset set<br>m365 spo contenttype field list<br>m365 spo contenttype remove<br>m365 spo contenttype sync<br>m365 spo contenttypehub get<br>m365 spo customaction add<br>m365 spo customaction clear<br>m365 spo customaction get<br>m365 spo customaction list<br>m365 spo customaction remove<br>m365 spo customaction set<br>m365 spo eventreceiver get<br>m365 spo eventreceiver list<br>m365 spo eventreceiver remove<br>m365 spo externaluser list<br>m365 spo feature disable<br>m365 spo file checkout undo<br>m365 spo file copy<br>m365 spo file move<br>m365 spo file rename<br>m365 spo file retentionlabel ensure<br>m365 spo file retentionlabel remove<br>m365 spo file roleassignment add<br>m365 spo file roleassignment remove<br>m365 spo file roleinheritance break<br>m365 spo file roleinheritance reset<br>m365 spo file sharinglink add<br>m365 spo file sharinglink clear<br>m365 spo file sharinglink get<br>m365 spo file sharinglink list<br>m365 spo file sharinglink remove<br>m365 spo file sharinglink set<br>m365 spo file version clear<br>m365 spo file version get<br>m365 spo file version restore<br>m365 spo folder copy<br>m365 spo folder move<br>m365 spo folder retentionlabel ensure<br>m365 spo folder retentionlabel remove<br>m365 spo folder roleassignment add<br>m365 spo folder roleassignment remove<br>m365 spo folder roleinheritance break<br>m365 spo folder roleinheritance reset<br>m365 spo folder set<br>m365 spo folder sharinglink add<br>m365 spo folder sharinglink clear<br>m365 spo folder sharinglink get<br>m365 spo folder sharinglink list<br>m365 spo folder sharinglink remove<br>m365 spo folder sharinglink set<br>m365 spo group member remove<br>m365 spo group remove<br>m365 spo group set<br>m365 spo hidedefaultthemes get<br>m365 spo hidedefaultthemes set<br>m365 spo homesite get<br>m365 spo homesite remove<br>m365 spo hubsite data get<br>m365 spo hubsite disconnect<br>m365 spo hubsite register<br>m365 spo hubsite rights grant<br>m365 spo hubsite rights revoke<br>m365 spo hubsite set<br>m365 spo hubsite unregister<br>m365 spo knowledgehub get<br>m365 spo knowledgehub remove<br>m365 spo knowledgehub set<br>m365 spo list retentionlabel ensure<br>m365 spo list retentionlabel get<br>m365 spo list retentionlabel remove<br>m365 spo list roleassignment remove<br>m365 spo list roleinheritance reset<br>m365 spo list sensitivitylabel ensure<br>m365 spo list sitescript get<br>m365 spo list view field remove<br>m365 spo list view field set<br>m365 spo list view remove<br>m365 spo list webhook add<br>m365 spo list webhook get<br>m365 spo list webhook list<br>m365 spo list webhook remove<br>m365 spo list webhook set<br>m365 spo listitem attachment add<br>m365 spo listitem attachment get<br>m365 spo listitem attachment remove<br>m365 spo listitem attachment set<br>m365 spo listitem batch add<br>m365 spo listitem batch remove<br>m365 spo listitem batch set<br>m365 spo listitem isrecord<br>m365 spo listitem record declare<br>m365 spo listitem record lock<br>m365 spo listitem record undeclare<br>m365 spo listitem record unlock<br>m365 spo listitem retentionlabel ensure<br>m365 spo listitem retentionlabel remove<br>m365 spo listitem roleassignment add<br>m365 spo listitem roleassignment remove<br>m365 spo listitem roleinheritance break<br>m365 spo mail send<br>m365 spo navigation node add<br>m365 spo navigation node get<br>m365 spo navigation node list<br>m365 spo navigation node remove<br>m365 spo navigation node set<br>m365 spo orgassetslibrary list<br>m365 spo orgnewssite list<br>m365 spo orgnewssite remove<br>m365 spo orgnewssite set<br>m365 spo page column get<br>m365 spo page column list<br>m365 spo page control get<br>m365 spo page control list<br>m365 spo page control set<br>m365 spo page copy<br>m365 spo page get<br>m365 spo page publish<br>m365 spo page section get<br>m365 spo page section list<br>m365 spo page template list<br>m365 spo propertybag get<br>m365 spo propertybag list<br>m365 spo propertybag remove<br>m365 spo report activityfilecounts<br>m365 spo report activitypages<br>m365 spo report activityusercounts<br>m365 spo report activityuserdetail<br>m365 spo report siteusagedetail<br>m365 spo report siteusagefilecounts<br>m365 spo report siteusagepages<br>m365 spo report siteusagesitecounts<br>m365 spo report siteusagestorage<br>m365 spo roledefinition add<br>m365 spo roledefinition get<br>m365 spo roledefinition list<br>m365 spo roledefinition remove<br>m365 spo serviceprincipal grant add<br>m365 spo serviceprincipal grant list<br>m365 spo serviceprincipal grant revoke<br>m365 spo serviceprincipal permissionrequest approve<br>m365 spo serviceprincipal permissionrequest deny<br>m365 spo serviceprincipal permissionrequest list<br>m365 spo serviceprincipal set<br>m365 spo site admin add<br>m365 spo site admin remove<br>m365 spo site appcatalog list<br>m365 spo site appcatalog remove<br>m365 spo site apppermission get<br>m365 spo site apppermission list<br>m365 spo site apppermission remove<br>m365 spo site apppermission set<br>m365 spo site chrome set<br>m365 spo site commsite enable<br>m365 spo site ensure<br>m365 spo site groupify<br>m365 spo site hubsite disconnect<br>m365 spo site hubsite theme sync<br>m365 spo site inplacerecordsmanagement set<br>m365 spo site recyclebinitem move<br>m365 spo site recyclebinitem remove<br>m365 spo site remove<br>m365 spo site sharingpermission set<br>m365 spo sitedesign get<br>m365 spo sitedesign rights grant<br>m365 spo sitedesign rights list<br>m365 spo sitedesign rights revoke<br>m365 spo sitedesign run list<br>m365 spo sitedesign run status get<br>m365 spo sitedesign task get<br>m365 spo sitedesign task list<br>m365 spo sitedesign task remove<br>m365 spo sitescript get<br>m365 spo sitescript set<br>m365 spo storageentity get<br>m365 spo storageentity list<br>m365 spo storageentity remove<br>m365 spo storageentity set<br>m365 spo tenant appcatalog add<br>m365 spo tenant appcatalogurl get<br>m365 spo tenant applicationcustomizer add<br>m365 spo tenant applicationcustomizer get<br>m365 spo tenant applicationcustomizer list<br>m365 spo tenant applicationcustomizer remove<br>m365 spo tenant applicationcustomizer set<br>m365 spo tenant commandset add<br>m365 spo tenant commandset get<br>m365 spo tenant commandset list<br>m365 spo tenant commandset remove<br>m365 spo tenant commandset set<br>m365 spo tenant recyclebinitem restore<br>m365 spo tenant settings list<br>m365 spo tenant site archive<br>m365 spo tenant site list<br>m365 spo tenant site rename<br>m365 spo tenant site unarchive<br>m365 spo term add<br>m365 spo term get<br>m365 spo term group add<br>m365 spo term group get<br>m365 spo term set add<br>m365 spo term set get<br>m365 spo theme apply<br>m365 spo theme get<br>m365 spo user ensure<br>m365 spo user get<br>m365 spo user remove<br>m365 spo web add<br>m365 spo web clientsidewebpart list<br>m365 spo web remove<br>m365 spo web retentionlabel list<br>m365 spo web roleassignment add<br>m365 spo web roleassignment remove<br>m365 spo web roleinheritance break<br>m365 spo web roleinheritance reset<br>m365 spp contentcenter list<br>m365 spp model list<br>m365 teams app install<br>m365 teams app list<br>m365 teams app publish<br>m365 teams app remove<br>m365 teams app uninstall<br>m365 teams app update<br>m365 teams cache remove<br>m365 teams channel add<br>m365 teams channel member add<br>m365 teams channel member list<br>m365 teams channel member remove<br>m365 teams channel member set<br>m365 teams channel remove<br>m365 teams channel set<br>m365 teams chat get<br>m365 teams chat list<br>m365 teams chat member add<br>m365 teams chat member list<br>m365 teams chat member remove<br>m365 teams chat message list<br>m365 teams chat message send<br>m365 teams funsettings list<br>m365 teams funsettings set<br>m365 teams guestsettings list<br>m365 teams guestsettings set<br>m365 teams meeting add<br>m365 teams meeting attendancereport get<br>m365 teams meeting attendancereport list<br>m365 teams meeting get<br>m365 teams meeting list<br>m365 teams meeting transcript get<br>m365 teams meeting transcript list<br>m365 teams membersettings list<br>m365 teams membersettings set<br>m365 teams message get<br>m365 teams message remove<br>m365 teams message restore<br>m365 teams messagingsettings list<br>m365 teams messagingsettings set<br>m365 teams report deviceusagedistributionusercounts<br>m365 teams report deviceusageusercounts<br>m365 teams report deviceusageuserdetail<br>m365 teams report useractivitycounts<br>m365 teams report useractivityusercounts<br>m365 teams report useractivityuserdetail<br>m365 teams tab add<br>m365 teams tab get<br>m365 teams tab remove<br>m365 teams team add<br>m365 teams team archive<br>m365 teams team clone<br>m365 teams team remove<br>m365 teams team set<br>m365 teams team unarchive<br>m365 teams user app add<br>m365 teams user app list<br>m365 teams user app remove<br>m365 teams user app upgrade<br>m365 tenant id get<br>m365 tenant info get<br>m365 tenant people profilecardproperty add<br>m365 tenant people profilecardproperty get<br>m365 tenant people profilecardproperty list<br>m365 tenant people profilecardproperty remove<br>m365 tenant people profilecardproperty set<br>m365 tenant report activeusercounts<br>m365 tenant report activeuserdetail<br>m365 tenant report office365activationcounts<br>m365 tenant report office365activationsusercounts<br>m365 tenant report office365activationsuserdetail<br>m365 tenant report servicesusercounts<br>m365 tenant security alerts list<br>m365 tenant serviceannouncement health get<br>m365 tenant serviceannouncement health list<br>m365 tenant serviceannouncement healthissue get<br>m365 tenant serviceannouncement message get<br>m365 todo list add<br>m365 todo list get<br>m365 todo list list<br>m365 todo list remove<br>m365 todo list set<br>m365 todo task add<br>m365 todo task get<br>m365 todo task list<br>m365 todo task remove<br>m365 todo task set<br>m365 viva connections app create<br>m365 viva engage community add<br>m365 viva engage community get<br>m365 viva engage community list<br>m365 viva engage community user list<br>m365 viva engage group list<br>m365 viva engage group user add<br>m365 viva engage group user remove<br>m365 viva engage message add<br>m365 viva engage message get<br>m365 viva engage message like set<br>m365 viva engage message list<br>m365 viva engage message remove<br>m365 viva engage network list<br>m365 viva engage report activitycounts<br>m365 viva engage report activityusercounts<br>m365 viva engage report activityuserdetail<br>m365 viva engage report deviceusagedistributionusercounts<br>m365 viva engage report deviceusageusercounts<br>m365 viva engage report deviceusageuserdetail<br>m365 viva engage report groupsactivitycounts<br>m365 viva engage report groupsactivitydetail<br>m365 viva engage report groupsactivitygroupcounts<br>m365 viva engage search<br>m365 viva engage user get<br>m365 viva engage user list<br></td>
+</tr>
+<tr>
+<td><strong>Total Used</strong></td>
+<td><strong>Total Unused</strong></td>
+</tr>
+<tr>
+<td>160</td>
+<td>633</td>
 </tr>
 </tbody>
 </table>
@@ -1283,6 +1706,14 @@
 <td>Connect-MgGraph<br>Get-MgApplication<br></td>
 <td></td>
 </tr>
+<tr>
+<td><strong>Total Used</strong></td>
+<td><strong>Total Unused</strong></td>
+</tr>
+<tr>
+<td>2</td>
+<td>0</td>
+</tr>
 </tbody>
 </table>
 <h3 id="pnp-powershell-usage">PnP PowerShell Usage</h3>
@@ -1295,8 +1726,16 @@
 </thead>
 <tbody>
 <tr>
-<td>Add-PnPApp<br>Add-PnPContentType<br>Add-PnPContentTypesFromContentTypeHub<br>Add-PnPContentTypeToList<br>Add-PnPDataRowsToSiteTemplate<br>Add-PnPDocumentSet<br>Add-PnPField<br>Add-PnPFieldFromXml<br>Add-PnPFieldToContentType<br>Add-PnPFile<br>Add-PnPFileToSiteTemplate<br>Add-PnPFolder<br>Add-PnPGroupMember<br>Add-PnPHubSiteAssociation<br>Add-PnPHubToHubAssociation<br>Add-PnPListItem<br>Add-PnPMicrosoft365GroupMember<br>Add-PnPMicrosoft365GroupOwner<br>Add-PnPNavigationNode<br>Add-PnPPage<br>Add-PnPPageSection<br>Add-PnPPageTextPart<br>Add-PnPPageWebPart<br>Add-PnPPlannerBucket<br>Add-PnPPlannerTask<br>Add-PnPSiteCollectionAppCatalog<br>Add-PnPSiteDesign<br>Add-PnPSiteScript<br>Add-PnPStoredCredential<br>Add-PnPTenantTheme<br>Add-PnPView<br>Clear-PnPTenantRecycleBinItem<br>Connect-PnPOnline<br>ConvertTo-PnPPage<br>Copy-PnPFile<br>Disconnect-PnPOnline<br>Enable-PnPFeature<br>Enable-PnPPageScheduling<br>Export-PnPFlow<br>Export-PnPPage<br>Export-PnPPageMapping<br>Get-PnPAccessToken<br>Get-PnPApp<br>Get-PnPAzureADApp<br>Get-PnPAzureADAppSitePermission<br>Get-PnPAzureADUser<br>Get-PnPConnection<br>Get-PnPContentType<br>Get-PnPContentTypePublishingHubUrl<br>Get-PnPContext<br>Get-PnPFeature<br>Get-PnPField<br>Get-PnPFile<br>Get-PnPFileVersion<br>Get-PnPFlow<br>Get-PnPFlowRun<br>Get-PnPFolder<br>Get-PnPFolderItem<br>Get-PnPGraphAccessToken<br>Get-PnPGroup<br>Get-PnPGroupMember<br>Get-PnPHomePage<br>Get-PnPHubSite<br>Get-PnPList<br>Get-PnPListDesign<br>Get-PnPListItem<br>Get-PnPMessageCenterAnnouncement<br>Get-PnPMicrosoft365Group<br>Get-PnPMicrosoft365GroupMember<br>Get-PnPMicrosoft365GroupOwner<br>Get-PnPNavigationNode<br>Get-PnPPage<br>Get-PnPPageComponent<br>Get-PnPPlannerBucket<br>Get-PnPPlannerPlan<br>Get-PnPPlannerTask<br>Get-PnPProperty<br>Get-PnPRecycleBinItem<br>Get-PnPRoleDefinition<br>Get-PnPSearchCrawlLog<br>Get-PnPSite<br>Get-PnPSiteCollectionAdmin<br>Get-PnPSiteCollectionAppCatalog<br>Get-PnPSiteDesign<br>Get-PnPSiteScript<br>Get-PnPSiteScriptFromWeb<br>Get-PnPSiteTemplate<br>Get-PnPStoredCredential<br>Get-PnPSubWeb<br>Get-PnPTeamsTeam<br>Get-PnPTeamsUser<br>Get-PnPTenant<br>Get-PnPTenantId<br>Get-PnPTenantRecycleBinItem<br>Get-PnPTenantSite<br>Get-PnPTenantTheme<br>Get-PnPTerm<br>Get-PnPTermGroup<br>Get-PnPTermLabel<br>Get-PnPTermSet<br>Get-PnPUnifiedAuditLog<br>Get-PnPUPABulkImportStatus<br>Get-PnPUser<br>Get-PnPUserProfileProperty<br>Get-PnPView<br>Get-PnPWeb<br>Get-PnPWebPart<br>Grant-PnPAzureADAppSitePermission<br>Grant-PnPSiteDesignRights<br>Import-PnPTermSet<br>Install-PnPApp<br>Invoke-PnPBatch<br>Invoke-PnPGraphMethod<br>Invoke-PnPQuery<br>Invoke-PnPSiteDesign<br>Invoke-PnPSiteTemplate<br>Invoke-PnPSPRestMethod<br>New-PnPBatch<br>New-PnPGroup<br>New-PnPList<br>New-PnPMicrosoft365Group<br>New-PnPPlannerPlan<br>New-PnPSite<br>New-PnPTenantSite<br>New-PnPTerm<br>New-PnPTermGroup<br>New-PnPUPABulkImportJob<br>New-PnPUser<br>Publish-PnPContentType<br>Publish-PnPSyntexModel<br>Register-PnPAzureADApp<br>Register-PnPHubSite<br>Remove-PnPContentType<br>Remove-PnPContentTypeFromList<br>Remove-PnPDeletedMicrosoft365Group<br>Remove-PnPField<br>Remove-PnPFieldFromContentType<br>Remove-PnPFile<br>Remove-PnPFileVersion<br>Remove-PnPFolder<br>Remove-PnPList<br>Remove-PnPListDesign<br>Remove-PnPListItem<br>Remove-PnPMicrosoft365Group<br>Remove-PnPMicrosoft365GroupMember<br>Remove-PnPMicrosoft365GroupOwner<br>Remove-PnPNavigationNode<br>Remove-PnPPage<br>Remove-PnPPageComponent<br>Remove-PnPSiteDesign<br>Remove-PnPSiteScript<br>Remove-PnPTenantDeletedSite<br>Remove-PnPTenantSite<br>Remove-PnPTenantTheme<br>Resolve-PnPFolder<br>Restore-PnPRecycleBinItem<br>Save-PnPPageConversionLog<br>Save-PnPSiteTemplate<br>Set-PnPAzureADAppSitePermission<br>Set-PnPContentType<br>Set-PnPDefaultContentTypeToList<br>Set-PnPField<br>Set-PnPFileCheckedIn<br>Set-PnPFileCheckedOut<br>Set-PnPHomePage<br>Set-PnPHomeSite<br>Set-PnPHubSite<br>Set-PnPList<br>Set-PnPListItem<br>Set-PnPListPermission<br>Set-PnPPage<br>Set-PnPPageWebPart<br>Set-PnPSearchSettings<br>Set-PnPSite<br>Set-PnPSiteDesign<br>Set-PnPTemporarilyDisableAppBar<br>Set-PnPTenant<br>Set-PnPUserProfileProperty<br>Set-PnPView<br>Submit-PnPSearchQuery<br>Submit-PnPTeamsChannelMessage<br>Update-PnPApp<br></td>
-<td>Add-PnPAlert<br>Add-PnPApplicationCustomizer<br>Add-PnPAvailableSiteClassification<br>Add-PnPAzureADGroupMember<br>Add-PnPAzureADGroupOwner<br>Add-PnPAzureADServicePrincipalAppRole<br>Add-PnPContentTypeToDocumentSet<br>Add-PnPCustomAction<br>Add-PnPEventReceiver<br>Add-PnPFileAnonymousSharingLink<br>Add-PnPFileOrganizationalSharingLink<br>Add-PnPFileSharingInvite<br>Add-PnPFileUserSharingLink<br>Add-PnPFlowOwner<br>Add-PnPFolderAnonymousSharingLink<br>Add-PnPFolderOrganizationalSharingLink<br>Add-PnPFolderSharingInvite<br>Add-PnPFolderUserSharingLink<br>Add-PnPHtmlPublishingPageLayout<br>Add-PnPIndexedProperty<br>Add-PnPJavaScriptBlock<br>Add-PnPJavaScriptLink<br>Add-PnPListDesign<br>Add-PnPListFoldersToSiteTemplate<br>Add-PnPListItemAttachment<br>Add-PnPListItemComment<br>Add-PnPMasterPage<br>Add-PnPMicrosoft365GroupToSite<br>Add-PnPOrgAssetsLibrary<br>Add-PnPOrgNewsSite<br>Add-PnPPageImageWebPart<br>Add-PnPPlannerRoster<br>Add-PnPPlannerRosterMember<br>Add-PnPPublishingImageRendition<br>Add-PnPPublishingPage<br>Add-PnPPublishingPageLayout<br>Add-PnPRoleDefinition<br>Add-PnPSiteCollectionAdmin<br>Add-PnPSiteDesignFromWeb<br>Add-PnPSiteDesignTask<br>Add-PnPSiteScriptPackage<br>Add-PnPSiteTemplate<br>Add-PnPTaxonomyField<br>Add-PnPTeamsChannel<br>Add-PnpTeamsChannelUser<br>Add-PnPTeamsTab<br>Add-PnPTeamsTeam<br>Add-PnPTeamsUser<br>Add-PnPTenantCdnOrigin<br>Add-PnPTenantSequence<br>Add-PnPTenantSequenceSite<br>Add-PnPTenantSequenceSubSite<br>Add-PnPTermToTerm<br>Add-PnPViewsFromXML<br>Add-PnPVivaConnectionsDashboardACE<br>Add-PnPWebhookSubscription<br>Add-PnPWebPartToWebPartPage<br>Add-PnPWebPartToWikiPage<br>Add-PnPWikiPage<br>Approve-PnPTenantServicePrincipalPermissionRequest<br>Clear-PnPAzureADGroupMember<br>Clear-PnPAzureADGroupOwner<br>Clear-PnPDefaultColumnValues<br>Clear-PnPListItemAsRecord<br>Clear-PnPMicrosoft365GroupMember<br>Clear-PnPMicrosoft365GroupOwner<br>Clear-PnpRecycleBinItem<br>Clear-PnPTenantAppCatalogUrl<br>Convert-PnPFolderToSiteTemplate<br>Convert-PnPSiteTemplate<br>Convert-PnPSiteTemplateToMarkdown<br>Copy-PnPFolder<br>Copy-PnPItemProxy<br>Copy-PnPList<br>Copy-PnPTeamsTeam<br>Deny-PnPTenantServicePrincipalPermissionRequest<br>Disable-PnPFeature<br>Disable-PnPFlow<br>Disable-PnPPageScheduling<br>Disable-PnPPowerShellTelemetry<br>Disable-PnPSharingForNonOwnersOfSite<br>Disable-PnPSiteClassification<br>Disable-PnPTenantServicePrincipal<br>Enable-PnPCommSite<br>Enable-PnPFlow<br>Enable-PnPPowerShellTelemetry<br>Enable-PnPSiteClassification<br>Enable-PnPTenantServicePrincipal<br>Export-PnPListToSiteTemplate<br>Export-PnPPowerApp<br>Export-PnPTaxonomy<br>Export-PnPTermGroupToXml<br>Export-PnPUserInfo<br>Export-PnPUserProfile<br>Find-PnPFile<br>Get-PnPAlert<br>Get-PnPAppAuthAccessToken<br>Get-PnPAppErrors<br>Get-PnPAppInfo<br>Get-PnPApplicationCustomizer<br>Get-PnPAuditing<br>Get-PnPAuthenticationRealm<br>Get-PnPAvailableLanguage<br>Get-PnPAvailableSensitivityLabel<br>Get-PnPAvailableSiteClassification<br>Get-PnPAzureACSPrincipal<br>Get-PnPAzureADActivityReportDirectoryAudit<br>Get-PnPAzureADActivityReportSignIn<br>Get-PnPAzureADAppPermission<br>Get-PnPAzureADGroup<br>Get-PnPAzureADGroupMember<br>Get-PnPAzureADGroupOwner<br>Get-PnPAzureADServicePrincipal<br>Get-PnPAzureADServicePrincipalAssignedAppRole<br>Get-PnPAzureADServicePrincipalAvailableAppRole<br>Get-PnPAzureCertificate<br>Get-PnPBrowserIdleSignout<br>Get-PnPBuiltInDesignPackageVisibility<br>Get-PnPBuiltInSiteTemplateSettings<br>Get-PnPChangeLog<br>Get-PnPCompatibleHubContentTypes<br>Get-PnPContentTypePublishingStatus<br>Get-PnPCustomAction<br>Get-PnPDefaultColumnValues<br>Get-PnPDeletedMicrosoft365Group<br>Get-PnPDeletedTeam<br>Get-PnPDiagnostics<br>Get-PnPDisableSpacesActivation<br>Get-PnPDocumentSetTemplate<br>Get-PnPEventReceiver<br>Get-PnPException<br>Get-PnPExternalUser<br>Get-PnPFileSharingLink<br>Get-PnPFlowOwner<br>Get-PnPFolderFile<br>Get-PnPFolderFolder<br>Get-PnPFolderSharingLink<br>Get-PnPFolderStorageMetric<br>Get-PnPFooter<br>Get-PnPGraphSubscription<br>Get-PnPGroupPermissions<br>Get-PnPHideDefaultThemes<br>Get-PnPHomeSite<br>Get-PnPHubSiteChild<br>Get-PnPIndexedPropertyKeys<br>Get-PnPInPlaceRecordsManagement<br>Get-PnPIsSiteAliasAvailable<br>Get-PnPJavaScriptLink<br>Get-PnPKnowledgeHubSite<br>Get-PnPLabel<br>Get-PnPLargeListOperationStatus<br>Get-PnPListInformationRightsManagement<br>Get-PnPListItemAttachment<br>Get-PnPListItemComment<br>Get-PnPListItemPermission<br>Get-PnPListItemVersion<br>Get-PnPListPermissions<br>Get-PnPListRecordDeclaration<br>Get-PnPMasterPage<br>Get-PnPMicrosoft365ExpiringGroup<br>Get-PnPMicrosoft365GroupEndpoint<br>Get-PnPMicrosoft365GroupSettings<br>Get-PnPMicrosoft365GroupSettingTemplates<br>Get-PnPMicrosoft365GroupTeam<br>Get-PnPMicrosoft365GroupYammerCommunity<br>Get-PnPOrgAssetsLibrary<br>Get-PnPOrgNewsSite<br>Get-PnPPlannerConfiguration<br>Get-PnPPlannerRosterMember<br>Get-PnPPlannerRosterPlan<br>Get-PnPPlannerUserPolicy<br>Get-PnPPowerApp<br>Get-PnPPowerPlatformConnector<br>Get-PnPPowerPlatformEnvironment<br>Get-PnPPowerShellTelemetryEnabled<br>Get-PnPPropertyBag<br>Get-PnPPublishingImageRendition<br>Get-PnPRequestAccessEmails<br>Get-PnPRetentionLabel<br>Get-PnPSearchConfiguration<br>Get-PnPSearchSettings<br>Get-PnPServiceCurrentHealth<br>Get-PnPServiceHealthIssue<br>Get-PnPSharePointAddIn<br>Get-PnPSharingForNonOwnersOfSite<br>Get-PnPSiteClosure<br>Get-PnPSiteCollectionTermStore<br>Get-PnPSiteDesignRights<br>Get-PnPSiteDesignRun<br>Get-PnPSiteDesignRunStatus<br>Get-PnPSiteDesignTask<br>Get-PnPSiteGroup<br>Get-PnPSitePolicy<br>Get-PnPSiteScriptFromList<br>Get-PnPSiteSearchQueryResults<br>Get-PnPSiteSensitivityLabel<br>Get-PnPSiteUserInvitations<br>Get-PnPStorageEntity<br>Get-PnPStructuralNavigationCacheSiteState<br>Get-PnPStructuralNavigationCacheWebState<br>Get-PnPSubscribeSharePointNewsDigest<br>Get-PnPSyntexModel<br>Get-PnPSyntexModelPublication<br>Get-PnPTaxonomyItem<br>Get-PnPTaxonomySession<br>Get-PnPTeamsApp<br>Get-PnPTeamsChannel<br>Get-PnPTeamsChannelFilesFolder<br>Get-PnPTeamsChannelMessage<br>Get-PnPTeamsChannelMessageReply<br>Get-PnPTeamsChannelUser<br>Get-PnPTeamsPrimaryChannel<br>Get-PnPTeamsTab<br>Get-PnPTeamsTag<br>Get-PnPTemporarilyDisableAppBar<br>Get-PnPTenantAppCatalogUrl<br>Get-PnPTenantCdnEnabled<br>Get-PnPTenantCdnOrigin<br>Get-PnPTenantCdnPolicies<br>Get-PnPTenantDeletedSite<br>Get-PnPTenantInfo<br>Get-PnPTenantInstance<br>Get-PnPTenantSequence<br>Get-PnPTenantSequenceSite<br>Get-PnPTenantServicePrincipal<br>Get-PnPTenantServicePrincipalPermissionGrants<br>Get-PnPTenantServicePrincipalPermissionRequests<br>Get-PnPTenantSyncClientRestriction<br>Get-PnPTenantTemplate<br>Get-PnPTheme<br>Get-PnPTimeZoneId<br>Get-PnPUnfurlLink<br>Get-PnPUserOneDriveQuota<br>Get-PnPVivaConnectionsDashboardACE<br>Get-PnPWebHeader<br>Get-PnPWebhookSubscriptions<br>Get-PnPWebPartProperty<br>Get-PnPWebPartXml<br>Get-PnPWebTemplates<br>Get-PnPWikiPageContent<br>Grant-PnPHubSiteRights<br>Grant-PnPTenantServicePrincipalPermission<br>Import-PnPTaxonomy<br>Import-PnPTermGroupFromXml<br>Invoke-PnPListDesign<br>Invoke-PnPSiteScript<br>Invoke-PnPSiteSwap<br>Invoke-PnPTenantTemplate<br>Invoke-PnPWebAction<br>Measure-PnPList<br>Measure-PnPWeb<br>Move-PnPFile<br>Move-PnPFolder<br>Move-PnPListItemToRecycleBin<br>Move-PnPPageComponent<br>Move-PnpRecycleBinItem<br>Move-PnPTerm<br>Move-PnPTermSet<br>New-PnPAzureADGroup<br>New-PnPAzureADUserTemporaryAccessPass<br>New-PnPAzureCertificate<br>New-PnPExtensibilityHandlerObject<br>New-PnPGraphSubscription<br>New-PnPMicrosoft365GroupSettings<br>New-PnPPersonalSite<br>New-PnPSdnProvider<br>New-PnPSiteCollectionTermStore<br>New-PnPSiteGroup<br>New-PnPSiteTemplate<br>New-PnPSiteTemplateFromFolder<br>New-PnPTeamsApp<br>New-PnPTeamsTeam<br>New-PnPTenantSequence<br>New-PnPTenantSequenceCommunicationSite<br>New-PnPTenantSequenceTeamNoGroupSite<br>New-PnPTenantSequenceTeamNoGroupSubSite<br>New-PnPTenantSequenceTeamSite<br>New-PnPTenantTemplate<br>New-PnPTermLabel<br>New-PnPTermSet<br>New-PnPWeb<br>Publish-PnPApp<br>Publish-PnPCompanyApp<br>Read-PnPSiteTemplate<br>Read-PnPTenantTemplate<br>Receive-PnPCopyMoveJobStatus<br>Register-PnPAppCatalogSite<br>Register-PnPManagementShellAccess<br>Remove-PnPAdaptiveScopeProperty<br>Remove-PnPAlert<br>Remove-PnPApp<br>Remove-PnPApplicationCustomizer<br>Remove-PnPAvailableSiteClassification<br>Remove-PnPAzureADApp<br>Remove-PnPAzureADGroup<br>Remove-PnPAzureADGroupMember<br>Remove-PnPAzureADGroupOwner<br>Remove-PnPAzureADServicePrincipalAssignedAppRole<br>Remove-PnPContentTypeFromDocumentSet<br>Remove-PnPCustomAction<br>Remove-PnPEventReceiver<br>Remove-PnPExternalUser<br>Remove-PnPFileFromSiteTemplate<br>Remove-PnPFileSharingLink<br>Remove-PnPFlow<br>Remove-PnPFlowOwner<br>Remove-PnPFolderSharingLink<br>Remove-PnPGraphSubscription<br>Remove-PnPGroup<br>Remove-PnPGroupMember<br>Remove-PnPHomeSite<br>Remove-PnPHubSiteAssociation<br>Remove-PnPHubToHubAssociation<br>Remove-PnPIndexedProperty<br>Remove-PnPJavaScriptLink<br>Remove-PnPKnowledgeHubSite<br>Remove-PnPListItemAttachment<br>Remove-PnPListItemComments<br>Remove-PnPListItemVersion<br>Remove-PnPMicrosoft365GroupSettings<br>Remove-PnPOrgAssetsLibrary<br>Remove-PnPOrgNewsSite<br>Remove-PnPPlannerBucket<br>Remove-PnPPlannerPlan<br>Remove-PnPPlannerRoster<br>Remove-PnPPlannerRosterMember<br>Remove-PnPPlannerTask<br>Remove-PnPPropertyBagValue<br>Remove-PnPPublishingImageRendition<br>Remove-PnPRoleDefinition<br>Remove-PnPSdnProvider<br>Remove-PnPSearchConfiguration<br>Remove-PnPSiteCollectionAdmin<br>Remove-PnPSiteCollectionAppCatalog<br>Remove-PnPSiteCollectionTermStore<br>Remove-PnPSiteDesignTask<br>Remove-PnPSiteGroup<br>Remove-PnPSiteUserInvitations<br>Remove-PnPStorageEntity<br>Remove-PnPStoredCredential<br>Remove-PnPTaxonomyItem<br>Remove-PnPTeamsApp<br>Remove-PnPTeamsChannel<br>Remove-PnPTeamsChannelUser<br>Remove-PnPTeamsTab<br>Remove-PnPTeamsTag<br>Remove-PnPTeamsTeam<br>Remove-PnPTeamsUser<br>Remove-PnPTenantCdnOrigin<br>Remove-PnPTenantSyncClientRestriction<br>Remove-PnPTerm<br>Remove-PnPTermGroup<br>Remove-PnPTermLabel<br>Remove-PnPUser<br>Remove-PnPUserInfo<br>Remove-PnPUserProfile<br>Remove-PnPView<br>Remove-PnPVivaConnectionsDashboardACE<br>Remove-PnPWeb<br>Remove-PnPWebhookSubscription<br>Remove-PnPWebPart<br>Remove-PnPWikiPage<br>Rename-PnPFile<br>Rename-PnPFolder<br>Rename-PnPTenantSite<br>Repair-PnPSite<br>Request-PnPAccessToken<br>Request-PnPPersonalSite<br>Request-PnPReIndexList<br>Request-PnPReIndexWeb<br>Request-PnPSyntexClassifyAndExtract<br>Reset-PnPFileVersion<br>Reset-PnPLabel<br>Reset-PnPMicrosoft365GroupExpiration<br>Reset-PnPUserOneDriveQuotaToDefault<br>Restart-PnPFlowRun<br>Restore-PnPDeletedMicrosoft365Group<br>Restore-PnPFileVersion<br>Restore-PnPListItemVersion<br>Restore-PnPTenantRecycleBinItem<br>Restore-PnPTenantSite<br>Revoke-PnPAzureADAppSitePermission<br>Revoke-PnPHubSiteRights<br>Revoke-PnPSiteDesignRights<br>Revoke-PnPTenantServicePrincipalPermission<br>Revoke-PnPUserSession<br>Save-PnPTenantTemplate<br>Send-PnPMail<br>Set-PnPAdaptiveScopeProperty<br>Set-PnPApplicationCustomizer<br>Set-PnPAppSideLoading<br>Set-PnPAuditing<br>Set-PnPAvailablePageLayouts<br>Set-PnPAzureADGroup<br>Set-PnPBrowserIdleSignout<br>Set-PnPBuiltInDesignPackageVisibility<br>Set-PnPBuiltInSiteTemplateSettings<br>Set-PnPContext<br>Set-PnPDefaultColumnValues<br>Set-PnPDefaultPageLayout<br>Set-PnPDisableSpacesActivation<br>Set-PnPDocumentSetField<br>Set-PnPFolderPermission<br>Set-PnPFooter<br>Set-PnPGraphSubscription<br>Set-PnPGroup<br>Set-PnPGroupPermissions<br>Set-PnPHideDefaultThemes<br>Set-PnPImageListItemColumn<br>Set-PnPIndexedProperties<br>Set-PnPInPlaceRecordsManagement<br>Set-PnPKnowledgeHubSite<br>Set-PnPLabel<br>Set-PnPListInformationRightsManagement<br>Set-PnPListItemAsRecord<br>Set-PnPListItemPermission<br>Set-PnPListRecordDeclaration<br>Set-PnPMasterPage<br>Set-PnPMessageCenterAnnouncementAsArchived<br>Set-PnPMessageCenterAnnouncementAsFavorite<br>Set-PnPMessageCenterAnnouncementAsNotArchived<br>Set-PnPMessageCenterAnnouncementAsNotFavorite<br>Set-PnPMessageCenterAnnouncementAsRead<br>Set-PnPMessageCenterAnnouncementAsUnread<br>Set-PnPMicrosoft365Group<br>Set-PnPMicrosoft365GroupSettings<br>Set-PnPMinimalDownloadStrategy<br>Set-PnPPageTextPart<br>Set-PnPPlannerBucket<br>Set-PnPPlannerConfiguration<br>Set-PnPPlannerPlan<br>Set-PnPPlannerTask<br>Set-PnPPlannerUserPolicy<br>Set-PnPPropertyBagValue<br>Set-PnPRequestAccessEmails<br>Set-PnPRoleDefinition<br>Set-PnPSearchConfiguration<br>Set-PnPSearchExternalItem<br>Set-PnPSiteClassification<br>Set-PnPSiteClosure<br>Set-PnPSiteGroup<br>Set-PnPSitePolicy<br>Set-PnPSiteScript<br>Set-PnPSiteScriptPackage<br>Set-PnPSiteSensitivityLabel<br>Set-PnPSiteTemplateMetadata<br>Set-PnPStorageEntity<br>Set-PnPStructuralNavigationCacheSiteState<br>Set-PnPStructuralNavigationCacheWebState<br>Set-PnPSubscribeSharePointNewsDigest<br>Set-PnPTaxonomyFieldValue<br>Set-PnPTeamifyPromptHidden<br>Set-PnPTeamsChannel<br>Set-PnpTeamsChannelUser<br>Set-PnPTeamsTab<br>Set-PnPTeamsTag<br>Set-PnPTeamsTeam<br>Set-PnPTeamsTeamArchivedState<br>Set-PnPTeamsTeamPicture<br>Set-PnPTenantAppCatalogUrl<br>Set-PnPTenantCdnEnabled<br>Set-PnPTenantCdnPolicy<br>Set-PnPTenantSite<br>Set-PnPTenantSyncClientRestriction<br>Set-PnPTerm<br>Set-PnPTermGroup<br>Set-PnPTermSet<br>Set-PnPTheme<br>Set-PnPTraceLog<br>Set-PnPUserOneDriveQuota<br>Set-PnPVivaConnectionsDashboardACE<br>Set-PnPWeb<br>Set-PnPWebHeader<br>Set-PnPWebhookSubscription<br>Set-PnPWebPartProperty<br>Set-PnPWebPermission<br>Set-PnPWebTheme<br>Set-PnPWikiPageContent<br>Stop-PnPFlowRun<br>Sync-PnPAppToTeams<br>Sync-PnPSharePointUserProfilesFromAzureActiveDirectory<br>Test-PnPListItemIsRecord<br>Test-PnPMicrosoft365GroupAliasIsUsed<br>Test-PnPSite<br>Test-PnPTenantTemplate<br>Undo-PnPFileCheckedOut<br>Uninstall-PnPApp<br>Unpublish-PnPApp<br>Unpublish-PnPContentType<br>Unpublish-PnPSyntexModel<br>Unregister-PnPHubSite<br>Update-PnPAvailableSiteClassification<br>Update-PnPSiteDesignFromWeb<br>Update-PnPTeamsApp<br>Update-PnPTeamsUser<br>Update-PnPUserType<br></td>
+<td>Add-PnPApp<br>Add-PnPContentType<br>Add-PnPContentTypesFromContentTypeHub<br>Add-PnPContentTypeToList<br>Add-PnPDataRowsToSiteTemplate<br>Add-PnPDocumentSet<br>Add-PnPField<br>Add-PnPFieldFromXml<br>Add-PnPFieldToContentType<br>Add-PnPFile<br>Add-PnPFileToSiteTemplate<br>Add-PnPFlowOwner<br>Add-PnPFolder<br>Add-PnPGroupMember<br>Add-PnPHubSiteAssociation<br>Add-PnPHubToHubAssociation<br>Add-PnPListItem<br>Add-PnPMicrosoft365GroupMember<br>Add-PnPMicrosoft365GroupOwner<br>Add-PnPNavigationNode<br>Add-PnPOrgAssetsLibrary<br>Add-PnPPage<br>Add-PnPPageSection<br>Add-PnPPageTextPart<br>Add-PnPPageWebPart<br>Add-PnPPlannerBucket<br>Add-PnPPlannerTask<br>Add-PnPSiteCollectionAppCatalog<br>Add-PnPSiteDesign<br>Add-PnPSiteScript<br>Add-PnPStoredCredential<br>Add-PnPTenantTheme<br>Add-PnPView<br>Add-PnPWikiPage<br>Approve-PnPTenantServicePrincipalPermissionRequest<br>Clear-PnPTenantRecycleBinItem<br>Connect-PnPOnline<br>ConvertTo-PnPPage<br>Copy-PnPFile<br>Disconnect-PnPOnline<br>Enable-PnPFeature<br>Enable-PnPPageScheduling<br>Export-PnPFlow<br>Export-PnPPage<br>Export-PnPPageMapping<br>Export-PnPPowerApp<br>Get-PnPAccessToken<br>Get-PnPApp<br>Get-PnPAzureADApp<br>Get-PnPAzureADAppPermission<br>Get-PnPAzureADAppSitePermission<br>Get-PnPAzureADUser<br>Get-PnPConnection<br>Get-PnPContentType<br>Get-PnPContentTypePublishingHubUrl<br>Get-PnPContext<br>Get-PnPFeature<br>Get-PnPField<br>Get-PnPFile<br>Get-PnPFileSharingLink<br>Get-PnPFileVersion<br>Get-PnPFlow<br>Get-PnPFlowOwner<br>Get-PnPFlowRun<br>Get-PnPFolder<br>Get-PnPFolderItem<br>Get-PnPFolderSharingLink<br>Get-PnPGroup<br>Get-PnPGroupMember<br>Get-PnPHomePage<br>Get-PnPHomeSite<br>Get-PnPHubSite<br>Get-PnPHubSiteChild<br>Get-PnPLibraryFileVersionBatchDeleteJobStatus<br>Get-PnPList<br>Get-PnPListDesign<br>Get-PnPListItem<br>Get-PnPListItemPermission<br>Get-PnPMessageCenterAnnouncement<br>Get-PnPMicrosoft365ExpiringGroup<br>Get-PnPMicrosoft365Group<br>Get-PnPMicrosoft365GroupEndpoint<br>Get-PnPMicrosoft365GroupMember<br>Get-PnPMicrosoft365GroupOwner<br>Get-PnPMicrosoft365GroupSettings<br>Get-PnPNavigationNode<br>Get-PnPPage<br>Get-PnPPageComponent<br>Get-PnPPlannerBucket<br>Get-PnPPlannerPlan<br>Get-PnPPlannerTask<br>Get-PnPPowerApp<br>Get-PnPPowerPlatformEnvironment<br>Get-PnPProperty<br>Get-PnPRecycleBinItem<br>Get-PnPRoleDefinition<br>Get-PnPSearchCrawlLog<br>Get-PnPSearchExternalSchema<br>Get-PnPSite<br>Get-PnPSiteCollectionAdmin<br>Get-PnPSiteCollectionAppCatalog<br>Get-PnPSiteDesign<br>Get-PnPSiteFileVersionBatchDeleteJobStatus<br>Get-PnPSiteScript<br>Get-PnPSiteScriptFromWeb<br>Get-PnPSiteSensitivityLabel<br>Get-PnPSiteTemplate<br>Get-PnPStoredCredential<br>Get-PnPSubWeb<br>Get-PnPTeamsApp<br>Get-PnPTeamsTeam<br>Get-PnPTeamsUser<br>Get-PnPTenant<br>Get-PnPTenantAppCatalogUrl<br>Get-PnPTenantId<br>Get-PnPTenantInfo<br>Get-PnPTenantRecycleBinItem<br>Get-PnPTenantServicePrincipal<br>Get-PnPTenantServicePrincipalPermissionRequests<br>Get-PnPTenantSite<br>Get-PnPTenantTheme<br>Get-PnPTerm<br>Get-PnPTermGroup<br>Get-PnPTermLabel<br>Get-PnPTermSet<br>Get-PnPUnifiedAuditLog<br>Get-PnPUPABulkImportStatus<br>Get-PnPUser<br>Get-PnPUserProfileProperty<br>Get-PnPView<br>Get-PnPWeb<br>Get-PnPWebPart<br>Grant-PnPAzureADAppSitePermission<br>Grant-PnPSiteDesignRights<br>Import-PnPTermSet<br>Install-PnPApp<br>Invoke-PnPBatch<br>Invoke-PnPGraphMethod<br>Invoke-PnPQuery<br>Invoke-PnPSiteDesign<br>Invoke-PnPSiteTemplate<br>Invoke-PnPSPRestMethod<br>Move-PnPFile<br>New-PnPBatch<br>New-PnPGroup<br>New-PnPLibraryFileVersionBatchDeleteJob<br>New-PnPList<br>New-PnPMicrosoft365Group<br>New-PnPMicrosoft365GroupSettings<br>New-PnPPlannerPlan<br>New-PnPSite<br>New-PnPSiteFileVersionBatchDeleteJob<br>New-PnPTenantSite<br>New-PnPTerm<br>New-PnPTermGroup<br>New-PnPUPABulkImportJob<br>New-PnPUser<br>Publish-PnPContentType<br>Publish-PnPSyntexModel<br>Register-PnPAzureADApp<br>Register-PnPHubSite<br>Remove-PnPApp<br>Remove-PnPContentType<br>Remove-PnPContentTypeFromList<br>Remove-PnPDeletedMicrosoft365Group<br>Remove-PnPField<br>Remove-PnPFieldFromContentType<br>Remove-PnPFile<br>Remove-PnPFileSharingLink<br>Remove-PnPFileVersion<br>Remove-PnPFlow<br>Remove-PnPFlowOwner<br>Remove-PnPFolder<br>Remove-PnPFolderSharingLink<br>Remove-PnPGroup<br>Remove-PnPList<br>Remove-PnPListDesign<br>Remove-PnPListItem<br>Remove-PnPMicrosoft365Group<br>Remove-PnPMicrosoft365GroupMember<br>Remove-PnPMicrosoft365GroupOwner<br>Remove-PnPNavigationNode<br>Remove-PnPOrgAssetsLibrary<br>Remove-PnPPage<br>Remove-PnPPageComponent<br>Remove-PnPSiteCollectionAdmin<br>Remove-PnPSiteDesign<br>Remove-PnPSiteScript<br>Remove-PnPTenantDeletedSite<br>Remove-PnPTenantSite<br>Remove-PnPTenantTheme<br>Remove-PnPUser<br>Request-PnPReIndexList<br>Request-PnPReIndexWeb<br>Reset-PnPMicrosoft365GroupExpiration<br>Resolve-PnPFolder<br>Restore-PnPRecycleBinItem<br>Save-PnPPageConversionLog<br>Save-PnPSiteTemplate<br>Set-PnPAzureADAppSitePermission<br>Set-PnPContentType<br>Set-PnPDefaultContentTypeToList<br>Set-PnPField<br>Set-PnPFileCheckedIn<br>Set-PnPFileCheckedOut<br>Set-PnPHomePage<br>Set-PnPHomeSite<br>Set-PnPHubSite<br>Set-PnPList<br>Set-PnPListItem<br>Set-PnPListPermission<br>Set-PnPMicrosoft365Group<br>Set-PnPMicrosoft365GroupSettings<br>Set-PnPPage<br>Set-PnPPageWebPart<br>Set-PnPPropertyBagValue<br>Set-PnPSearchSettings<br>Set-PnPSite<br>Set-PnPSiteArchiveState<br>Set-PnPSiteDesign<br>Set-PnPTeamifyPromptHidden<br>Set-PnPTemporarilyDisableAppBar<br>Set-PnPTenant<br>Set-PnPTenantSite<br>Set-PnPUserProfileProperty<br>Set-PnPView<br>Set-PnPWeb<br>Set-PnPWebHeader<br>Submit-PnPSearchQuery<br>Submit-PnPTeamsChannelMessage<br>Uninstall-PnPApp<br>Update-PnPApp<br></td>
+<td>Add-PnPAlert<br>Add-PnPApplicationCustomizer<br>Add-PnPAvailableSiteClassification<br>Add-PnPAzureADGroupMember<br>Add-PnPAzureADGroupOwner<br>Add-PnPAzureADServicePrincipalAppRole<br>Add-PnPContentTypeToDocumentSet<br>Add-PnPCustomAction<br>Add-PnPEventReceiver<br>Add-PnPFileAnonymousSharingLink<br>Add-PnPFileOrganizationalSharingLink<br>Add-PnPFileSharingInvite<br>Add-PnPFileUserSharingLink<br>Add-PnPFolderAnonymousSharingLink<br>Add-PnPFolderOrganizationalSharingLink<br>Add-PnPFolderSharingInvite<br>Add-PnPFolderUserSharingLink<br>Add-PnPHomeSite<br>Add-PnPHtmlPublishingPageLayout<br>Add-PnPIndexedProperty<br>Add-PnPJavaScriptBlock<br>Add-PnPJavaScriptLink<br>Add-PnPListDesign<br>Add-PnPListFoldersToSiteTemplate<br>Add-PnPListItemAttachment<br>Add-PnPListItemComment<br>Add-PnPMasterPage<br>Add-PnPMicrosoft365GroupToSite<br>Add-PnPOrgNewsSite<br>Add-PnPPageImageWebPart<br>Add-PnPPlannerRoster<br>Add-PnPPlannerRosterMember<br>Add-PnPPublishingImageRendition<br>Add-PnPPublishingPage<br>Add-PnPPublishingPageLayout<br>Add-PnPRoleDefinition<br>Add-PnPSiteCollectionAdmin<br>Add-PnPSiteDesignFromWeb<br>Add-PnPSiteDesignTask<br>Add-PnPSiteScriptPackage<br>Add-PnPSiteTemplate<br>Add-PnPTaxonomyField<br>Add-PnPTeamsChannel<br>Add-PnpTeamsChannelUser<br>Add-PnPTeamsTab<br>Add-PnPTeamsTeam<br>Add-PnPTeamsUser<br>Add-PnPTenantCdnOrigin<br>Add-PnPTenantRestrictedSearchAllowedList<br>Add-PnPTenantSequence<br>Add-PnPTenantSequenceSite<br>Add-PnPTenantSequenceSubSite<br>Add-PnPTermToTerm<br>Add-PnPViewsFromXML<br>Add-PnPVivaConnectionsDashboardACE<br>Add-PnPWebhookSubscription<br>Add-PnPWebPartToWebPartPage<br>Add-PnPWebPartToWikiPage<br>Clear-PnPAzureADGroupMember<br>Clear-PnPAzureADGroupOwner<br>Clear-PnPDefaultColumnValues<br>Clear-PnPListItemAsRecord<br>Clear-PnPMicrosoft365GroupMember<br>Clear-PnPMicrosoft365GroupOwner<br>Clear-PnpRecycleBinItem<br>Clear-PnPTenantAppCatalogUrl<br>Convert-PnPFile<br>Convert-PnPFolderToSiteTemplate<br>Convert-PnPSiteTemplate<br>Convert-PnPSiteTemplateToMarkdown<br>Copy-PnPFolder<br>Copy-PnPItemProxy<br>Copy-PnPList<br>Copy-PnPTeamsTeam<br>Deny-PnPTenantServicePrincipalPermissionRequest<br>Disable-PnPFeature<br>Disable-PnPFlow<br>Disable-PnPPageScheduling<br>Disable-PnPPowerShellTelemetry<br>Disable-PnPSharingForNonOwnersOfSite<br>Disable-PnPSiteClassification<br>Disable-PnPTenantServicePrincipal<br>Enable-PnPCommSite<br>Enable-PnPFlow<br>Enable-PnPPowerShellTelemetry<br>Enable-PnPPriviledgedIdentityManagement<br>Enable-PnPSiteClassification<br>Enable-PnPTenantServicePrincipal<br>Export-PnPListToSiteTemplate<br>Export-PnPTaxonomy<br>Export-PnPTermGroupToXml<br>Export-PnPUserInfo<br>Export-PnPUserProfile<br>Find-PnPFile<br>Get-PnPAlert<br>Get-PnPAppErrors<br>Get-PnPAppInfo<br>Get-PnPApplicationCustomizer<br>Get-PnPAuditing<br>Get-PnPAuthenticationRealm<br>Get-PnPAvailableLanguage<br>Get-PnPAvailableSensitivityLabel<br>Get-PnPAvailableSiteClassification<br>Get-PnPAzureACSPrincipal<br>Get-PnPAzureADActivityReportDirectoryAudit<br>Get-PnPAzureADActivityReportSignIn<br>Get-PnPAzureADGroup<br>Get-PnPAzureADGroupMember<br>Get-PnPAzureADGroupOwner<br>Get-PnPAzureADServicePrincipal<br>Get-PnPAzureADServicePrincipalAssignedAppRole<br>Get-PnPAzureADServicePrincipalAvailableAppRole<br>Get-PnPAzureCertificate<br>Get-PnPBrowserIdleSignout<br>Get-PnPBuiltInDesignPackageVisibility<br>Get-PnPBuiltInSiteTemplateSettings<br>Get-PnPChangeLog<br>Get-PnPCompatibleHubContentTypes<br>Get-PnPContainer<br>Get-PnPContainerType<br>Get-PnPContainerTypeConfiguration<br>Get-PnPContentTypePublishingStatus<br>Get-PnPCustomAction<br>Get-PnPDefaultColumnValues<br>Get-PnPDeletedContainer<br>Get-PnPDeletedFlow<br>Get-PnPDeletedMicrosoft365Group<br>Get-PnPDeletedTeam<br>Get-PnPDiagnostics<br>Get-PnPDisableSpacesActivation<br>Get-PnPDocumentSetTemplate<br>Get-PnPEventReceiver<br>Get-PnPException<br>Get-PnPExternalUser<br>Get-PnPFileAnalyticsData<br>Get-PnPFileInFolder<br>Get-PnPFileSensitivityLabelInfo<br>Get-PnPFolderInFolder<br>Get-PnPFolderStorageMetric<br>Get-PnPFooter<br>Get-PnPGraphSubscription<br>Get-PnPGroupPermissions<br>Get-PnPHideDefaultThemes<br>Get-PnPIndexedPropertyKeys<br>Get-PnPInPlaceRecordsManagement<br>Get-PnPIsSiteAliasAvailable<br>Get-PnPJavaScriptLink<br>Get-PnPKnowledgeHubSite<br>Get-PnPLabel<br>Get-PnPLargeListOperationStatus<br>Get-PnPLibraryFileVersionExpirationReportJobStatus<br>Get-PnPListInformationRightsManagement<br>Get-PnPListItemAttachment<br>Get-PnPListItemComment<br>Get-PnPListItemVersion<br>Get-PnPListPermissions<br>Get-PnPListRecordDeclaration<br>Get-PnPManagedAppId<br>Get-PnPMasterPage<br>Get-PnPMicrosoft365GroupSettingTemplates<br>Get-PnPMicrosoft365GroupTeam<br>Get-PnPMicrosoft365GroupYammerCommunity<br>Get-PnPOrgAssetsLibrary<br>Get-PnPOrgNewsSite<br>Get-PnPPageLikedByInformation<br>Get-PnPPageSchedulingEnabled<br>Get-PnPPlannerConfiguration<br>Get-PnPPlannerRosterMember<br>Get-PnPPlannerRosterPlan<br>Get-PnPPlannerUserPolicy<br>Get-PnPPowerPlatformCustomConnector<br>Get-PnPPowerPlatformSolution<br>Get-PnPPowerShellTelemetryEnabled<br>Get-PnPPriviledgedIdentityManagementEligibleAssignment<br>Get-PnPPriviledgedIdentityManagementRole<br>Get-PnPPropertyBag<br>Get-PnPPublishingImageRendition<br>Get-PnPRequestAccessEmails<br>Get-PnPSearchConfiguration<br>Get-PnPSearchExternalConnection<br>Get-PnPSearchExternalItem<br>Get-PnPSearchSettings<br>Get-PnPServiceCurrentHealth<br>Get-PnPServiceHealthIssue<br>Get-PnPSharePointAddIn<br>Get-PnPSharingForNonOwnersOfSite<br>Get-PnPSiteAnalyticsData<br>Get-PnPSiteClosure<br>Get-PnPSiteCollectionTermStore<br>Get-PnPSiteDesignRights<br>Get-PnPSiteDesignRun<br>Get-PnPSiteDesignRunStatus<br>Get-PnPSiteDesignTask<br>Get-PnPSiteFileVersionExpirationReportJobStatus<br>Get-PnPSiteGroup<br>Get-PnPSitePolicy<br>Get-PnPSiteScriptFromList<br>Get-PnPSiteSearchQueryResults<br>Get-PnPSiteUserInvitations<br>Get-PnPSiteVersionPolicy<br>Get-PnPSiteVersionPolicyStatus<br>Get-PnPStorageEntity<br>Get-PnPStructuralNavigationCacheSiteState<br>Get-PnPStructuralNavigationCacheWebState<br>Get-PnPSubscribeSharePointNewsDigest<br>Get-PnPSyntexModel<br>Get-PnPSyntexModelPublication<br>Get-PnPTaxonomyItem<br>Get-PnPTaxonomySession<br>Get-PnPTeamsChannel<br>Get-PnPTeamsChannelFilesFolder<br>Get-PnPTeamsChannelMessage<br>Get-PnPTeamsChannelMessageReply<br>Get-PnPTeamsChannelUser<br>Get-PnPTeamsPrimaryChannel<br>Get-PnPTeamsTab<br>Get-PnPTeamsTag<br>Get-PnPTemporarilyDisableAppBar<br>Get-PnPTenantCdnEnabled<br>Get-PnPTenantCdnOrigin<br>Get-PnPTenantCdnPolicies<br>Get-PnPTenantDeletedSite<br>Get-PnPTenantInstance<br>Get-PnPTenantInternalSetting<br>Get-PnPTenantRestrictedSearchAllowedList<br>Get-PnPTenantRestrictedSearchMode<br>Get-PnPTenantRetentionLabel<br>Get-PnPTenantSequence<br>Get-PnPTenantSequenceSite<br>Get-PnPTenantServicePrincipalPermissionGrants<br>Get-PnPTenantSyncClientRestriction<br>Get-PnPTenantTemplate<br>Get-PnPTheme<br>Get-PnPTimeZoneId<br>Get-PnPUnfurlLink<br>Get-PnPUserOneDriveQuota<br>Get-PnPVivaConnectionsDashboardACE<br>Get-PnPWebHeader<br>Get-PnPWebhookSubscription<br>Get-PnPWebPartProperty<br>Get-PnPWebPartXml<br>Get-PnPWebPermission<br>Get-PnPWebTemplates<br>Get-PnPWikiPageContent<br>Grant-PnPHubSiteRights<br>Grant-PnPTenantServicePrincipalPermission<br>Import-PnPTaxonomy<br>Import-PnPTermGroupFromXml<br>Invoke-PnPListDesign<br>Invoke-PnPSiteScript<br>Invoke-PnPSiteSwap<br>Invoke-PnPTenantTemplate<br>Invoke-PnPWebAction<br>Measure-PnPList<br>Measure-PnPWeb<br>Merge-PnPTerm<br>Move-PnPFolder<br>Move-PnPListItemToRecycleBin<br>Move-PnPPageComponent<br>Move-PnpRecycleBinItem<br>Move-PnPTerm<br>Move-PnPTermSet<br>New-PnPAzureADGroup<br>New-PnPAzureADUserTemporaryAccessPass<br>New-PnPAzureCertificate<br>New-PnPContainerType<br>New-PnPExtensibilityHandlerObject<br>New-PnPGraphSubscription<br>New-PnPLibraryFileVersionExpirationReportJob<br>New-PnPPersonalSite<br>New-PnPSdnProvider<br>New-PnPSearchExternalConnection<br>New-PnPSiteCollectionTermStore<br>New-PnPSiteFileVersionExpirationReportJob<br>New-PnPSiteGroup<br>New-PnPSiteTemplate<br>New-PnPSiteTemplateFromFolder<br>New-PnPTeamsApp<br>New-PnPTeamsTeam<br>New-PnPTenantSequence<br>New-PnPTenantSequenceCommunicationSite<br>New-PnPTenantSequenceTeamNoGroupSite<br>New-PnPTenantSequenceTeamNoGroupSubSite<br>New-PnPTenantSequenceTeamSite<br>New-PnPTenantTemplate<br>New-PnPTermLabel<br>New-PnPTermSet<br>New-PnPWeb<br>Publish-PnPApp<br>Publish-PnPCompanyApp<br>Read-PnPSiteTemplate<br>Read-PnPTenantTemplate<br>Receive-PnPCopyMoveJobStatus<br>Register-PnPAppCatalogSite<br>Register-PnPEntraIDAppForInteractiveLogin<br>Register-PnPManagementShellAccess<br>Remove-PnPAdaptiveScopeProperty<br>Remove-PnPAlert<br>Remove-PnPApplicationCustomizer<br>Remove-PnPAvailableSiteClassification<br>Remove-PnPAzureADApp<br>Remove-PnPAzureADGroup<br>Remove-PnPAzureADGroupMember<br>Remove-PnPAzureADGroupOwner<br>Remove-PnPAzureADServicePrincipalAssignedAppRole<br>Remove-PnPAzureADUser<br>Remove-PnPContainer<br>Remove-PnPContainerType<br>Remove-PnPContentTypeFromDocumentSet<br>Remove-PnPCustomAction<br>Remove-PnPEventReceiver<br>Remove-PnPExternalUser<br>Remove-PnPFileFromSiteTemplate<br>Remove-PnPGraphSubscription<br>Remove-PnPGroupMember<br>Remove-PnPHomeSite<br>Remove-PnPHubSiteAssociation<br>Remove-PnPHubToHubAssociation<br>Remove-PnPIndexedProperty<br>Remove-PnPJavaScriptLink<br>Remove-PnPKnowledgeHubSite<br>Remove-PnPLibraryFileVersionBatchDeleteJob<br>Remove-PnPListItemAttachment<br>Remove-PnPListItemComments<br>Remove-PnPListItemVersion<br>Remove-PnPManagedAppId<br>Remove-PnPMicrosoft365GroupPhoto<br>Remove-PnPMicrosoft365GroupSettings<br>Remove-PnPOrgNewsSite<br>Remove-PnPPlannerBucket<br>Remove-PnPPlannerPlan<br>Remove-PnPPlannerRoster<br>Remove-PnPPlannerRosterMember<br>Remove-PnPPlannerTask<br>Remove-PnPPropertyBagValue<br>Remove-PnPPublishingImageRendition<br>Remove-PnPRoleDefinition<br>Remove-PnPSdnProvider<br>Remove-PnPSearchConfiguration<br>Remove-PnPSearchExternalConnection<br>Remove-PnPSearchExternalItem<br>Remove-PnPSiteCollectionAppCatalog<br>Remove-PnPSiteCollectionTermStore<br>Remove-PnPSiteDesignTask<br>Remove-PnPSiteFileVersionBatchDeleteJob<br>Remove-PnPSiteGroup<br>Remove-PnPSiteUserInvitations<br>Remove-PnPStorageEntity<br>Remove-PnPStoredCredential<br>Remove-PnPTaxonomyItem<br>Remove-PnPTeamsApp<br>Remove-PnPTeamsChannel<br>Remove-PnPTeamsChannelUser<br>Remove-PnPTeamsTab<br>Remove-PnPTeamsTag<br>Remove-PnPTeamsTeam<br>Remove-PnPTeamsUser<br>Remove-PnPTenantCdnOrigin<br>Remove-PnPTenantRestrictedSearchAllowedList<br>Remove-PnPTenantSyncClientRestriction<br>Remove-PnPTerm<br>Remove-PnPTermGroup<br>Remove-PnPTermLabel<br>Remove-PnPUserInfo<br>Remove-PnPUserProfile<br>Remove-PnPView<br>Remove-PnPVivaConnectionsDashboardACE<br>Remove-PnPWeb<br>Remove-PnPWebhookSubscription<br>Remove-PnPWebPart<br>Remove-PnPWikiPage<br>Rename-PnPFile<br>Rename-PnPFolder<br>Rename-PnPTenantSite<br>Repair-PnPSite<br>Request-PnPPersonalSite<br>Request-PnPSyntexClassifyAndExtract<br>Reset-PnPDocumentId<br>Reset-PnPFileVersion<br>Reset-PnPRetentionLabel<br>Reset-PnPUserOneDriveQuotaToDefault<br>Restart-PnPFlowRun<br>Restore-PnPDeletedContainer<br>Restore-PnPDeletedMicrosoft365Group<br>Restore-PnPFileVersion<br>Restore-PnPFlow<br>Restore-PnPListItemVersion<br>Restore-PnPTenantRecycleBinItem<br>Restore-PnPTenantSite<br>Revoke-PnPAzureADAppSitePermission<br>Revoke-PnPHubSiteRights<br>Revoke-PnPSiteDesignRights<br>Revoke-PnPTenantServicePrincipalPermission<br>Revoke-PnPUserSession<br>Save-PnPTenantTemplate<br>Send-PnPMail<br>Set-PnPAdaptiveScopeProperty<br>Set-PnPApplicationCustomizer<br>Set-PnPAppSideLoading<br>Set-PnPAuditing<br>Set-PnPAvailablePageLayouts<br>Set-PnPAzureADGroup<br>Set-PnPBrowserIdleSignout<br>Set-PnPBuiltInDesignPackageVisibility<br>Set-PnPBuiltInSiteTemplateSettings<br>Set-PnPContext<br>Set-PnPDefaultColumnValues<br>Set-PnPDefaultPageLayout<br>Set-PnPDisableSpacesActivation<br>Set-PnPDocumentSetField<br>Set-PnPFolderPermission<br>Set-PnPFooter<br>Set-PnPGraphSubscription<br>Set-PnPGroup<br>Set-PnPGroupPermissions<br>Set-PnPHideDefaultThemes<br>Set-PnPImageListItemColumn<br>Set-PnPIndexedProperties<br>Set-PnPInPlaceRecordsManagement<br>Set-PnPKnowledgeHubSite<br>Set-PnPListInformationRightsManagement<br>Set-PnPListItemAsRecord<br>Set-PnPListItemPermission<br>Set-PnPListRecordDeclaration<br>Set-PnPManagedAppId<br>Set-PnPMasterPage<br>Set-PnPMessageCenterAnnouncementAsArchived<br>Set-PnPMessageCenterAnnouncementAsFavorite<br>Set-PnPMessageCenterAnnouncementAsNotArchived<br>Set-PnPMessageCenterAnnouncementAsNotFavorite<br>Set-PnPMessageCenterAnnouncementAsRead<br>Set-PnPMessageCenterAnnouncementAsUnread<br>Set-PnPMinimalDownloadStrategy<br>Set-PnPOrgAssetsLibrary<br>Set-PnPPageTextPart<br>Set-PnPPlannerBucket<br>Set-PnPPlannerConfiguration<br>Set-PnPPlannerPlan<br>Set-PnPPlannerTask<br>Set-PnPPlannerUserPolicy<br>Set-PnPPowerAppByPassConsent<br>Set-PnPRequestAccessEmails<br>Set-PnPRetentionLabel<br>Set-PnPRoleDefinition<br>Set-PnPSearchConfiguration<br>Set-PnPSearchExternalConnection<br>Set-PnPSearchExternalItem<br>Set-PnPSearchExternalSchema<br>Set-PnPSiteClassification<br>Set-PnPSiteClosure<br>Set-PnPSiteGroup<br>Set-PnPSitePolicy<br>Set-PnPSiteScript<br>Set-PnPSiteScriptPackage<br>Set-PnPSiteSensitivityLabel<br>Set-PnPSiteTemplateMetadata<br>Set-PnPSiteVersionPolicy<br>Set-PnPStorageEntity<br>Set-PnPStructuralNavigationCacheSiteState<br>Set-PnPStructuralNavigationCacheWebState<br>Set-PnPSubscribeSharePointNewsDigest<br>Set-PnPTaxonomyFieldValue<br>Set-PnPTeamsChannel<br>Set-PnpTeamsChannelUser<br>Set-PnPTeamsTab<br>Set-PnPTeamsTag<br>Set-PnPTeamsTeam<br>Set-PnPTeamsTeamArchivedState<br>Set-PnPTeamsTeamPicture<br>Set-PnPTenantAppCatalogUrl<br>Set-PnPTenantCdnEnabled<br>Set-PnPTenantCdnPolicy<br>Set-PnPTenantRestrictedSearchMode<br>Set-PnPTenantSyncClientRestriction<br>Set-PnPTerm<br>Set-PnPTermGroup<br>Set-PnPTermSet<br>Set-PnPTheme<br>Set-PnPTraceLog<br>Set-PnPUserOneDriveQuota<br>Set-PnPVivaConnectionsDashboardACE<br>Set-PnPWebhookSubscription<br>Set-PnPWebPartProperty<br>Set-PnPWebPermission<br>Set-PnPWebTheme<br>Set-PnPWikiPageContent<br>Stop-PnPFlowRun<br>Sync-PnPAppToTeams<br>Sync-PnPSharePointUserProfilesFromAzureActiveDirectory<br>Test-PnPListItemIsRecord<br>Test-PnPMicrosoft365GroupAliasIsUsed<br>Test-PnPSite<br>Test-PnPTenantTemplate<br>Undo-PnPFileCheckedOut<br>Unlock-PnPSensitivityLabelEncryptedFile<br>Unpublish-PnPApp<br>Unpublish-PnPContentType<br>Unpublish-PnPSyntexModel<br>Unregister-PnPHubSite<br>Update-PnPAvailableSiteClassification<br>Update-PnPSiteDesignFromWeb<br>Update-PnPTeamsApp<br>Update-PnPTeamsUser<br>Update-PnPUserType<br></td>
+</tr>
+<tr>
+<td><strong>Total Used</strong></td>
+<td><strong>Total Unused</strong></td>
+</tr>
+<tr>
+<td>232</td>
+<td>504</td>
 </tr>
 </tbody>
 </table>
@@ -1310,12 +1749,20 @@
 </thead>
 <tbody>
 <tr>
-<td>Add-SPOHubSiteAssociation<br>Add-SPOListDesign<br>Add-SPOSiteCollectionAppCatalog<br>Add-SPOSiteScript<br>Add-SPOTheme<br>Add-SPOUser<br>Connect-SPOService<br>Disconnect-SPOService<br>Get-SPODeletedSite<br>Get-SPOExternalUser<br>Get-SPOHubSite<br>Get-SPOListDesign<br>Get-SPOSite<br>Get-SPOSiteDesign<br>Get-SPOSiteScript<br>Get-SPOSiteScriptFromList<br>Get-SPOTheme<br>Get-SPOUser<br>New-SPOSite<br>New-SPOSiteGroup<br>Remove-SPODeletedSite<br>Remove-SPOSite<br>Remove-SPOSiteDesign<br>Remove-SPOSiteScript<br>Remove-SPOTheme<br>Set-SPOHomeSite<br>Set-SPOSite<br>Set-SPOTenant<br>Set-SPOUser<br>sharepoint-online<br></td>
-<td>Add-SPOGeoAdministrator<br>Add-SPOHubToHubAssociation<br>Add-SPOOrgAssetsLibrary<br>Add-SPOSiteDesign<br>Add-SPOSiteDesignTask<br>Add-SPOSiteScriptPackage<br>Add-SPOTenantCdnOrigin<br>Approve-SPOTenantServicePrincipalPermissionGrant<br>Approve-SPOTenantServicePrincipalPermissionRequest<br>ConvertTo-SPOMigrationEncryptedPackage<br>ConvertTo-SPOMigrationTargetedPackage<br>Deny-SPOTenantServicePrincipalPermissionRequest<br>Disable-SPOTenantServicePrincipal<br>Enable-SPOCommSite<br>Enable-SPOTenantServicePrincipal<br>Export-SPOQueryLogs<br>Export-SPOUserInfo<br>Export-SPOUserProfile<br>Get-FileSensitivityLabelInfo<br>Get-SPOAppErrors<br>Get-SPOAppInfo<br>Get-SPOBrowserIdleSignOut<br>Get-SPOBuiltInDesignPackageVisibility<br>Get-SPOBuiltInSiteTemplateSettings<br>Get-SPOCrossGeoMovedUsers<br>Get-SPOCrossGeoMoveReport<br>Get-SPOCrossGeoUsers<br>Get-SPODataEncryptionPolicy<br>Get-SPOGeoAdministrator<br>Get-SPOGeoMoveCrossCompatibilityStatus<br>Get-SPOGeoStorageQuota<br>Get-SPOHideDefaultThemes<br>Get-SPOHomeSite<br>Get-SPOMalwareFile<br>Get-SPOMalwareFileContent<br>Get-SPOMigrationJobProgress<br>Get-SPOMigrationJobStatus<br>Get-SPOMultiGeoCompanyAllowedDataLocation<br>Get-SPOMultiGeoExperience<br>Get-SPOOrgAssetsLibrary<br>Get-SPOOrgNewsSite<br>Get-SPOPublicCdnOrigins<br>Get-SPOSiteCollectionAppCatalogs<br>Get-SPOSiteContentMoveState<br>Get-SPOSiteDataEncryptionPolicy<br>Get-SPOSiteDesignRights<br>Get-SPOSiteDesignRun<br>Get-SPOSiteDesignRunStatus<br>Get-SPOSiteDesignTask<br>Get-SPOSiteGroup<br>Get-SPOSiteRenameState<br>Get-SPOSiteScriptFromWeb<br>Get-SPOSiteUserInvitations<br>Get-SPOStorageEntity<br>Get-SPOStructuralNavigationCacheSiteState<br>Get-SPOStructuralNavigationCacheWebState<br>Get-SPOTenant<br>Get-SPOTenantCdnEnabled<br>Get-SPOTenantCdnOrigins<br>Get-SPOTenantCdnPolicies<br>Get-SPOTenantContentTypeReplicationParameters<br>Get-SPOTenantLogEntry<br>Get-SPOTenantLogLastAvailableTimeInUtc<br>Get-SPOTenantOrgRelation<br>Get-SPOTenantOrgRelationByPartner<br>Get-SPOTenantOrgRelationByScenario<br>Get-SPOTenantRenameStatus<br>Get-SPOTenantServicePrincipalPermissionGrants<br>Get-SPOTenantServicePrincipalPermissionRequests<br>Get-SPOTenantSyncClientRestriction<br>Get-SPOTenantTaxonomyReplicationParameters<br>Get-SPOUnifiedGroup<br>Get-SPOUnifiedGroupMoveState<br>Get-SPOUserAndContentMoveState<br>Get-SPOUserOneDriveLocation<br>Get-SPOWebTemplate<br>Grant-SPOHubSiteRights<br>Grant-SPOSiteDesignRights<br>Invoke-SPOMigrationEncryptUploadSubmit<br>Invoke-SPOSiteDesign<br>Invoke-SPOSiteSwap<br>New-SPODataConnectionSetting<br>New-SPOMigrationEncryptionParameters<br>New-SPOMigrationPackage<br>New-SPOnlineApplicationPrincipalManagementServiceApplicationProxy<br>New-SPOPublicCdnOrigin<br>New-SPOSdnProvider<br>New-SPOSiteSharingReportJob<br>New-SPOTenantOrgRelation<br>Register-SPODataEncryptionPolicy<br>Register-SPOHubSite<br>Remove-SPODataConnectionSetting<br>Remove-SPOExternalUser<br>Remove-SPOGeoAdministrator<br>Remove-SPOHomeSite<br>Remove-SPOHubSiteAssociation<br>Remove-SPOHubToHubAssociation<br>Remove-SPOListDesign<br>Remove-SPOMigrationJob<br>Remove-SPOMultiGeoCompanyAllowedDataLocation<br>Remove-SPOOrgAssetsLibrary<br>Remove-SPOOrgNewsSite<br>Remove-SPOPublicCdnOrigin<br>Remove-SPOSdnProvider<br>Remove-SPOSiteCollectionAppCatalog<br>Remove-SPOSiteCollectionAppCatalogById<br>Remove-SPOSiteDesignTask<br>Remove-SPOSiteGroup<br>Remove-SPOSiteUserInvitations<br>Remove-SPOStorageEntity<br>Remove-SPOTenantCdnOrigin<br>Remove-SPOTenantOrgRelation<br>Remove-SPOTenantSyncClientRestriction<br>Remove-SPOUser<br>Remove-SPOUserInfo<br>Remove-SPOUserProfile<br>Repair-SPOSite<br>Request-SPOPersonalSite<br>Request-SPOUpgradeEvaluationSite<br>Restore-SPODataEncryptionPolicy<br>Restore-SPODeletedSite<br>Revoke-SPOHubSiteRights<br>Revoke-SPOSiteDesignRights<br>Revoke-SPOTenantServicePrincipalPermission<br>Revoke-SPOUserSession<br>Set-SPOBrowserIdleSignOut<br>Set-SPOBuiltInDesignPackageVisibility<br>Set-SPOBuiltInSiteTemplateSettings<br>Set-SPODataConnectionSetting<br>Set-SPODataConnectionSettingMetadata<br>Set-SPODisableSpacesActivation<br>Set-SPOGeoStorageQuota<br>Set-SPOHideDefaultThemes<br>Set-SPOHubSite<br>Set-SPOMigrationPackageAzureSource<br>Set-SPOMultiGeoCompanyAllowedDataLocation<br>Set-SPOMultiGeoExperience<br>Set-SPOOrgAssetsLibrary<br>Set-SPOOrgNewsSite<br>Set-SPOSiteArchiveState<br>Set-SPOSiteDesign<br>Set-SPOSiteGroup<br>Set-SPOSiteOffice365Group<br>Set-SPOSiteScript<br>Set-SPOSiteScriptPackage<br>Set-SPOStorageEntity<br>Set-SPOStructuralNavigationCacheSiteState<br>Set-SPOStructuralNavigationCacheWebState<br>Set-SPOTenantCdnEnabled<br>Set-SPOTenantCdnPolicy<br>Set-SPOTenantContentTypeReplicationParameters<br>Set-SPOTenantSyncClientRestriction<br>Set-SPOTenantTaxonomyReplicationParameters<br>Set-SPOUnifiedGroup<br>Set-SPOWebTheme<br>Start-SPOSiteContentMove<br>Start-SPOSiteRename<br>Start-SPOTenantRename<br>Start-SPOUnifiedGroupMove<br>Start-SPOUserAndContentMove<br>Stop-SPOSiteContentMove<br>Stop-SPOTenantRename<br>Stop-SPOUserAndContentMove<br>Submit-SPOMigrationJob<br>Test-SPOSite<br>Unlock-SPOSensitivityLabelEncryptedFile<br>Unregister-SPOHubSite<br>Update-SPODataEncryptionPolicy<br>Update-UserType<br>Upgrade-SPOSite<br>Verify-SPOTenantOrgRelation<br></td>
+<td>Add-SPOHubSiteAssociation<br>Add-SPOListDesign<br>Add-SPOOrgAssetsLibrary<br>Add-SPOSiteCollectionAppCatalog<br>Add-SPOSiteScript<br>Add-SPOTheme<br>Add-SPOUser<br>Connect-SPOService<br>Disconnect-SPOService<br>Get-SPODeletedSite<br>Get-SPOExternalUser<br>Get-SPOHubSite<br>Get-SPOListDesign<br>Get-SPOSite<br>Get-SPOSiteDesign<br>Get-SPOSiteScript<br>Get-SPOSiteScriptFromList<br>Get-SPOTheme<br>Get-SPOUser<br>New-SPOSite<br>New-SPOSiteGroup<br>Remove-SPODeletedSite<br>Remove-SPOOrgAssetsLibrary<br>Remove-SPOSite<br>Remove-SPOSiteDesign<br>Remove-SPOSiteScript<br>Remove-SPOTheme<br>Set-SPOHomeSite<br>Set-SPOSite<br>Set-SPOTenant<br>Set-SPOUser<br>sharepoint-online<br></td>
+<td>Add-SPOContentSecurityPolicy<br>Add-SPOGeoAdministrator<br>Add-SPOHubToHubAssociation<br>Add-SPOSiteDesign<br>Add-SPOSiteDesignTask<br>Add-SPOSiteScriptPackage<br>Add-SPOTenantCdnOrigin<br>Approve-SPOTenantServicePrincipalPermissionGrant<br>Approve-SPOTenantServicePrincipalPermissionRequest<br>ConvertTo-SPOMigrationEncryptedPackage<br>ConvertTo-SPOMigrationTargetedPackage<br>Copy-SPOPersonalSitePage<br>Deny-SPOTenantServicePrincipalPermissionRequest<br>Disable-SPOTenantServicePrincipal<br>Enable-SPOCommSite<br>Enable-SPOTenantServicePrincipal<br>Export-SPOQueryLogs<br>Export-SPOUserInfo<br>Export-SPOUserProfile<br>Get-FileSensitivityLabelInfo<br>Get-SPOAppBillingPolicies<br>Get-SPOAppErrors<br>Get-SPOAppInfo<br>Get-SPOApplication<br>Get-SPOBrowserIdleSignOut<br>Get-SPOBuiltInDesignPackageVisibility<br>Get-SPOBuiltInSiteTemplateSettings<br>Get-SPOContainer<br>Get-SPOContainerTypeConfiguration<br>Get-SPOContentEventEmailAddresses<br>Get-SPOContentSecurityPolicy<br>Get-SPOCrossGeoMovedUsers<br>Get-SPOCrossGeoMoveReport<br>Get-SPOCrossGeoUsers<br>Get-SPOCrossTenantCompatibilityStatus<br>Get-SPOCrossTenantHostUrl<br>Get-SPODataEncryptionPolicy<br>Get-SPODeletedContainer<br>Get-SPOEnterpriseAppInsightsReport<br>Get-SPOGeoAdministrator<br>Get-SPOGeoMoveCrossCompatibilityStatus<br>Get-SPOGeoStorageQuota<br>Get-SPOHideDefaultThemes<br>Get-SPOHomeSite<br>Get-SPOListFileVersionBatchDeleteJobProgress<br>Get-SPOListFileVersionExpirationReportJobProgress<br>Get-SPOListVersionPolicy<br>Get-SPOMalwareFile<br>Get-SPOMalwareFileContent<br>Get-SPOMigrationJobProgress<br>Get-SPOMigrationJobStatus<br>Get-SPOMultiGeoCompanyAllowedDataLocation<br>Get-SPOMultiGeoExperience<br>Get-SPOOrgAssetsLibrary<br>Get-SPOOrgNewsSite<br>Get-SPOPersonalSitePageCopyProgress<br>Get-SPOPublicCdnOrigins<br>Get-SPOSiteCollectionAppCatalogs<br>Get-SPOSiteContentMoveState<br>Get-SPOSiteDataEncryptionPolicy<br>Get-SPOSiteDesignRights<br>Get-SPOSiteDesignRun<br>Get-SPOSiteDesignRunStatus<br>Get-SPOSiteDesignTask<br>Get-SPOSiteFileVersionBatchDeleteJobProgress<br>Get-SPOSiteFileVersionExpirationReportJobProgress<br>Get-SPOSiteGroup<br>Get-SPOSitePages<br>Get-SPOSiteRenameState<br>Get-SPOSiteScriptFromWeb<br>Get-SPOSiteUserInvitations<br>Get-SPOSiteVersionPolicyJobProgress<br>Get-SPOStorageEntity<br>Get-SPOStructuralNavigationCacheSiteState<br>Get-SPOStructuralNavigationCacheWebState<br>Get-SPOTenant<br>Get-SPOTenantCdnEnabled<br>Get-SPOTenantCdnOrigins<br>Get-SPOTenantCdnPolicies<br>Get-SPOTenantContentTypeReplicationParameters<br>Get-SPOTenantLogEntry<br>Get-SPOTenantLogLastAvailableTimeInUtc<br>Get-SPOTenantOrgRelation<br>Get-SPOTenantOrgRelationByPartner<br>Get-SPOTenantOrgRelationByScenario<br>Get-SPOTenantRenameSitePrioritization<br>Get-SPOTenantRenameStatus<br>Get-SPOTenantServicePrincipalPermissionGrants<br>Get-SPOTenantServicePrincipalPermissionRequests<br>Get-SPOTenantSyncClientRestriction<br>Get-SPOTenantTaxonomyReplicationParameters<br>Get-SPOUnifiedGroup<br>Get-SPOUnifiedGroupMoveState<br>Get-SPOUserAndContentMoveState<br>Get-SPOUserOneDriveLocation<br>Get-SPOWebTemplate<br>Grant-SPOHubSiteRights<br>Grant-SPOSiteDesignRights<br>Invoke-SPOMigrationEncryptUploadSubmit<br>Invoke-SPOSiteDesign<br>Invoke-SPOSiteSwap<br>New-SPOAppBillingPolicy<br>New-SPODataConnectionSetting<br>New-SPOListFileVersionBatchDeleteJob<br>New-SPOListFileVersionExpirationReportJob<br>New-SPOMigrationEncryptionParameters<br>New-SPOMigrationPackage<br>New-SPOnlineApplicationPrincipalManagementServiceApplicationProxy<br>New-SPOPublicCdnOrigin<br>New-SPOSdnProvider<br>New-SPOSiteFileVersionBatchDeleteJob<br>New-SPOSiteFileVersionExpirationReportJob<br>New-SPOSiteSharingReportJob<br>New-SPOTenantOrgRelation<br>Register-SPODataEncryptionPolicy<br>Register-SPOHubSite<br>Remove-SPOAppBillingPolicy<br>Remove-SPOContainer<br>Remove-SPOContentEventEmailAddresses<br>Remove-SPOContentSecurityPolicy<br>Remove-SPODataConnectionSetting<br>Remove-SPODeletedContainer<br>Remove-SPOExternalUser<br>Remove-SPOGeoAdministrator<br>Remove-SPOHomeSite<br>Remove-SPOHubSiteAssociation<br>Remove-SPOHubToHubAssociation<br>Remove-SPOListDesign<br>Remove-SPOListFileVersionBatchDeleteJob<br>Remove-SPOMigrationJob<br>Remove-SPOMultiGeoCompanyAllowedDataLocation<br>Remove-SPOOrgNewsSite<br>Remove-SPOPublicCdnOrigin<br>Remove-SPOSdnProvider<br>Remove-SPOSiteCollectionAppCatalog<br>Remove-SPOSiteCollectionAppCatalogById<br>Remove-SPOSiteDesignTask<br>Remove-SPOSiteFileVersionBatchDeleteJob<br>Remove-SPOSiteGroup<br>Remove-SPOSiteUserInvitations<br>Remove-SPOSiteVersionPolicyJob<br>Remove-SPOStorageEntity<br>Remove-SPOTenantCdnOrigin<br>Remove-SPOTenantOrgRelation<br>Remove-SPOTenantRenameSitePrioritization<br>Remove-SPOTenantSyncClientRestriction<br>Remove-SPOUser<br>Remove-SPOUserInfo<br>Remove-SPOUserProfile<br>Repair-SPOSite<br>Request-SPOPersonalSite<br>Request-SPOUpgradeEvaluationSite<br>Restore-SPODataEncryptionPolicy<br>Restore-SPODeletedContainer<br>Restore-SPODeletedSite<br>Revoke-SPOHubSiteRights<br>Revoke-SPOSiteDesignRights<br>Revoke-SPOTenantServicePrincipalPermission<br>Revoke-SPOUserSession<br>Set-SPOApplication<br>Set-SPOApplicationPermission<br>Set-SPOBrowserIdleSignOut<br>Set-SPOBuiltInDesignPackageVisibility<br>Set-SPOBuiltInSiteTemplateSettings<br>Set-SPOContainer<br>Set-SPOContainerTypeConfiguration<br>Set-SPOContentEventEmailAddresses<br>Set-SPOCrossTenantRelationship<br>Set-SPODataConnectionSetting<br>Set-SPODataConnectionSettingMetadata<br>Set-SPODisableSpacesActivation<br>Set-SPOGeoStorageQuota<br>Set-SPOHideDefaultThemes<br>Set-SPOHubSite<br>Set-SPOListVersionPolicy<br>Set-SPOMigrationPackageAzureSource<br>Set-SPOMultiGeoCompanyAllowedDataLocation<br>Set-SPOMultiGeoExperience<br>Set-SPOOrgAssetsLibrary<br>Set-SPOOrgNewsSite<br>Set-SPOSiteArchiveState<br>Set-SPOSiteDesign<br>Set-SPOSiteGroup<br>Set-SPOSiteOffice365Group<br>Set-SPOSiteScript<br>Set-SPOSiteScriptPackage<br>Set-SPOStorageEntity<br>Set-SPOStructuralNavigationCacheSiteState<br>Set-SPOStructuralNavigationCacheWebState<br>Set-SPOTenantCdnEnabled<br>Set-SPOTenantCdnPolicy<br>Set-SPOTenantContentTypeReplicationParameters<br>Set-SPOTenantRenameSitePrioritization<br>Set-SPOTenantSyncClientRestriction<br>Set-SPOTenantTaxonomyReplicationParameters<br>Set-SPOUnifiedGroup<br>Set-SPOWebTheme<br>Start-SPOEnterpriseAppInsightsReport<br>Start-SPOSiteContentMove<br>Start-SPOSiteRename<br>Start-SPOTenantRename<br>Start-SPOUnifiedGroupMove<br>Start-SPOUserAndContentMove<br>Stop-SPOSiteContentMove<br>Stop-SPOTenantRename<br>Stop-SPOUserAndContentMove<br>Submit-SPOMigrationJob<br>Test-SPOSite<br>Unlock-SPOSensitivityLabelEncryptedFile<br>Unregister-SPOHubSite<br>Update-SPODataEncryptionPolicy<br>Update-UserType<br>Upgrade-SPOSite<br>Verify-SPOTenantOrgRelation<br></td>
+</tr>
+<tr>
+<td><strong>Total Used</strong></td>
+<td><strong>Total Unused</strong></td>
+</tr>
+<tr>
+<td>32</td>
+<td>214</td>
 </tr>
 </tbody>
 </table>
-<p>There are <strong>229</strong> script scenarios with metadata in the site | Generated: 03 Nov 2023 02:01:18</p>
+<p>There are <strong>312</strong> script scenarios with metadata in the site | Generated: 12 Mar 2025 07:09:34</p>
 </article>
           </div>
         </div>
